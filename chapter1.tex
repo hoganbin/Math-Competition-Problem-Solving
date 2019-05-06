@@ -1,0 +1,519 @@
+\chapter{函数、极限、连续}\label{cha:1}
+\section{函数}
+\begin{xiti}
+\item 设$g\left(x\right)=\left\{\begin{array}{l}
+2-x,x\le 0\\
+x+2,x>0\\
+\end{array},f\left(x\right)=\left\{\begin{array}{l}
+x^2,x<0\\
+-x,x\geqslant 0\\
+\end{array}\right.\right. 
+$，求$g(f(x))$.
+
+\item 已知$f(x)$满足等式$2 f ( x ) + x ^ { 2 } f \left( \frac { 1 } { x } \right) = \frac { x ^ { 2 } + 2 x } { x + 1 }$，求$f(x)$的表达式.
+\item 设$f ( x ) = \lim _ { n \rightarrow \infty } n \left[ \left( 1 + \frac { x } { n } \right) ^ { n } - \mathrm { e } ^ { x } \right]$，求$f(x)$的显式表达式.
+%\begin{solution}
+%	\begin{align*}
+%	\lim _{n \rightarrow \infty} n\left[\left(1+\frac{x}{n}\right)^{n}-\mathrm{e}^{x}\right]&=\lim _{n \rightarrow \infty} n\left\{\left[\left(1+\frac{x}{n}\right)^{\frac{n}{x}}\right]^{x}-\mathrm{e}^{x}\right\}=\lim _{n \rightarrow \infty} n \mathrm{e}^{x}\left\{\left[\frac{\left(1+\frac{x}{n}\right)^{\frac{n}{x}}}{e}\right]^{x}-1\right\}\\
+%	&=\lim _{n \rightarrow \infty} n \mathrm{e}^{x}\left\{\left[1+\frac{\left(1+\frac{x}{n}\right)^{\frac{n}{x}}-e}{e}\right]^x-1\right\}=\lim _{n \rightarrow \infty}ne^x \frac{\left(1+\frac{x}{n}\right)^{\frac{n}{x}}-e}{e} x\\
+%	&=x^{2} e^{x-1} \lim _{n \rightarrow \infty} \frac{\left(1+\frac{x}{n}\right)^{\frac{n}{x}}-e}{\frac{x}{n}}=x^{2} e^{x-1} \lim _{t \rightarrow 0} \frac{(1+t)^{\frac{1}{t}}-e}{t}\\
+%	&=x^{2} e^{x-1} \lim _{t \rightarrow 0} \frac{(1+t)^{\frac{1}{t}} \cdot\frac{ \frac{t}{1+t}-\ln (1+t)}{t^2}}{1}=x^{2} \mathrm{e}^{x} \lim _{t \rightarrow 0} \frac{t-(1+t) \ln (1+t)}{(1+t) t^{2}}\\
+%	&=x^{2} \mathrm{e}^{x} \lim _{t \rightarrow 0} \frac{t-(1+t) \ln (1+t)}{t^{2}}=x^{2} \mathrm{e}^{x} \lim _{t \rightarrow 0} \frac{1-1-\ln (1+t)}{2 t}\\
+%	&=-\frac{1}{2}x^{2}e^x
+%	\end{align*}
+%\end{solution}
+
+\item 设函数$F(x)$是奇函数，$f ( x ) = F ( x ) \left( \frac { 1 } { a ^ { x } - 1 } + \frac { 1 } { 2 } \right)$，其中$a>0,a\ne 1$.证明：$f(x)$是偶函数.
+\item 设对一切实数$x$，有$f \left( \frac { 1 } { 2 } + x \right) = \frac { 1 } { 2 } + \sqrt { f ( x ) - f ^ { 2 } ( x ) }$，证明$f(x)$是周期函数.
+%\begin{solution}
+%	考虑到 $f(x+1)=f[(x+\frac{1}{2})+\frac{1}{2}]$，故有
+%	\begin{equation}\label{eq:1.1}
+%	\begin{aligned}
+%	f(x+1)&=\frac{1}{2}+\sqrt{f(x+\frac{1}{2})-f^{2}(x+\frac{1}{2} )}=\frac{1}{2}+\sqrt{\frac{1}{2}+\sqrt{f\left(x\right)-f^2\left(x\right)}-\left(\frac{1}{2}+\sqrt{f\left(x\right)-f^2\left(x\right)}\right)^2}\\
+%	&=\frac{1}{2}+\sqrt{\frac{1}{2}+\sqrt{f\left(x\right)-f^2\left(x\right)}-\left(\frac{1}{4}+\sqrt{f\left(x\right)-f^2\left(x\right)}+f\left(x\right)-f^2\left(x\right)\right)}\\
+%	&=\frac{1}{2}+\sqrt{\frac{1}{4}-f\left(x\right)+f^2\left(x\right)}=\frac{1}{2}+\left|f(x)-\frac{1}{2}\right|
+%	\end{aligned}
+%	\end{equation}
+%	由于
+%	\begin{equation}
+%	\begin{aligned}
+%	f(x)=f(x-\frac{1}{2}+\frac{1}{2})=\frac{1}{2}+\sqrt{f(x-\frac{1}{2})-f^{2}(x-\frac{1}{2})} \geqslant \frac{1}{2}
+%	\end{aligned}
+%	\end{equation}
+%	
+%	即$\left|f(x)-\frac{1}{2}\right|=f(x)-\frac{1}{2}$，将其代入\ref{eq:1.1}式，得
+%	$f(x+1)=\frac{1}{2}+f(x)-\frac{1}{2}=f(x)$
+%\end{solution}
+\item 函数$f(x)$在$(-\infty,+\infty)$上满足等式$f ( 3 - x ) = f ( 3 + x ) , f ( 8 - x ) = f ( 8 + x )$，且$f(0)=0$，试问：方程$f(x)=0$在区间$[0,2014]$上至少有多少个根.
+
+%\begin{solution}
+%	此题需要用到下面的结论：若函数$y=f(x) (-\infty <x<+\infty)$的图形关于二垂直轴$x=a,x=b(b>a)$对称，
+%	则函数$f(x)$为周期函数$T=2(b-a)$.
+%	
+%	由于$ f(x) $满足$ f(3+x)=f(3-x) $；$ f(8+x)=f(8-x)$，即$ f(x) $的图形既关于直线$ x=3 $，又关于直线$ x=8 $对称，于是$ f(x) $是以$ T=2(8-3)=10 $为周期的周期函数．
+%	
+%	事实上，若$ f(t) $满足$ f(a-t)=f(a+t) $，令$ x=a-t $，则$ a+t=2a-x $，即对任意实数$ x $，有$ f(x)=f(2a-x $)；又因为$ f(b-t)=f(b+t)(b>a) $.对任意实数$x$，令$ t=2a-x $，则有
+%\[ f(x)=f(2a-x)=f(t)=f(2b-t)=f[2b-(2a-x)]=f[x+2(b-a)] \]
+%	于是$ f(x) $以$ T=2(b-a)=2(8-3)=10 $为周期．在$ f(3-x)=f(3+x) $中，令$ x=3 $，则$ f(6)=f(0)=0 $．在$ f(8-x)=f(8+x) $中，令$ x=2 $，则$ f(6)=f(10)=0 $．
+%	
+%	因此$ f(x) $在$ (0,10] $中至少有$ 2 $根，以$ [x] $表示不超过实数$ x $的最大整数$ ，[*]， $因此在$ (0,2014] $中$ f(x)=0 $至少有$ 2[\frac{2014}{10}]=402 $个根，再加上$ x=0 $这个根f(x)在$ [0,2014] $中至少有$ N=403 $个根．
+%\end{solution}
+\item 设$y=f(x)$在$(-\infty,+\infty)$满足$f(x+T)=kf(x)$(其中$T$和$k$是正整数)，证明$f(x)$可表示为$f ( x ) = a ^ { x } \varphi ( x )$，式中$a>0,\varphi(x)$是以$T$为周期的周期函数.
+
+%\begin{solution}
+%	由假定$k>0,T>0$,现令$a=k^{ \frac {1}{T}} >0$,则
+%	$a^{T}=k$，即有$f(x+T)=a^{T} f(x)$.现定义函数如下$\varphi(x)=a^{-x}f(x)$，可知$\varphi(x)$是周期为$T$的函数.
+%	
+%	事实上$\varphi(x+T)=a^{-(x+T)} f(x+T)=a^{-x} a^{-T} a^{T} f(x)$
+%	$=a^{-x} f(x)=\varphi(x)$.因此$f(x)=a^{x} \varphi(x)$，其中$\varphi(x)$是周期为$T$的函数，证毕.
+%\end{solution}
+\item 若对任意$x,y$，有$f ( x ) - f ( y ) \leqslant ( x - y ) ^ { 2 }$，求证对任意正整数$n$，任意$a,b$，有
+\[| f ( b ) - f ( a ) | \leqslant \frac { 1 } { n } ( b - a ) ^ { 2 }\]
+%\begin{solution}
+%	法1：
+%	\begin{itemize}
+%		\item 当$a=b$，显然成立;
+%		\item 当$a\ne b$，不妨设$a<b$
+%		将$[a,b]n$等分，设分点$x_i, i=0,1,2,\cdots ,n$
+%		则有
+%		\begin{equation*}
+%		\begin{aligned}
+%		|f(b)-f(a)|&=|\sum_{i=1}^{n} [f(x_i)-f(x_{i-1})]|\leq \sum_{i=1}^{n} |f(x_i)-f(x_{i-1})|\\
+%		&=\sum_{i=1}^{n} (\frac{(b-a)}{n})^2=n\frac{(b-a)^2}{n^2}=\frac{1}{n}(b-a)^2
+%		\end{aligned}
+%		\end{equation*}
+%	\end{itemize}
+%
+%	法2：证$f(x)$常值函数
+%	$$0 \leq |\lim_{x \rightarrow y}\frac{f(x)-f(y)}{x-y}|\leq \lim_{x \rightarrow y}|x-y|=0$$
+%	即$f'(y)=0$, $ y$具有任意性
+%\end{solution}
+\end{xiti}
+
+\section{极限}
+\begin{xiti}
+\item 求下列极限.
+\begin{enumerate}
+	\item[(1)] $\lim _ { n \rightarrow \infty } ( \sqrt { n + 3 \sqrt { n } } - \sqrt { n - \sqrt { n } } )$
+	\item[(2)] $\lim _ { n \rightarrow \infty } \left[ \frac { 3 } { 1 ^ { 2 } \times 2 ^ { 2 } } + \frac { 5 } { 2 ^ { 2 } \times 3 ^ { 2 } } + \dots + \frac { 2 n + 1 } { n ^ { 2 } \times ( n + 1 ) ^ { 2 } } \right]$
+	\item[(3)] $\lim _ { n \rightarrow \infty } ( 1 + x ) \left( 1 + x ^ { 2 } \right) \left( 1 + x ^ { 4 } \right) \cdots \left( 1 + x ^ { 2 n } \right)$
+\end{enumerate}
+\item 求下列极限.
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow \infty } \frac { \mathrm { e } ^ { x } - x \arctan x } { \mathrm { e } ^ { x } + x }$
+	\item[(2)] $\lim _ { x \rightarrow 0 } \left( \frac { 2 + e ^ { \frac { 1 } { x } } } { 1 + e ^ { \frac { 4 } { x } } } + \frac { \sin x } { | x | } \right)$
+\end{enumerate}
+\item 求下列极限.
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow 0 ^ { - } } \frac { 1 - \sqrt { \cos x } } { x ( 1 - \cos \sqrt { x } ) }$
+	\item[(2)] $\lim _ { n \rightarrow \infty } n ^ { 2 } \left[ \mathrm { e } ^ { 2 + \frac { 1 } { n } } + \mathrm { e } ^ { 2 - \frac { 1 } { n } } - 2 \mathrm { e } ^ { 2 } \right]$
+	\item[(3)] $\lim _ { x \rightarrow 0 } \frac { ( 3 + 2 \sin x ) ^ { x } - 3 ^ { x } } { \tan ^ { 2 } x }$
+\end{enumerate}
+\item 已知$\lim _ { x \rightarrow 0 } \frac { \sqrt { 1 + \frac { f ( x ) } { x ^ { 2 } } } - 1 } { \arctan x ^ { 2 } } = C \neq 0$，求$a,b$，使得$x \rightarrow 0 , \quad f ( x ) \sim a x ^ { b }$.
+\item 求下列极限.
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow + \infty } [ \cos \ln ( 1 + x ) - \cos \ln x ]$
+	\item[(2)] $\lim _ { x \rightarrow 0 } x \ln x \ln \left[ \left( 1 + \sin x + \cos ^ { 2 } x \right) / ( 1 - \sin x ) \right]$
+\end{enumerate}
+\item 求下列极限.
+\begin{enumerate}
+	\item[(1)] $\lim _ { n \rightarrow \infty } \left( \sin \frac { \pi } { \sqrt { n ^ { 2 } + 1 } } + \sin \frac { \pi } { \sqrt { n ^ { 2 } + 2 } } + \cdots + \sin \frac { \pi } { \sqrt { n ^ { 2 } + n } } \right)$
+	\item[(2)] $\lim _ { n \rightarrow \infty } \sum _ { k = 1 } ^ { n } \frac { n + k } { n ^ { 2 } + k }$
+	\item[(3)] $a _ { n } = \sum _ { k = 1 } ^ { n } \frac { 1 } { \sqrt [ k ] { k } }$，求$\lim _ { n \rightarrow \infty } \sqrt [ n ] { a _ { n } }$.
+\end{enumerate}
+\item 设$F ( x ) = \left( \frac { a _ { 1 } ^ { x } + a _ { 2 } ^ { x } + \ldots + a _ { n } ^ { x } } { n } \right) ^ { \frac { 1 } { x } } , a _ { 1 } , a _ { 2 } , \cdots , a _ { n }$都是正数.求下列极限：
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow + \infty } F ( x )$
+	\item[(2)] $\lim _ { x \rightarrow - \infty } F ( x )$
+	\item[(3)] $\lim _ { x \rightarrow 0 } F ( x )$.
+\end{enumerate}
+\item 设$0<x_{1}<3,x _ { n + 1 } = \sqrt { x _ { n } \left( 3 - x _ { n } \right) } ( n = 1,2 , \cdots )$，证明数列${x_{n}}$的极限存在，并求出极限.
+\item $0 < a < 1 , x _ { 1 } = \frac { a } { 2 } , x _ { n } = \frac { a } { 2 } + \frac { x _ { n - 1 } ^ { 2 } } { 2 } \quad ( n = 2 , \cdots )$，证明$\lim_{ n \rightarrow \infty }$存在，并求此极限.
+\item 设数列${x_{n}}$满足$0 < x _ { 1 } < \pi , x _ { n + 1 } = \sin x _ { n } ( n = 1,2 , \cdots )$，求$\lim _ { n \rightarrow \infty } \left( \frac { x _ { n + 1 } } { \tan x _ { n } } \right) ^ { \frac { 1 } { x _ { n } ^ { 2 } } }$.
+\item 设$x _ { 1 } = \frac { 1 } { 1 } , x _ { 2 } = \frac { 1 } { 1 + \frac { 1 } { 1 } } , x _ { 3 } = \frac { 1 } { 1 + \frac { 1 } { 1 + \frac { 1 } { 1 } } } , \cdots$，求$\lim_{ n \rightarrow \infty }x_{n}$.
+\item 设$x _ { n + 1 } = x _ { n } \left( 2 - A x _ { n } \right) , n = 0,1,2 , \cdots$，其中$A>0$.确定初始值$x_{0}$，使得${x_{n}}$收敛.
+\item 设曲线$y=f(x)$在原点与$y=\sin x$相切，试求极限$\lim _ { n \rightarrow \infty } n ^ { \frac { 1 } { 2 } } \sqrt { f \left( \frac { 2 } { n } \right) }$.
+\item 设函数$f(x)>0$，在$x=a$处可导，试求$\lim _ { n \rightarrow \infty } \left[ \frac { f \left( a + \frac { 1 } { n } \right) } { f \left( a - \frac { 1 } { n } \right) } \right] ^ { n }$.
+\item 求极限：
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow + \infty } x ^ { 2 } \ln \frac { \arctan ( x + 1 ) } { \arctan x }$
+	\item[(2)] $\lim _ { x \rightarrow 0 ^ {+ } } \frac { \tan ( \tan x ) - \tan ( \sin x ) } { \tan x - \sin x }$
+\end{enumerate}
+\item 求$\lim _ { x \rightarrow \infty } x \left[ \sin \ln \left( 1 + \frac { 3 } { x } \right) - \sin \ln \left( 1 + \frac { 1 } { x } \right) \right]$
+\item 如图弦$PQ$所对的圆心角为$\theta$，设$A(\theta)$是弦$PQ$与弧$PQ$之间的面积，$B(\theta)$是切线长$PR$、$OR$与弧之间的面积，求极限$\lim _ { \theta \rightarrow 0 ^ { + } } \frac { A ( \theta ) } { B ( \theta ) }$.
+
+\item 计算下列极限：
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow 0 } \left( \frac { \ln ( 1 + x ) } { x } \right) ^ { \frac { 1 } { x } }$
+	\item[(2)] $\lim _ { x \rightarrow \pi / 2 } \frac { 1 - \sin ^ { \alpha + \beta } x } { \sqrt { \left( 1 - \sin ^ { \alpha } x \right) \left( 1 - \sin ^ { \beta } x \right) } }$
+\end{enumerate}
+\item 试确定常数$a,b$，使极限$\lim _ { x \rightarrow 0 } \frac { 1 + a \cos 2 x + b \cos 4 x } { x ^ { 4 } }$存在，并求出它的值.
+\item 确定$a,b$的值，使当$x\rightarrow0$时，$f ( x ) = e ^ { x } - \frac { 1 + a x } { 1 + b x }$为$x$的$3$阶无穷小.
+\item 设$\lim _ { x \rightarrow 0 } \frac { \sin 6 x + x f ( x ) } { x ^ { 3 } } = 0$
+\begin{enumerate}
+	\item[(1)] 求$\lim _ { x \rightarrow 0 } \frac { 6 + f ( x ) } { x ^ { 2 } }$
+	\item[(2)] 若$f(x)$在$x=0$处连续，求$f''(x)$.
+\end{enumerate}
+\item 当$ x \rightarrow 0$时，$f ( x ) = \sqrt [ 5 ] { x ^ { 2 } + \sqrt [ 3 ] { x } } - \sqrt [ 3 ] { x ^ { 2 } + \sqrt [ 5 ] { x } }$是关于$x$的几阶无穷小?
+%\begin{solution}
+%	易知
+%	\begin{align*}
+%	f(x)&=\left(x^{2}+x^{\frac{1}{3}}\right)^{\frac{1}{5}}-\left(x^{2}+x^{\frac{1}{5}}\right)^{\frac{1}{3}}=x^{\frac{1}{15}}\left[\left(1+x^{\frac{5}{3}}\right)^{\frac{1}{5}}-\left(1+x^{\frac{9}{5}}\right)^{\frac{1}{3}}\right]\\
+%	&=x^{\frac{1}{15}}\left[1+\frac{1}{5} x^{\frac{5}{3}}+o\left(x^{\frac{5}{3}}\right)-\left(1+\frac{1}{3}x^{\frac{9}{5}}+o\left(x^{\frac{9}{5}}\right)\right)\right]\\
+%	&=\frac{1}{5}x^{\frac{26}{15}}+o\left(x^{\frac{26}{15}}\right)-\frac{1}{3}x^{\frac{28}{15}}+o\left(x^{\frac{28}{15}}\right)=\frac{1}{5}x^{\frac{26}{15}}+o\left(x^{\frac{26}{15}}\right)
+%	\end{align*}
+%	即$f(x)$是关于$x$的$\frac{26}{15}$阶无穷小.
+%\end{solution}
+\item 求下列极限
+\begin{enumerate}
+	\item[(1)] $\lim _ { x \rightarrow 0 } \left( \frac {e ^ { \sin x } - x - \cos x } { \arcsin ^ { 2 } x } \right)$
+	\item[(2)] $\lim _ { x \rightarrow 0 } \left( \frac { \cos x - e ^ { \frac { x ^ { 2 } } { 2 } } + \frac { x ^ { 4 } } { 12 } } { \sin ^ { 6 } x } \right)$
+\end{enumerate}
+\item 已知$\lim _ { x \rightarrow 0 } \frac { ( 1 + x ) ^ { \frac { 1 } { x } } - \left( A + B x + C x ^ { 2 } \right) } { x ^ { 3 } } = D \neq 0$，求常数$A,B,C,D$.
+%\begin{solution}
+%	此题暴力泰勒展开
+%	\begin{equation*}
+%	\begin{aligned}
+%	&(1+x)^{\frac{1}{x}}=\exp(\frac{1}{x} \ln (1+x)) \stackrel{(\text{泰勒展开})}{=}\exp\left(1-\frac{1}{2}x+\frac{1}{3}x^2-\frac{1}{4}x^3+o\left(x^3\right)\right)\\
+%	&=\exp\left(1+\left(-\frac{1}{2}x+\frac{1}{3}x^2-\frac{1}{4}x^3\right)+\frac{1}{2}\left(-\frac{1}{2}x+\frac{1}{3}x^2-\frac{1}{4}x^3\right)^2+\frac{1}{6}\left(-\frac{1}{2}x+\frac{1}{3}x^2-\frac{1}{4}x^3\right)^3+o\left(x^3\right)\right) \\
+%	&=\exp\left(1-\frac{1}{2}x+\left(\frac{1}{3}+\frac{1}{8}\right)x^2+\left(-\frac{1}{4}-\frac{1}{6}-\frac{1}{48}\right)x^3+o\left(x^3\right)\right)\\
+%	&=\exp\left(1-\frac{1}{2}x+\frac{11}{24}x^2-\frac{7}{16}x^3+o\left(x^3\right)\right)
+%	\end{aligned}
+%	\end{equation*}
+%	因此得到$A=e, B=-\frac{1}{2}e, C=\frac{11}{24} e, D=-\frac{7}{16}e$
+%\end{solution}
+\item 求极限$\lim _ { n \rightarrow \infty } \sum _ { k = 1 } ^ { n - 1 } \left( 1 + \frac { k } { n } \right) \sin \left( \frac { k \pi } { n ^ { 2 } } \right)$.
+%\begin{solution}
+%	记$S_{n}=\sum_{k=1}^{n-1}\left(1+\frac{k}{n}\right) \sin \frac{k \pi}{n^{2}}$，则
+%	\[
+%	S_{n}=\sum_{k=1}^{n-1}\left(1+\frac{k}{n}\right)\left(\frac{k \pi}{n^{2}}+o\left(\frac{1}{n^{2}}\right)\right)=\frac{\pi}{n^{2}} \sum_{k=1}^{n-1} k+\frac{\pi}{n^{3}} \sum_{k=1}^{n-1} k^{2}+o\left(\frac{1}{n}\right)=\frac{\pi}{n^{2}} \sum_{k=1}^{n-1} k+\frac{\pi}{n^{3}} \sum_{k=1}^{n-1} k^{2}+o\left(\frac{1}{n}\right)
+%	\]
+%	故有
+%	
+%	\[\lim _{n \rightarrow \infty} \sum_{k=1}^{n-1}\left(1+\frac{k}{n}\right) \sin \frac{k \pi}{n^{2}}=\frac{\pi}{2}+\frac{\pi}{3}=\frac{5 \pi}{6}\]
+%	
+%\end{solution}
+\item 求下列极限
+\begin{enumerate}
+	\item[(1)] $\lim _ { n \rightarrow \infty } \left( \frac { 1 } { \sqrt { n ^ { 2 } + 1 ^ { 2 } } } + \frac { 1 } { \sqrt { n ^ { 2 } + 2 ^ { 2 } } } + \cdots + \frac { 1 } { \sqrt { n ^ { 2 } + n ^ { 2 } } } \right)$
+	\item[(2)] $\lim _ { n \rightarrow \infty } \sum _ { i = 1 } ^ { n } \frac { 1 } { n + \frac { i ^ { 2 } + 1 } { n } }$
+	\item[(3)] $\lim _ { n \rightarrow \infty } \sqrt [ n ] { n ! } \ln \left( 1 + \frac { 2 } { n } \right)$
+\end{enumerate}
+%\begin{solution}
+%	
+%	\begin{enumerate}
+%		\item[(2)] 由于$\frac{1}{n} \cdot \frac{1}{1+\left(\frac{i+1}{n}\right)^{2}}<\frac{1}{n+\frac{i^{2}+1}{n}}=\frac{1}{n} \cdot \frac{1}{1+\frac{i^{2}+1}{n^{2}}}<\frac{1}{n} \cdot \frac{1}{1+\left(\frac{i}{n}\right)^{2}}$，即
+%		\[\sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i+1}{n}\right)^{2}}<\sum_{i=1}^{n} \frac{1}{n+\frac{i^{2}+1}{n}}<\sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i}{n}\right)^{2}}\]
+%		
+%		考虑到
+%		\[
+%		\lim _{n \rightarrow \infty} \sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i}{n}\right)^{2}}=\int_{0}^{1} \frac{1}{1+x^{2}} \mathrm{d} x=\arctan \left.x\right|_{0} ^{1}=\frac{\pi}{4}\]
+%		\begin{align*}
+%		\lim _{n \rightarrow \infty} \sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i+1}{n}\right)^{2}}&=\lim _{n \rightarrow \infty} \sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i}{n}\right)^{2}}-\lim _{n \rightarrow \infty} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{1}{n}\right)^{2}}+\lim _{n \rightarrow \infty} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{n+1}{n}\right)^{2}}\\
+%		&=\int_{0}^{1} \frac{1}{1+x^{2}} \mathrm{d} x-0+0=\frac{\pi}{4}
+%		\end{align*}
+%		两边夹可得$
+%		\lim _{n \rightarrow \infty} \sum_{i=1}^{n} \frac{1}{n+\frac{i^{2}+1}{n}}=\frac{\pi}{4}$
+%		\item[(3)] 由于$\ln(1+\frac{1}{n}) =\frac{1}{n}+o(\frac{1}{n})$，即有
+%		
+%		法一：根据Stolz定理
+%		\begin{equation*}
+%		\begin{aligned}
+%		\lim _{n \rightarrow \infty} \frac{\sqrt[n]{n !}}{n}&=\exp\lim _{n \rightarrow \infty}\frac{\ln n!-n\ln n}{n}=\exp{\lim_{n \rightarrow \infty}\frac{(\ln n!-n\ln n)-[\ln(n-1)!-(n-1)\ln(n-1)]}{n-(n-1)}}\\
+%		&=\exp{\lim_{n \rightarrow \infty}{(\ln n!-n\ln n)-[\ln(n-1)!-(n-1)\ln(n-1)]}}\\
+%		&=\exp{\lim_{n \rightarrow \infty}(n-1)\ln(1-\frac{1}{n})}=\frac{1}{e}
+%		\end{aligned}
+%		\end{equation*}
+%		
+%		法二：定积分定义
+%		
+%		\[
+%		\lim _{n \rightarrow \infty} \frac{\sqrt[n]{n !}}{n}=\lim _{n \rightarrow \infty} \sqrt[n]{\frac{n !}{n^{n}}}=\lim _{n \rightarrow \infty} \exp{\frac{1}{n} \sum_{i=1}^{n} \frac{i}{n}}=\exp{\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{i=1}^{n} \ln \frac{i}{n}}=\exp\int_{0}^{1} \ln x \mathrm{d} x=\frac{1}{e}
+%		\]
+%		即$\int_{0}^{1} \ln x \mathrm{d} x=x \ln \left.x\right|_{0} ^{1}-\int_{0}^{1} \mathrm{d} x=-1$.
+%		
+%		法三:
+%		\begin{theorem}{柯西命题}{1}
+%			已知$\lim_{n \rightarrow \infty}a_n=a$，求证：$\lim_{n\rightarrow\infty}\frac{a_1+a_2+\cdots +a_n}{n}=a$
+%		\end{theorem}
+%			\begin{proof}
+%			我们只需证明：
+%			
+%			\[\frac{a_{1}+a_{2}+\cdots+a_{n}}{n}-a=\frac{\left(a_{1}-a\right)+\left(a_{2}-a\right)+\cdots+\left(a_{n}-a\right)}{n}\]
+%			
+%			是无穷小，而条件是$\left\{a_n-a\right\}$是无穷小，这表明只需对$a=0$这一特殊情况来证明这个命题就行了.由于 $a_n \rightarrow a$对任意的$\epsilon>0,$存在一个正整数$N,$当$n>N$时，便有$|a_n|<\frac{\epsilon}{2},$设$n>N$，这时有
+%			\begin{align*}
+%			\left|\frac{a_{1}+a_{2}+\cdots+a_{n}}{n}\right|&=\left|\frac{a_{1}+a_{2}+\cdots+a_{N}+a_{N+1}+\cdots+a_{n}}{n}\right|\\
+%			&\leqslant \frac{\left|a_{1}+a_{2}+\dots+a_{N}\right|}{n}+\frac{1}{n}\left(\left|a_{N+1}\right|+\cdots+\left|a_{n}\right|\right)\\
+%			&\leqslant \frac{\left|a_{1}+a_{2}+\cdots+a_{N}\right|}{n}+\frac{n-N}{n} \frac{\varepsilon}{2}.
+%			\end{align*}
+%			由于$N$已经取定，$\left|a_{1}+a_{2}+\dots+a_{N}\right|$便是一个有限数，再取整数$N_1>N,$使得
+%			
+%			当$n>N_1$时，有
+%			
+%			$$\frac{\left|a_{1}+a_{2}+\dots+a_{N}\right|}{n}<\frac{\varepsilon}{2}$$
+%			
+%			可见，$n>N_1$时，有
+%			
+%			$$\left|\frac{a_{1}+a_{2}+\cdots+a_{n}}{n}\right|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\epsilon$$
+%			
+%			这就证明了当$a_{n}\rightarrow a (n\rightarrow\infty)$时
+%			
+%			$$ 
+%			\lim _{n \rightarrow \infty} \frac{a_{1}+a_{2}+\cdots+a_{n}}{n}=0
+%			$$
+%			
+%				\end{proof}
+%		\begin{theorem}{乘积形式的柯西命题}{2}
+%			证明：如果$x_n(n=1,2,\cdots )$收敛，且$x_n>0,$那么
+%			$$ 
+%			\lim _{n \rightarrow \infty} \sqrt[n]{x_{1} x_{2} \cdots x_{n}}=\lim _{n \rightarrow \infty} x_{n}
+%			$$
+%		\end{theorem}
+%			\begin{solution}
+%			记$a=\lim_{n \rightarrow \infty}x_n,$则$a\geq 0$.若$a> 0$,则也有$\lim_{n \rightarrow \infty}\frac{1}{x_n}
+%			=\frac{1}{a}$，根据平均值不等式$H\leq G\leq A$，刻碟
+%			\[\frac{n}{\frac{1}{x_{1}}+\cdots+\frac{1}{x_{n}}}=\frac{1}{\frac{\frac{1}{x_{1}}+\cdots+\frac{1}{x_{n}}}{n}} \leqslant \sqrt[n]{x_{1} \cdots x_{n}} \leqslant \frac{x_{1}+\cdots+x_{n}}{n}\]
+%			令$n\rightarrow \infty$并在两边用柯西命题，可见他们都收敛于$a$,因此得到
+%			$$ 
+%			\lim _{n \rightarrow \infty} \sqrt[n]{x_{1} x_{2} \cdots x_{n}}=a
+%			$$
+%			
+%			在$a=0$的情况则只要如上写出右边的不等式后再用柯西命题.
+%		\end{solution}
+%	然后将数列通项写成$\frac{n}{\sqrt[n]{n !}}=\sqrt[n]{\frac{n^{n}}{n !}}$
+%	记$x_n=\frac{n^n}{n!}$，则有
+%	\[\frac{x_{n+1}}{x_{n}}=\frac{(n+1)^{n+1}}{(n+1) !} \cdot \frac{n !}{n^{n}}=\left(1+\frac{1}{n}\right)^{n} \rightarrow e\]
+%	
+%	然后用上题的定理可证.
+%	
+%	\begin{note}
+%		因此
+%		$$\lim_{n \rightarrow \infty}\frac{\sqrt[n]{n!}}{n}=
+%		\lim_{n \rightarrow \infty}\frac{1}{\frac{n}{\sqrt[n]{n!}}}=\frac{1}{e}$$
+%		
+%	\end{note}
+%	
+%	法四：斯特林公式
+%	
+%	\[n !=\sqrt{2 \pi n}\left(\frac{n}{\mathrm{e}}\right)^{n} \mathrm{e}^{\frac{\theta_{\mathrm{n}}}{12 n}}\left(0<\theta_{n}<1\right)\]	
+%	\end{enumerate}
+%\end{solution}
+\item 求$\lim _ { n \rightarrow \infty } \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { \sin ^ { n } x } { 1 + x } \mathrm { d } x$.
+\item 设$x _ { n } = 1 + \frac { 1 } { \sqrt { 2 } } + \dots + \frac { 1 } { \sqrt { n } } - 2 \sqrt { n }$，证明数列$\left\lbrace x_{n}\right\rbrace $收敛.
+\item 求下列极限
+\begin{enumerate}
+	\item[(1)] $\lim _ { n \rightarrow \infty } \frac { n ^ { k } } { a ^ { n } } ( a > 1 , k > 0 )$
+	\item[(2)] $\lim _ { n \rightarrow \infty } \left[ \frac { 1 } { 2 ! } + \frac { 2 } { 3 ! } + \cdots + \frac { n } { ( n + 1 ) ! } \right]$
+\end{enumerate}
+\item 序列$x _ { 0 } , x _ { 1 } , x _ { 2 } , \cdots$由下列条件定义：$x _ { 0 } = a , x _ { 1 } = b , x _ { n + 1 } = \frac { x _ { n - 1 } + ( 2 n - 1 ) x _ { n } } { 2 n } , n \geqslant 1$
+\noindent 这里$a$与$b$是已知数，试用$a$与$b$表示$\lim_{ x \rightarrow \infty }x_{n}$.
+%\begin{solution}
+%	由于\begin{align*} 
+%	x_{n+1}-x_{n} &=\left(-\frac{1}{2 n}\right)\left(x_{n}-x_{n-1}\right)=\cdots \\ &=\left(-\frac{1}{2 n}\right)\left(-\frac{1}{2(n-1)}\right) \cdots\left(-\frac{1}{2}\right)\left(x_{1}-x_{0}\right) \\ &=(-1)^{n} \frac{b-a}{2^{n} \cdot n !} 
+%	\end{align*}
+%	
+%	即$x_{n}-x_{n-1}=(-1)^{n-1} \frac{b-a}{2^{n-1} \cdot(n-1) !}(n=1,2, \cdots)$
+%	
+%	
+%	所以$x_{n}=\sum_{i=1}^{n}\left(x_{i}-x_{i-1}\right)+x_{0}=\sum_{i=1}^{n}(-1)^{i-1} \frac{b-a}{2^{i-1} \cdot(i-1) !}+a$
+%	
+%	由此得到
+%	\[
+%	\lim _{n \rightarrow \infty} x_{n}=\sum_{n=1}^{\infty}(-1)^{n-1} \frac{b-a}{2^{n-1} \cdot(n-1) !}+a=(b-a) \sum_{n=0}^{\infty} \frac{1}{n !}\left(-\frac{1}{2}\right)^{n}+a=(b-a) \mathrm{e}^{-\frac{1}{2}}+a 
+%	\]
+%	
+%	
+%\end{solution}
+\item 证明压缩映射定理.
+\begin{enumerate}
+	\item[(1)] 设$f(x)$在$(-\infty,+\infty)$上连续，存在$0<a<1$，使得对任何$x,y$都有
+	\[| f ( x ) - f ( y ) | \leqslant \alpha | x - y |\]
+	证明存在唯一的$x_{0}$使得$x_{0}=f(x_{0})(x_{0}\text{称为不动点})$.
+	\item[(2)] 设$f(x)$在$(-\infty,+\infty)$上可导且$\left| f ^ { \prime } ( x ) \right| \leqslant \alpha$，其中常数$\alpha<1$.任取$x _ { 1 } \in ( - \infty , + \infty )$有$x _ { n + 1 } = f \left( x _ { n } \right) ( n = 1,2 , \cdots )$，证明：$\lim_{ n \rightarrow \infty }x_{n}$存在，并且不依赖于初始值$x_{1}$.
+\end{enumerate}
+%\begin{solution}
+%	\begin{enumerate}
+%		\item[(1)] 先证不动点的存在性
+%		
+%		任取$x_1\in(-\infty,+\infty),$
+%		令$x_{n+1}=f(x_n)(n=1,2,3\cdots ),$则
+%		
+%		$|x_{n+1}-x_n|=|f(x_n)-f(x_{n-1})| \leq \alpha |x_n-x_{n-1}|\leq \cdots \leq \alpha ^{n-1}|x_2-x_1|$
+%		
+%		注意到$0<\alpha<1,$可知级数$ \sum_{n=2}^{\infty}(x_n-x_{n-1})$
+%		绝对收敛，
+%		设$x_0=\lim_{n \rightarrow \infty}x_n.$再有$f(x)$的连续性可知
+%		$x_0=\lim_{n \rightarrow \infty}x_n=f(\lim_{n \rightarrow \infty}x_{n-1})=f(x_0)$
+%		即$f(x_0)$是$f(x)$的一个不动点
+%		
+%		 再证不动点的唯一性，设另有不动点$\overline x_0=f(\overline{x_0}),$则
+%		
+%		$|\overline{x_0}-x_0|=|f(\overline{x_0})-F(x_0)|\leq \alpha |\overline{x_0}-x_0|$
+%		
+%		注意到$0<\alpha<1,$这个不等式只有在$|\overline{x_0}-x_0|=0$时才成立，即$\overline{x_0}=x_0.$
+%		\item[(2)] 由拉格朗日中值定理可知，对任何$x,y$都有
+%		$|f(x)-f(y)|=|f'(\xi)||x-y|\leq \alpha|x-y|$
+%		
+%		由$(1)$的证明可知，存在极限
+%		$x_0=\lim_{n \rightarrow \infty}x_n.$
+%		它是$f(x)$唯一的不动点且这个不动点不依赖于初值$x_1$
+%		.
+%	\end{enumerate}
+%	
+%\end{solution}
+\item 曲线$y = \frac { 1 } { x } + \ln \left( 1 + \mathrm { e } ^ { x } \right)$有几条渐近线？
+\item 求曲线$y = ( x - 1 ) \mathrm { e } ^ { \frac { \pi } { 2 } + \arctan x }$的渐近线.
+\end{xiti}
+
+
+
+\section{连续}
+\begin{xiti}
+	\item 设$f\left(x\right)=\left\{\begin{matrix}
+	\frac{\ln\cos\left(x-1\right)}{1-\sin\frac{\pi}{2}x},&		x\ne 1\\
+	1,&		x=1\\
+	\end{matrix}\right. $，问函数$f(x)$在$x=1$
+	是否连续？若不连续，修改函数$f(x)$在$x=1$的定义使之连续.
+	\item 求$a,b$的值，使函数$f ( x ) = \left\{ \begin{array} { l } { \frac { \cos \pi x } { x ^ { 2 } + a x + b } , x \neq \frac { 1 } { 2 } } \\ { 2 , \quad x = \frac { 1 } { 2 } } \end{array} \right.$在$x=\frac{1}{2}$连续.
+	\item 设$f ( x ) = \left\{ \begin{array} { c } { \frac { x ^ { 3 } + a x + b } { 2 x ^ { 3 } + 3 x ^ { 2 } - 1 } , x \neq - 1 } \\ { c , \quad x = - 1 } \end{array} \right.$，试确定$a,b,c$的值使$f(x)$在$x=-1$连续.
+	\item 求$f ( x ) = \lim _ { t \rightarrow x } \left( \frac { \sin t } { \sin x } \right) ^ { \frac { x } { \sin t - \sin x } }$的间断点并指出其类型.
+	\item 设函数$f\left(x\right)=\left\{\begin{matrix}
+	\frac{\ln\left(1+ax^3\right)}{x-\arcsin x},&		x<0\\
+	6,&		x=0\\
+	\frac{\textrm{e}^{ax}+x^2-ax-1}{x\sin\frac{x}{4}},&		x>0\\
+	\end{matrix}\right. $，问$a$为何值时$f(x)$在$x=0$处连续；$a$为何值时，$x=0$是$f(x)$的可去间断点？
+	\item 设$f_n\left(x\right)=C_{n}^{1}\cos x-C_{n}^{2}\cos^2x+\cdots +\left(-1\right)^{n-1}C_{n}^{n}\cos^nx$，求证：
+	\begin{enumerate}
+		\item [(1)] 对任意的自然数$n$，方程$f _ { n } \left( x _ { n } \right) = \frac { 1 } { 2 }$在区间$(0,\frac{\pi }{2})$内仅有一根.
+		\item [(2)] 设$x _ { n } \in \left( 0 , \frac { \pi } { 2 } \right)$满足$f _ { n } \left( x _ { n } \right) = \frac { 1 } { 2 }$，则$\lim _ { x \rightarrow \infty } x _ { n } = \frac { \pi } { 2 }$.
+	\end{enumerate}
+%\begin{solution}
+%	\begin{itemize}
+%		\item 因为$f_n(x)=1-(1-\cos x)^n$在$[0,\frac{\pi}{2}]$上连续,又$f_n(0)=1,f_n(\frac{\pi}{2})=0$，故由介值定理知存在$x\in(0,\frac{\pi}{2})$使得$f_{n}(x_n)=\frac{1}{2}$且因为
+%		\begin{align*}
+%		f_{n}'(x)=-n(1-\cos x)^{n-1} \sin x<0 \quad\left(0<x<\frac{\pi}{2}\right)
+%		\end{align*}
+%		
+%		所以$f_{n}(x)$在$(0,\frac{\pi}{2})$内单调递减.因此满足方程$f_(x_n)=\frac{1}{2}$的根$x_{n}$存在且唯一.
+%		\item 因为$f_{n}\left(\arccos \frac{1}{n}\right)=1-\left(1-\frac{1}{n}\right)^{n}$，令$n \to \infty $两边取极限，有
+%		\[ 
+%		\lim _{n \rightarrow \infty} f_{n}\left(\arccos \frac{1}{n}\right)=1-\frac{1}{e}>\frac{1}{2}
+%		\]
+%		说明存在正整数$N$，使对于$n\ge N$时有$f_{n}\left(\arccos \frac{1}{n}\right)>\frac{1}{2}=f_{n}\left(x_{n}\right)$
+%		
+%		因为$f_{n}(x)$严格单调递减，所以$\arccos \frac{1}{n}<x_{n}<\frac{\pi}{2}$，对于$n\ge N$由夹逼定理即知，当$n\to \infty $时有$x_{n} \to \frac{1}{2}$，即有$\lim_{n \rightarrow \infty}x_n=\frac{1}{2}$
+%	\end{itemize}
+%\end{solution}
+\item 设$f \in C ( - \infty , + \infty )$试证：对一切$x$满足$f(2x)=f(x)\mathrm{e}^{x}$的充分必要条件是$f(x)=f(0)\mathrm{e}^{x}$.
+%\begin{proof}
+%	充分性：事实上如果$f(x)=f(0)\mathrm{e}^{x}$，那么$f(2x)=f(0)e^{2x}=f(0)\mathrm{e}^{x}\cdot \mathrm{e}^{x}=f(x)\mathrm{e}^{x}$
+%	
+%	必要性：已知$f(2x)=f(x)e^x$，依次用$\frac{x}{2}$代替$f(x)$中的$x$，则得$f(x)=f(\frac{x}{2})e^{\frac{x}{2}}$
+%	
+%	其中$f(\frac{x}{2})=f(\frac{x}{2^2})e^{\frac{x}{2^2}},\cdots,
+%	f(\frac{x}{2^{n-1}})=f(\frac{x}{2^{{n}}})e^{\frac{x}{2^{n}}}$
+%
+%	于是
+%	\begin{align*}
+%	f(x)&=f\left(\frac{x}{2}\right) e^{\frac{x}{2}}=f\left(\frac{x}{2^{2}}\right) e^{\frac{x}{2^{2}}} \cdot e^{\frac{x}{2}}=f\left(\frac{x}{2^{2}}\right) e^{\frac{x}{2}\left(1+\frac{1}{2}\right)}=\dots\\
+%	&=f(\frac{x}{2^n})e^{\frac{x}{2}(1+\frac{1}{2}+\frac{1}{2^2}+\cdots +\frac{1}{2^{n-1}})}=f(\frac{x}{2^{n}})e^{\frac{x}{2}\cdot\frac{1-\frac{1}{2^n}}{1-\frac{1}{2}}}=f(\frac{x}{2^{n}})e^{x(1-\frac{1}{2^n})}
+%	\end{align*}
+%	
+%	将$x$固定，在上式中，令$n \rightarrow \infty$,得到
+%	$\lim_{n \rightarrow \infty}f(x)=\lim_{n \rightarrow \infty}f(\frac{x}{2^{n}})e^{x(1-\frac{1}{2^n})}$
+%	
+%	由于$f(x)$在$(-\infty,+\infty)$上连续，因此
+%	$\lim _{n \rightarrow \infty} f\left(\frac{x}{2^{n}}\right)\xlongequal[\qquad]{t=\frac{x}{2^{n}}} \lim _{t \rightarrow 0} f(t)=f(0)$，且$e^{x(1-\frac{1}{2^n})}\xlongequal[\qquad]{u=\frac{1}{2^n}}\lim_{n \rightarrow \infty}e^{x(1-u)}=e^x$，因此 $f(x)=f(0)\mathrm{e}^{x}$得证.
+%\end{proof}
+\item 设$f ( x ) \in C [ 0,2 ]$，且$f ( 0 ) + f ( 1 ) + f ( 2 ) = 3$，证明：$\exists \xi \in ( 0,2 )$使$f(\xi)=1$.
+\item 设函数$f(x)$在$[0,1]$上非负连续，且$f(0)=f(1)=0$.证明：对实数$a(0<a<1)$，必有$\xi \in \left[ 0,1\right) $，使得$f(a+\xi )=f(a)$.
+\item 依次求解下列问题：
+\begin{enumerate}
+	\item [(1)] 证明方程$e ^ { x } + x ^ { 2 n + 1 } = 0$有唯一的实根$x_{n}(n=0,1,2,\cdots)$;
+	\item [(2)]证明$\lim_{ n \rightarrow \infty }x_{n}$存在，并求其值$A$;
+	\item [(3)]证明当$n\rightarrow \infty$，$x_{n}-A$与$\frac{1}{n}$是同阶无穷小.
+\end{enumerate}
+\item 设$\Omega$是定义在$(-\infty,+\infty)$上某些连续函数所构成的集合，满足当$f(x)=Q$，存在常数$k$，使得$f ( f ( x ) ) = k x ^ { 9 }$.试确定常数$k$的取值范围.
+%\begin{proof}
+%	充要条件是$k \ge 0$.若$k \ge 0 $,我们发现$ f(x) =\sqrt[4]{k}x^3 $满足$f(f(x)) = kx^9 $. 相反地,我们注意到$ k\not =0 $及对一切实数$ x $有$ f(f(x)) = kx^9 $ 可推出$ f $能取到一切实数值.由$ kx^9 $确定了$ f $是一对一的.事实上从$ f(a) = f(b) $可导出 $ ka^9= f(f(a)) = kb^9, $所以$ a = b. $但是,从实数集$ R $到其自身上的一个连续的一对一函数$ f $必定是严格单调的.当f为单调时,通常是递增的或者是递减的,$ f(f(x)) $将总是递增的.所以当$ k < 0 $时,不可能等于$ kx^9 $.
+%\end{proof}
+\item 设函数$f(x)$在$(-\infty,+\infty)$内连续，且$f[f(x)]=x$.证明：在$(-\infty,+\infty)$内至少有一个$x_{0}$满足$f(x_{0})=x_{0}$.
+
+%\begin{proof}
+%	法1：假设对$\forall x\in [a,b]\subset R,F(x)\not=0$故由零值定理知$f(x)-x$不变号，即$f(x)-x>0\text{或}(f(x)-x<0),x\in [a,b]$，因此$x=f(f(x))>f(x)>x$矛盾
+%	
+%	法2：欲证$\exists x_{0} \in (-\infty ,+\infty),s.t\quad f(x_{0})-x_{0}=0$，作辅助函数$F(x)=f(x)-x$.由题设条件知，函数$f(x)$ 不恒为$x$，所以存在实数$t$，使得$f(t)\not =t$,且在$[t,f(t)]\text{或}[f(t),t]$上连续，并有
+%	$F(t)F(f(t))=(f(t)-t)(f(f(t))-f(t))=-(f(t)-t)^2<0$
+%	
+%	故由零点定理知，存在$x_{0}\in (t,f(t))$，或$(f(t),t)$使得$F(x_{0})=0$，即存在$x_{0}$使得$F(x_{0})=0$.
+%
+%\end{proof}
+
+\end{xiti}
+
+\section{综合题 1}
+\begin{enumerate}
+	\item 求$y = \sqrt [ 3 ] { x + \sqrt { 1 + x ^ { 2 } } } + \sqrt [ 3 ] { x - \sqrt { 1 + x ^ { 2 } } }$的反函数.
+	\item 设对$\forall x,y$为实数，有$\frac { f ( x ) + f ( y ) } { 2 } \leqslant f \left( \frac { x + y } { 2 } \right)$且$f ( x ) \geqslant 0 , f ( 0 ) = c$，证明：$f(x)=c$.
+	\item 试构造一个整系数多项式$a x ^ { 2 } + b x + c$，使它在$(0,1)$上有两个相异的根，同时给出$a$是满足所述条件的最小正整数，并证明之.
+	\item 炮弹击中距地面高度为$h$的正在飞行的飞机.已知炮弹在地面上发射时有初速度$V$，大炮位置及其仰角都是未知的.试推断大炮位于一圆内，其圆心在飞机的正下方，半径是$( V / g ) \sqrt { V ^ { 2 } - 2 g h }$(忽略大气阻力).
+	\item 设$a _ { 1 } , a _ { 2 } , \cdots , a _ { n }$为非负实数，试证：$\left| \sum _ { k = 1 } ^ { n } a _ { k } \sin k x \right| \leqslant | \sin x |$的充分必要条件为$\sum _ { k = 1 } ^ { n } k a _ { k } \leqslant 1$.
+%\begin{proof}
+%	由题设可知
+%	\[
+%	\left|\sum_{k=1}^n{a_k}\sin kx\right|\le\left|\sin x\right|\Rightarrow\left|\sum_{k=1}^n{a_k}\frac{\sin kx}{x}\right|\le\left|\frac{\sin x}{x}\right|
+%	\]
+%	即
+%	\[
+%	\left|\lim_{x\rightarrow 0}\sum_{k=1}^n{a_k}\frac{\sin kx}{x}\right|\le 1\Rightarrow\left|\sum_{k=1}^n{ka_k}\right|\le 1
+%	\]
+%\end{proof}
+	\item 是否存在自然数$n$使得式子$( 2 + \sqrt { 2 } ) ^ { n }$的值的小数部分大于$0 . \underbrace { 99 \cdots 9 } _ { 2014 \text{个} 9 }$.
+	\item 设$a _ { 1 } = \sqrt { \frac { 1 } { 2 } } , a _ { n } = \sqrt { \frac { 1 + a _ { n - 1 } } { 2 } } ( n = 2,3 , \cdots )$，求极限$\lim _ { n \rightarrow \infty } a _ { 1 } a _ { 2 } \cdots a _ { n }$.
+	\item 计算极限$\lim _ { x \rightarrow \infty } \sum _ { k = 0 } ^ { n } ( - 1 ) ^ { k } C _ { n } ^ { k } \sqrt { x ^ { 2 } + k }$.
+	\item 设$a _ { n } = \sum _ { k = 0 } ^ { n } \ln C _ { n + 1 } ^ { k } / n ^ { 2 }$，求$\lim_{ n \rightarrow \infty }x_{n}$.
+	\item 设$x _ { 1 } > 0 , x _ { n + 1 } = \ln \left( 1 + x _ { n } \right) , n = 1,2 , \cdots$，证明：$\lim _ { n \rightarrow \infty } x _ { n } = 0$且$x _ { n } \sim \frac { 2 } { n } ( n \rightarrow + \infty )$.
+	\item 给定一个序列${x_{n}(n=1,2,\cdots)}$且具有性质$\lim _ { n \rightarrow \infty } \left( x _ { n } - x _ { n - 2 } \right) = 0$，证明：$\lim _ { n \rightarrow \infty } \frac { x _ { n } - x _ { n - 1 } } { n } = 0$.
+	\item 设$a _ { 1 } = 1 , a _ { k } = k \left( a _ { k - 1 } + 1 \right) ( k = 2,3 , \cdots )$，求极限$\lim _ { n \rightarrow \infty } \prod _ { k = 1 } ^ { n } \left( 1 + \frac { 1 } { a _ { k } } \right)$.
+	\item 设$b _ { n } = \sum _ { k = 0 } ^ { n } \frac { 1 } { C _ { n } ^ { k } } ( n = 1,2 , \cdots )$.证明：
+	\begin{enumerate}
+		\item[(1)] $b _ { n } = \frac { n + 1 } { 2 n } b _ { n - 1 } + 1 ( n = 2,3 , \cdots )$
+		\item[(2)] $\lim _ { n \rightarrow \infty } b _ { n } = 2$
+	\end{enumerate}
+\item 设$f_1\left(x\right)=x,f_2\left(x\right)=x^x,f_3\left(x\right)=x^{x^x},\cdots ,f_n\left(x\right)=x^{\{x^{^x}\}\textrm{共有}n\textrm{个}}$，求极限$\lim _ { x \rightarrow 0 ^ { + } } f _ { n } ( x )$.
+\item 设$x _ { 1 } = 2 , x _ { 2 } = 2 + \frac { 1 } { x _ { 1 } } , \cdots , x _ { n + 1 } = 2 + \frac { 1 } { x _ { n } } , \cdots$，求证：$\lim_{ n \rightarrow \infty }x_{n}$存在，并求极限值.
+\item 证明：数列$\sqrt { 7 } , \sqrt { 7 - \sqrt { 7 } } , \sqrt { 7 - \sqrt { 7 + \sqrt { 7 } } } , \sqrt { 7 - \sqrt { 7 + \sqrt { 7 - \sqrt { 7 } } } } ,\cdots$收敛，并计算其极限值.
+\item 一数列由递推公式 $u _ { 1 } = b , u _ { n + 1 } = u _ { n } ^ { 2 } + ( 1 - 2 a ) u _ { n } + a ^ { 2 } ( n = 1,2 , \cdots )$ 所确定.当$a$，$b$满足何种关系时，数列${u_{n}}$收敛?它的极限是何值?
+\item 序列${x_{n}}$对一切$m$与$n$满足条件$0 \leqslant x _ { n + m } \leqslant x _ { n } + x _ { m }$.证明：序列${\frac{{x_{n}}}{n}}$收敛.
+\item 设$x _ { 1 } , x _ { 2 } , \cdots$是非负序列，满足$x _ { n + 1 } \leqslant x _ { n } + \frac { 1 } { n ^ { 2 } } ( n = 1,2 , \cdots )$，证明：$\lim _ { n \rightarrow \infty } x _ { n }$存在.
+\item 设$a>0$，求证$\lim _ { n \rightarrow \infty } \sum _ { s = 1 } ^ { n } \left( \frac { a + s } { n } \right) ^ { n }$介于$e^{a}$与$e^{a+1}$之间.
+\item 设$u _ { n } = 1 + \frac { 1 } { 2 } - \frac { 2 } { 3 } + \frac { 1 } { 4 } + \frac { 1 } { 5 } - \frac { 2 } { 6 } + \dots + \frac { 1 } { 3 n - 2 } + \frac { 1 } { 3 n - 1 } - \frac { 2 } { 3 n }$，求$\lim_{ n \rightarrow \infty }u_{n}$.
+\item 求极限：
+\begin{enumerate}
+	\item[(1)] $\lim _ { n \rightarrow \infty } \frac { 1 } { n } \sqrt [ n ] { n ( n + 1 ) ( n + 2 ) \cdots ( 2 n - 1 ) }$
+	\item[(2)] $\lim _ { n \rightarrow \infty } \sum _ { k = 1 } ^ { n } \frac { \mathrm { e } ^ { \frac { k } { n } } } { n + \frac { 1 } { k } }$
+\end{enumerate}
+\item 设$0<x_{1}<1$而$x _ { n + 1 } = x _ { n } \left( 1 - x _ { n } \right) , n = 1,2 , \cdots$，求证：$\lim_{ n \rightarrow \infty }nx_{n}=1$.
+\item 设$[x]$为不超过$x$的最大整数，记$\{ x \} = x - [ x ]$.求极限$\lim _ { n \rightarrow \infty } \left\{ ( 2 + \sqrt { 3 } ) ^ { n } \right\}$.
+\item 设实函数$f(x)$定义于$0<x<1$，以$f(x)=o(x)$表示当$x\rightarrow 0$时$\frac { f ( x ) } { x } \rightarrow 0$.
+
+试证以下推断：若$\lim _ { x \rightarrow 0 } f ( x ) = 0$以及$f ( x ) - f \left( \frac { x } { 2 } \right) = o ( x )$，则$f(x)=o(x)$.
+\item 对于实数对$(x,y)$，定义数列${a_{n}}$，其中$a _ { 0 } = x , a _ { n + 1 } = \frac { a _ { n } ^ { 2 } + y ^ { 2 } } { 2 } ( n = 0,1,2 , \cdots )$.设区域$D=\left\{\left(x,y\right)\left|\textrm{使得数列}\left\{a_n\right\}\textrm{收敛}\right.\right\}$，求$D$的面积.
+\item 设$a_{1},b_{1}$是任意取定的实数，令
+\[a _ { n } = \int _ { 0 } ^ { 1 } \max \left( b _ { n - 1 } , x \right) \mathrm { d } x , b _ { n } = \int _ { 0 } ^ { 1 } \min \left( a _ { n - 1 } , x \right) \mathrm { d } x , n = 2,3,4 , \cdots\]
+证明数列$\left\{ a _ { n } \right\} , \left\{ b _ { n } \right\}$都收敛，并求$\lim _ { n \rightarrow \infty } a _ { n }$与$\lim _ { n \rightarrow \infty } b _ { n }$.
+\item 空气通过盛有$\mathrm { CO } _ { 2 }$，吸收剂的圆柱形器皿，已知它吸收$\mathrm { CO } _ { 2 }$的量与$\mathrm { CO } _ { 2 }$的百分浓度及吸收层厚度成正比.今有$\mathrm { CO } _ { 2 }$，含量为8\%的空气，通过厚度为10厘米的吸收层，其$\mathrm { CO } _ { 2 }$，含量为2\%.问：
+\begin{enumerate}
+	\item[(1)] 若通过的吸收层厚度为30厘米，出口处空气中$\mathrm { CO } _ { 2 }$，的含量是多少？
+	\item[(2)] 若要使出口处空气中$\mathrm { CO } _ { 2 }$，的含量为1\%，其吸收层厚度应为多少？
+\end{enumerate}
+\item 求证方程$x ^ { n } + x ^ { n - 1 } + \cdots + x ^ { 2 } + x = 1 ( n = 2,3,4 , \cdots )$在$(0,1)$内必有唯一实根$x_{n}$，并求$\lim_{ n \rightarrow \infty }x_{n}$.
+\item 设有一实值连续函数，对于所有的实数x和y满足函数方程$f \left( \sqrt { x ^ { 2 } + y ^ { 2 } } \right) = f ( x ) f ( y )$及$f(1)=2$.证明：$f(x)=2^{x}$.
+\item 对于每一个$x>\mathrm{e}^{x}$，归纳定义一个数列，$u _ { 0 } , u _ { 1 } , u _ { 2 } , \cdots$如下：$u _ { 0 } = e , u _ { n + 1 } = \log _ { u _ { n } } x ( n = 0,1,2 , \cdots )$.证明：该数列收敛，记$g ( x ) = \lim _ { n \rightarrow \infty } u _ { n }$，并且$x>e^{e}$时$g(x)$是连续的.
+\item 设$f(x)$是连续函数，使得对所有的$x$都有$f \left( 2 x ^ { 2 } - 1 \right) = 2 x f ( x )$成立.证明：对于$-1\leq x \leq 1$，恒有$f(x)=0$.
+\item 设$f(x),g(x)$在闭区间$[a,b]$上连续，并有数列$\left\{ x _ { n } \right\} \subset [ a , b ]$，使得$f \left( x _ { n + 1 } \right) = g \left( x _ { n } \right) , n = 1,2 , \cdots$证明存在一点$x_{0}$，使得$f(x_{0})=g(x_{0})$.
+\item 设$f : [ 0,1 ] \rightarrow [ 0,1 ]$为连续函数，$f ( 0 ) = 0 , f ( 1 ) = 1 , f [ f ( x ) ] = x$.证明：$f(x)=x$.
+\item 定义在$\mathrm{R}$上的函数$f$满足：$f$在$x=0$连续，且对$x,y\in \mathrm{R}$有$f(x+y)=f(x)+f(y)$.证明：对$\forall x\in \mathrm{R},f(x)=xf(1)$.
+\item 函数$f(x)$在半直线$\left[ 0,+\infty\right) $上有定义且一致连续，已知$\lim _ { n \rightarrow \infty } f ( x + n ) = 0$\quad($ n$为自然数)对任何$x\geq 0$成立.证明：$\lim_{ x \rightarrow  \infty }f(x)=0$.
+\end{enumerate}

@@ -1,0 +1,130 @@
+\chapter{常微分方程}\label{cha:7}
+\section{各类方程求解}
+\begin{xiti}
+	\item 	若函数$y=y(x)$连续，且满足$x \int_{1}^{x} y(t) \mathrm{d} t=(x+1) \int_{1}^{x} t y(t) \mathrm{d} t-x+1$，求函数$y(x)$.
+	\item 设函数$y(x)$可导，且对任何实数$x,h$满足$f(x) \neq 0,  f(x+h)=\int_{x}^{x+h} \frac{t\left(t^{2}+1\right)}{f(t)} \mathrm{d} t+f(x)$，此外，$f(1)=\sqrt{2}$，求$f(x)$的表达式.
+	
+	\item 设$f \in C(-\infty, \infty), f^{\prime}(0)$存在，且对任意$x,y$有$f(x+y)=f(x) f(y)$，求$f(x)$.
+	\item 求微分方程$\frac{\mathrm{d} y}{\mathrm{d} x}=\frac{1}{x \sin ^{2}(x y)}-\frac{y}{x}$的通解.
+	
+	\item 求方程$\frac{d y}{d x}=\frac{x+y+3}{x-y+1}$的通解
+	
+	\item 	设$\int_{0}^{1} f(t x) \mathrm{d} t=\frac{1}{2} f(x)+1$，其中$f(x)$为连续函数，求$f(x)$.
+	
+	\item 设$\varphi(x)$是以$2\pi$为周期的连续函数，且$\Phi^{\prime}(x)=\varphi(x),  \Phi^{\prime}(0)=0, \Phi^{\prime}(2 \pi) \neq 0$.
+	\begin{enumerate}
+		\item [(1)]求解$y'+y \sin x=\varphi(x) \mathrm{e}^{\cos x}$
+		\item [(2)]以上解中是否存在以$2\pi$为周期的解，若有求之.
+	\end{enumerate}
+	
+	\item 设有微分方程$y^{\prime}-2 y=\varphi(x)$，其中$\varphi\left(x\right)=\left\{\begin{array}{l}
+	2,\textrm{若}x<1\\
+	0,\textrm{若}x>1\\
+	\end{array}\right. $.试求在$(-\infty,+\infty)$内的连续函数$y=y(x)$，使之在$(-\infty, 1)$和$(1,+\infty)$内都满足所给方程，且满足条件$y(0)=0$.
+	\item 求解方程$y^{\prime}+x \sin 2 y=x \mathrm{e}^{-x^{2}} \cos ^{2} y, y(0)=\frac{\pi}{4}$.
+	\item 求微分方程$\frac{\mathrm{d} y}{\mathrm{d} x}=\frac{y}{x^{6} y^{3}-x}$的通解.
+	
+	\item 	设函数$f(x)$在区间$I$上处处可导，对$\forall a \in I$，有$\lim _{x \rightarrow a} \frac{x f(a)-a f(x)}{x-a}=a^{2} e^{a}$，求$f(x)$.
+	\item 求方程 $(\ln y+2 x-1) \frac{\mathrm{d} y}{\mathrm{d} x}=2 y$的通解.
+	
+	\item 微分学中的一个错误结论是：$(f g)^{\prime}=f^{\prime} g^{\prime}$.如果$f(x)=\mathrm{e}^{x^{2}}$，是否存在一个开区间$(a,b)$和定义在$(a,b)$上的非零函数$g$使得这个错误的乘积对于（$(a,b)$中的$x$是对的
+	
+	\item 求方程$y y''+1=y^{2}$满足$y(0)=1, y^{\prime}(0)=-\frac{1}{2}$的特解.
+	\item 求方程$y y^{\prime}+1=y^{\prime 2}$满足$y(0)=1, y^{\prime}(0)=-\sqrt{2}$的特解.
+	
+	\item 	求解微分方程$\left(y^{\prime \prime \prime}\right)^{2}-y^{\prime \prime} y^{(4)}=0$.
+	\item 试证曲率为非零常数的平面曲线为圆.
+	
+	\item 若$u=f(x y z), f(0)=0, f^{\prime}(1)=1$,，且$\frac{\partial^{3} u}{\partial x \partial y \partial z}=x^{2} y^{2} z^{2} f'''(x y z)$，求$u$.
+	\item 求方程$x y y^{\prime \prime}-x y^{2}=y y^{\prime}$的通解.
+	
+	\item 求满足$x=\int_{0}^{x} f(t) \mathrm{d} t+\int_{0}^{x} t f(t-x) \mathrm{d} t$的可微函数$f(x)$.
+	
+	\item 求代数多项式$F(x)$和$G(x)$使得
+	\[
+	\int[\left(2 x^{4}-1\right) \cos x+\left(8 x^{3}-x^{2}-1\right) \sin x ] \mathrm{d} x=F(x) \cos x+G(x) \sin x+C
+	\]	
+	\item 求方程$
+	y^{\prime \prime}+a y=\frac{1}{2}(x+\cos 2 x)(a>0)$的通解.
+	\item 设$f(x)$具有二阶连续导数，$f(0)=0, f'(0)=1$，且
+	\[
+	[x y(x+y)-f(x) y] \mathrm{d} x+\left[f^{\prime}(x)+x^{2} y\right] \mathrm{d} y=0
+	\]
+	为一全微分方程，求$f(x)$及此全微分方程的通解.
+	\item 解微分方程$x^{3} y^{\prime \prime}-x^{2} y^{\prime \prime}+2 x y^{\prime}-2 y=x \sin (\ln x)$.
+	\item 设函数$u=f(r), r=\sqrt{x^{2}+y^{2}+z^{2}}$在$r>0$内满足拉普拉斯方程$\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}+\frac{\partial^{2} u}{\partial z^{2}}=0$，其中$f(r)$二阶可导，且$f(1)=f^{\prime}(1)=1$，求$f(r)$.
+	
+	\item 设$f(x)$在$\left[ 1，+\infty\right) $上有连续的二阶导数，且$f(1)=0, f^{\prime}(1)=1$，二元函数$z=\left(x^{2}+y^{2}\right) f\left(x^{2}+y^{2}\right)$满足$\frac{\partial^{2} z}{\partial x^{2}}+\frac{\partial^{2} z}{\partial y^{2}}=0$.求$\lim _{t \rightarrow 0^{+}} \iint_{D} z \mathrm{d} x \mathrm{d} y$，其中$D : 0<t \leqslant \sqrt{x^{2}+y^{2}} \leqslant 1$.	
+	\item 设$x y=c_{1} e^{x}+c_{2} e^{-x}$是某微分方程的通解，求对应的微分方程.
+\end{xiti}
+
+
+
+\section{微分方程的应用}
+\begin{xiti}
+	\item 设函数$f$定义在有限或无限区间$I$上，$I$的左端点为0.若正数$x\in I$，则$f$在$[0,x]$上的平均值等于$f(0)$与$f(x)$的几何平均值，求满足上述条件的函数$f(x)$.
+	\item 设$y=f(x)$是第一象限内连接点$A(0,1), B(1,0)$的一段连续曲线，$M(x,y)$为该曲线上任意一点，点$C$为$M$在$x$轴上的投影，$O$为坐标原点.若梯形$OCMA$的面积与曲边三角形$CBM$的面积之和为$\frac{x^{3}}{6}+\frac{1}{3}$，求$f(x)$的表达式。
+	
+	\item 求一曲线，使得在其上任一点$P$处的切线在$y$轴上的截距等于原点到点$P$的距离.
+	
+	\item 设函数$y(x)(x \geqslant 0)$二阶可导且$y^{\prime}(x)>0, y(0)=1$，过曲线$y=y(x)$上任意一点$P(x, y)$作该曲线的切线及$x$轴的垂线，上述两直线与$x$轴所围成的三角形的面积记为$S_{1}$，区间$[0,x]$上以$y=y(x)$为曲边的梯形面积记为$S_{2}$，并设$2S_{1}-S_{2}$恒为1，求此曲线$y=y(x)$的方程.
+	
+	\item 	在第一象限内求一条与x轴相切于点$A(\mathrm{e}, 0)$的下凸曲线$y=f(x), f^{\prime \prime}(x) \geqslant 0$，使曲线上任意两点$M_{1},M_{2}$之间的弧长，等于曲线在这两点处的切线在$y$轴上截下的线段$P_{1}P_{2}$之长.
+	\item 设$y=y(x)$是一向上凸的连续曲线，其上任意一点$(x,y)$处的曲率为$\frac{1}{\sqrt{1+y'^{2}}}$，且此曲线上点$(0,1)$处的切线方程为$y=x+1$，求该曲线的方程，并求函数$y=y(x)$的极值.
+	
+	\item  (CPU降温问题)一台计算机启动后，其芯片CPU温度会不断升高，升高速度为$20^{\circ} \mathrm{C} / \mathrm{h}$.为防止温度无限升高而烧坏CPU，在计算机启动后就要用风扇将恒温空气对它猛吹，使它冷却降温.根据牛顿冷却定律可知冷却速度和物体与空气的温差成正比.设空气的温度一直保持$15^{\circ} \mathrm{C} / \mathrm{h}$不变.试求CPU温度的变化规律.
+	
+	\begin{enumerate}
+		\item [(1)]试证明在这种冷却方法下，CPU温度$T$是关于时间$t$的单调增加函数，但$T(d)$有上界；
+		
+		\item [(2)]若已知计算机在启动1h后其温度的升高率为$14^{\circ} \mathrm{C} / \mathrm{h}$，试求在启动2h后CPU温度的升高率.
+	\end{enumerate}
+	\item 拖拉机后面通过长为$a(m)$不可拉伸的钢绳拖拉着一个重物，拖拉机的初始位置在坐标原点，重物的初始位置在$A=(0,a)$点.现在拖拉机沿$x$轴正向前进，求重物运动的轨迹曲线方程.
+	
+	\item 从船上向海中沉放某种探测仪器，按探测要求，需确定仪器的下沉深度$y$（从海平面算起）与下沉速度$v$之间的函数关系.设仪器在重力作用下，从海平面由静止开始铅直下沉，在下沉过程中还受到阻力和浮子的作用.设仪器的质量为$m$，体积为$B$，海水密度为$\rho$，仪器所受的阻力与下沉速度成正比，比例系数为$k(k>0)$.试建立$y$与$v$所满足的微分方程，并求出函数关系式$y=y(v)$.
+		
+	\item 某湖泊的水量为$V$，每年排入湖泊内含污染物$A$的污水量为$V/6$，流入湖泊内不含$A$的水量为
+	$V/6$，流出湖泊的水量为$V/3$.已知1999年底的湖中$A$的含量为5$m_{0}$，超过国家规定指标，为了治理污染，从2000年初起，限定排入湖泊中含$A$污水的浓度不超过$m_{0}/V$.问至少需经过多少年，湖泊中污染物$A$的含量降至$m_{0}$以内？（注：设湖水中$A$的浓度是均匀的）
+	
+	\item 有一小船从岸边的$O$点出发驶向对岸，假定河流两岸是互相平行的直线，并设船速为$a$方向始终垂直于对岸，又设河宽为$2l$，河面上任一点处的水速与该点到两岸距离之积成正比，比例系数为$k=\frac{v_{0}}{l^{2}}$，求小船航行的轨迹方程
+	\item 一条鲨鱼在发现血腥味时，总是沿血腥味最浓的方向追寻.在海平面上进行试验表明，如果把坐标原点取在血源处，在海平面上建立直角坐标系，那么点$(x,y)$处血液的浓度$C$(每百万份水中所含血的份数)的近似值为$C=\mathrm{e}^{-\left(x^{2}+2 y^{2}\right) / 10^{4}}$。求鲨鱼从点$(x_{0},y_{0})$出发向血源前进的路线.
+	
+\end{xiti}
+
+
+\section{综合题 7}
+\begin{enumerate}
+	\item 找出所有的可微函数$f :(0,+\infty) \rightarrow(0,+\infty)$，对于这样的函数，存在一一个正实数$a$，使得对于所有的$x>0$，有$f^{\prime}\left(\frac{a}{x}\right)=\frac{x}{f(x)}$.
+	
+	\item 解二阶偏微分方程$\frac{\partial^{2} z}{\partial x \partial y}=\frac{1}{2 x} \cdot \frac{\partial z}{\partial y}$，其中$z=z(x,y)$，有连续的二阶偏导数。
+	\item 设$p_{1}(x), p_{2}(x)$是连续函数，$y_{1}(x), y_{2}(x)$是方程$y^{\prime \prime}+p_{1}(x) y^{\prime}+p_{2}(x) y=0$的两个线性无关的解.
+	证明：如果$\alpha,\beta$是$y(x)$的两个零点，则在$\alpha,\beta$之间必存在$y_{2}(x)$的一个零点.
+	\item 设$\mu_{1}(x, y), \mu_{2}(x, y)$为方程$M(x, y) \mathrm{d} x+N(x, y) \mathrm{d} y=0$的两个积分因子，且$\frac{\mu_{1}}{\mu_{2}} \neq$常数，求证
+	$\frac{\mu_{1}}{\mu_{2}}=C$是该方程的通解，其中$C$为任意常数.
+	\item 设函数$u=f\left(\sqrt{x^{2}+y^{2}}\right)$，满足$\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}=\iint\limits_{s^{2}+t^{2} \leqslant x^{2}+y^{2}} \frac{1}{1+s^{2}+t^{2}} \mathrm{d} s \mathrm{d} t$，且$\lim _{x \rightarrow 0^{+}} f^{\prime}(x)=0$.
+	\begin{enumerate}
+		\item [(1)]试求函数$f(x)$的表达式：
+		\item [(2)]若$f(0)=0$,求$\lim _{x \rightarrow 0^{+}} \frac{f(x)}{x^{4}}$.
+	\end{enumerate}
+	\item 设函数$f(x)$在$[0,+\infty)$上连续，$\Omega(t)=\left\{(x, y, z) | x^{2}+y^{2}+z^{2} \leqslant t^{2}, z \geqslant 0\right\}$，$S(t)$是$\Omega(t)$的表面，$D(t)$是$\Omega(t)$在$xOy$面的投影区域，$L(t)$是$D(t)$的边界曲线，已知当$t \in(0,+\infty)$时，恒有
+	\[\oint\limits_{L(t)} f\left(x^{2}+y^{2}\right) \sqrt{x^{2}+y^{2}} \mathrm{d} s+\oiint\limits_{S(t)}\left(x^{2}+y^{2}+z^{2}\right) \mathrm{d} S=\iint\limits_{D(t)} f\left(x^{2}+y^{2}\right) \mathrm{d} \sigma+\iiint\limits_{\Omega(t)} \sqrt{x^{2}+y^{2}+z^{2}} \mathrm{d} V\]
+	求$f(x)$的表达式
+	\item 求出所有定义在$[0,+\infty)$上的连续的，在$(0,+\infty)$上（函数）值是正实数的函数$y=g(x)$，使得对所有$x>0$，区域$R_{x}=\{(s, t) | 0 \leqslant s \leqslant x, 0 \leqslant t \leqslant g(s)\}$的质心的$y$坐标和$g$在$[0,x]$上的平均值相同.并证明你的结论.
+	
+	\item 一个质点在直线上运动，仅有与速度成反比的力作用于其上.如果初速为每秒1000尺，当它经过1200尺后，速度为每秒900尺.试计算运行这段距离的时间.误差不超过百分之一秒.
+	
+	\item 飞机在机场开始滑行着陆。在着陆时刻已失去垂直速度，水平速度为$v_{0}$米/秒飞机与地面的摩擦系数为$\mu$，且飞机运动时所受空气的阻力与速度的平方成正比，在水平方向的比例系数为$k_{x}$千克$\cdot$秒$^{2}$/米，在垂直方向的比例系数为$k_{y}$千克$\cdot$秒$^{2}$/米.设飞机的质量为$m$千克，求飞机从着陆到停止所需的时间.
+	\item 有一圆锥形的塔，底半径为$R$高为($h>R$)，现沿塔身建一登上塔顶的楼梯，要求楼梯曲线在每一点的切线与过该点垂直于$xOy$平面的直线的夹角为工，设楼梯入口在点$(R, 0,0)$，试求楼梯曲线的方程(设塔底面为$xOy$平面).
+	
+	\item 设过曲线上任一点$M(x,y)$的切线$MT$与坐标原点到此点的连线$OM$相交成定角$\omega$，求此曲线方程.
+	
+	\item (四人追逐问题)位于边长为$2a$的一个正方形的四个顶点有四个人$P_{1}, P_{2}, P_{3}, P_{4}$，一开始分别位于点$A_{1}(a, a), A_{2}(-a, a), A_{3}(-a,-a), A_{4}(a,-a)$处，他们玩依次追逐的游戏，$P_{1}$追逐$P_{2}$，$P_{2}$追逐$P_{3}$，$P_{3}$追逐$P_{4}$，$P_{4}$追逐$P_{1}$.求各自追逐路线的方程.
+	
+	\item 一个质点缚在一条轻的竿$AB$的一端$A$上.竿长为$a$，竿的$B$端有绞链使它能在一个垂直平面上自由转动.竿在绞链上面竖直的位置处于平衡，然后轻微地扰动它.证明：竿从通过水平位置降到最低位置的时间是$\sqrt{a / g} \ln (1+\sqrt{2})$.
+	
+	\item 一个质量为$m=1 \mathrm{kg}$的爆竹，以初速度$v_{0}=21 \mathrm{m} / \mathrm{s}$铅直向上飞向高空，已知在上升的过程中，空气对它的阻力与它运动速度v的平方成正比，比例系数为$k=0.025 \mathrm{kg} / \mathrm{m}$.求该爆竹能够到达的最高高度.
+	
+	\item 一质点在一与距离$k$次方成反比的有心力作用下运动。如果质点的运动轨道为一圆(假设有心力由圆周上的点出发)，试求$k$的值
+	
+	\item (雨滴下落的速度)有一滴雨滴，以初速度为零开始从高空落下，设其初始质量为$m_{0}(\mathrm{g})$.在下落的过程中，由于不断地蒸发，所以其质量以$a(\mathrm{g} / \mathrm{s})$的速率逐渐减少.已知雨滴在下落时，所受到的空气阻力和下落的速度成正比，比例系数为$k>0$.试求在时刻$t\left(0<t<\frac{m_{0}}{a}\right)$，雨滴的下落速度$v(t)$.
+\end{enumerate}

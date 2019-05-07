@@ -1,0 +1,183 @@
+\chapter{无穷级数}\label{cha:8}
+\section{常数项级数}
+\begin{xiti}
+	\item 讨论下列级数的敛散性
+	\begin{enumerate}
+		\item [(1)]$\sum_{n=1}^{\infty}\left(1+\frac{1}{n}\right)^{n^{2}} \mathrm{e}^{-n}$
+		\item [(2)]$\sum_{n=1}^{\infty}(\sqrt[n]{a}-\sqrt[n]{b})(a>b>0)$
+	\end{enumerate}
+	\item 判定下列级数的敛散性
+		\begin{enumerate}
+		\item [(1)]$\sum_{n=1}^{\infty} \frac{n^{3}\left[\sqrt{2}+(-1)^{n}\right]^{n}}{3^{n}}$
+		\item [(2)]$\sum_{n=1}^{\infty} \frac{1}{\ln (1+n)^{\ln (1+n)}}$
+		\item [(3)]$\sum_{n=1}^{\infty}\left(\frac{\pi}{n}-\sin \frac{\pi}{n}\right)$
+		\item [(4)]$\sum_{n=1}^{\infty} \int_{0}^{\frac{1}{n}} \frac{\sqrt{x}}{1+x^{4}} \mathrm{d} x$
+	\end{enumerate}
+	\item 设$a_{n}=\int_{0}^{\frac{\pi}{4}} \tan ^{n} x \mathrm{d} x$，(1)求$\sum_{n=1}^{\infty} \frac{1}{n}\left(a_{n}+a_{n+2}\right)$的值；(2)试证：对任意常数$\lambda>0$，级数$\sum_{n=1}^{\infty} \frac{a_{n}}{n^{2}}$收敛.
+	\item 设$\sum_{n=1}^{\infty} a_{n}$是收敛的正项级数，求证$\sum_{n=1}^{\infty} \sqrt{a_{n} a_{n+1}}$也收敛，反之是否正确？
+	
+	\item 判定级数$\sum_{n=1}^{\infty} \int_{0}^{1} x^{2}(1-x)^{n} \mathrm{d} x$的敛散性，并求其和.
+	
+	\item 求级数$\sum_{n=0}^{\infty} \operatorname{arccot}\left(n^{2}+n+1\right)$的和.
+	\item 若$\lim _{n \rightarrow \infty}\left[n^{p}\left(\mathrm{e}^{\frac{1}{n}}-1\right) a_{n}\right]=1(p>1)$，讨论级数$\sum_{n=1}^{\infty} a_{n}$的敛散性.
+	\item 设正项级数$\sum_{n=1}^{\infty} a_{n}$收敛，证明$\lim _{n \rightarrow \infty}\left(1+a_{1}\right)\left(1+a_{2}\right) \cdots\left(1+a_{n}\right)$存在.
+	\item 判定级数$\sum_{n=1}^{\infty} \frac{1}{x_{n}^{2}}$的敛散性。其中$x_{n}$是方程$x=\tan x$的正根按递增顺序的排列.
+	=1Xn
+	\item 设$B_{n}(x)=1^{x}+2^{x}+3^{x}+\cdots+n^{x}$，判断级数$\sum_{n=2}^{\infty} \frac{B_{n}\left(\log _{n} 2\right)}{\left(n \log _{2} n\right)^{2}}$收敛.
+	
+	
+	\item 设$a_{n}=\int_{0}^{\frac{\pi}{4}} \cos ^{n} t \mathrm{d} t$，判断级数$\sum_{n=1}^{\infty} a_{n}$的敛散性.
+	\item 设有方程$x^{n}+n x-1=0$，其中$n$为正整数，证明此方程存在唯一正实根$x_{n}$，并证明：当$\alpha>1$时，级数$\sum_{n=1}^{\infty} x_{n}^{\alpha}$收敛.
+	\item 设$\left\{p_{n}\right\}$是单调增加的正实数列，证明：$\sum_{n=1}^{\infty} \frac{1}{p_{n}}$与$\sum_{n=1}^{\infty} \frac{n}{p_{1}+p_{2}+\cdots+p_{n}}$同敛散.
+	\item 设$\left\{u_{n}\right\},\left\{c_{n}\right\}$为正实数列，试证明：
+	\begin{enumerate}
+		\item [(1)]若对所有的正整数$n$满足：$c_{n} u_{n}-c_{n+1} u_{n+1} \leqslant 0$，且$\sum_{n=1}^{\infty} \frac{1}{c_{n}}$发散，则$\sum_{n=1}^{\infty} u_{n}$也发散.
+		
+		\item [(2)]若对所有的正整数$n$满足：$c_{n} \frac{u_{n}}{u_{n+1}}-c_{n+1} \geqslant a$（常数$a>0$），且$\sum_{n=1}^{\infty} \frac{1}{c_{n}}$收敛，则$\sum_{n=1}^{\infty} a_{n}$也收敛.
+	\end{enumerate}
+	\item 设数列$S_{1}=1, S_{2}, S_{3}, \cdots$由公式$2 S_{n+1}=S_{n}+\sqrt{S_{n}^{2}+u_{n}}\left(u_{n}>0\right)$确定，证明级数$\sum_{n=1}^{\infty} u_{n}$收敛的充分必要条件是数列$\left\{S_{n}\right\}$收敛.
+	
+	
+	\item 令$A$为整数的一个集合，这些数在它们的十进制表示中不包含数字9，证明：$\sum_{\alpha \in A} \frac{1}{a}$收敛，即$A$定义了一个调和级数的收敛子列.
+	
+	\item 设$\left\{a_{n}\right\}$是正项递减数列，且级数$\sum_{n=1}^{\infty} a_{n}$收敛，证明：
+	\begin{enumerate}
+		\item [(1)]$\lim _{n \rightarrow \infty} n a_{n}=0$;
+		\item [(2)]$\sum_{n=1}^{\infty} n\left(a_{n-1}-a_{n}\right)=\sum_{n=1}^{\infty} a_{n}$，其中$a_{0}=0$
+	\end{enumerate}
+	\item 证明级数$\sum_{n=1}^{\infty}\left[\mathrm{e}-\left(1+\frac{1}{1 !}+\frac{1}{2 !}+\frac{1}{3 !}+\cdots+\frac{1}{n !}\right)\right]$收敛.
+	\item 设$F_{n}$满足条件$F_{0}=1, F_{1}=1, F_{n}=F_{n-1}+F_{n-2}(n=2,3, \cdots)$.判断两个级数$\sum_{n=1}^{\infty} \frac{1}{F_{n}}, \sum_{n=2}^{\infty} \frac{1}{\ln F_{n}}$的敛散性.
+	\item 设实数列$u_{0}, u_{1}, u_{2}, \cdots$满足$u_{n}=\sum_{k=1}^{\infty} u_{n+k}^{2}, n=0,1,2, \cdots$，试证：若 $\sum_{n=1}^{\infty} u_{n}$收敛，则对于所有的$k$都有$u_{k}=0$.
+	
+	\item 判断下列级数的敛散性？如果收敛，是条件收敛还是绝对收敛？
+	\begin{enumerate}
+		\item [(1)]$\sum_{n=1}^{\infty} \frac{(-3)^{n}}{\left(3^{n}+2^{n}\right) n}$
+		\item [(2)]$\sum_{n=2}^{\infty}(-1)^{n} \int_{n}^{n+1} \frac{e^{-x}}{x} \mathrm{d} x$
+		\item [(3)]$a-\frac{b}{2}+\frac{a}{3}-\frac{b}{4}+\dots+\frac{a}{2 n-1}-\frac{b}{2 n}+\cdots\left(a^{2}+b^{2} \neq 0\right)$
+		\item [(4)]$\sum_{n=1}^{\infty} \sin \left(\frac{n^{2}+a n+b}{n} \pi\right)$($a,b$为常数)
+	\end{enumerate}
+	\item 设$u_{n} \neq 0(n=1,2, \cdots)$且$\lim _{n \rightarrow \infty} \frac{n}{u_{n}}=1$，讨论级数$\sum_{n=1}^{\infty}(-1)^{n+1}\left(\frac{1}{u_{n}}+\frac{1}{u_{n+1}}\right)$的敛散性.
+	\item 设$|a_{n} | \leqslant 1\left(n \in \mathbf{N}_{+}\right)$，且$\left|a_{n}-a_{n-1}\right| \leqslant \frac{1}{4}\left|a_{n-1}^{2}-a_{n-2}^{2}\right|(n \geqslant 3)$，求证：
+	\begin{enumerate}
+		\item [(1)] $\sum_{n=2}^{\infty}\left(a_{n}-a_{n-1}\right)$绝对收敛.
+		\item [(2)] 数列$\left\{a_{n}\right\}$收敛.
+	\end{enumerate}
+	\item 讨论级数$\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^{p}+(-1)^{n-1}}(p \geqslant 1)$的敛散性.
+	\item 给定级数$\sum_{n=2}^{\infty} \ln \left(1+\frac{(-1)^{n}}{n^{p}}\right), p>0$.证明下列结论：
+	\begin{enumerate}
+		\item [(1)]当$p>1$时，该级数绝对收敛;
+		\item [(2)]当$\frac{1}{2}<p\leq 1$时，该级数条件收敛;
+		\item [(3)]当$0<p\leq \frac{1}{2}$时，该级数发散.
+	\end{enumerate}
+	
+	\item 设$u _ { 1 } = 2 , u _ { n + 1 } = u _ { n } ^ { 2 } - u _ { n } + 1 ( n = 1,2 , \cdots )$，证明级数$\sum _ { n = 0 } ^ { \infty } \frac { 1 } { u _ { n } } = 1$.
+	
+	\item 证明：$\int _ { 0 } ^ { + \infty } \frac { \sin x } { x } \mathrm { d } x < \int _ { 0 } ^ { \pi } \frac { \sin x } { x } \mathrm { d } x$	
+\end{xiti}
+
+
+
+\section{函数项级数}
+\begin{xiti}
+	\item 	若$\sum _ { n = 1 } ^ { \infty } ( - 1 ) ^ { n } a _ { n }$条件收敛，求$\sum _ { n = 1 } ^ { \infty } \frac { a _ { n } } { n + 1 } ( x - 1 ) ^ { n }$的收敛半径.
+	\item 求级数$\sum _ { n = 0 } ^ { \infty } \frac { ( n + x ) ^ { n } } { n ^ { n + x } }$的收敛域.
+	\item 求函数项级数$\sum _ { n = 1 } ^ { \infty } \frac { 2 ^ { n } \sin ^ { n } x } { n ^ { 2 } }$的收敛域.
+	\item 求函数项级数$\sum _ { n = 1 } ^ { \infty } \frac { 1 ^ { n } + 2 ^ { n } + \cdots + 50 ^ { n } } { n ^ { 2 } } \left( \frac { 1 - x } { 1 + x } \right) ^ { n }$的收敛域.
+	\item 对$p$讨论幂级数$\sum _ { n = 2 } ^ { \infty } \frac { x ^ { n } } { n ^ { p } \ln n }$的收敛域.
+	\item 求下列幂级数的收敛半径与收敛域.
+	\begin{enumerate}
+		\item [(1)]$\sum _ { n = 1 } ^ { \infty } \left( 1 - n \ln \left( 1 + \frac { 1 } { n } \right) \right) x ^ { n }$
+		\item [(2)]$\sum _ { n = 1 } ^ { \infty } \frac { \ln n \cdot ( x - a ) ^ { 2 n } } { 2 ^ { n } }$
+		\item [(3)]$\sum _ { n = 1 } ^ { \infty } \frac { 3 ^ { n } + ( - 2 ) ^ { n } } { n } ( x - 1 ) ^ { n }$
+		\item [(4)]$\sum _ { n = 1 } ^ { \infty } \left( \frac { 1 } { n ^ { 2 } } + ( - 1 ) ^ { n } + \sin n \right) x ^ { n }$
+	\end{enumerate}
+	\item 求$\sum _ { n = 0 } ^ { \infty } \frac { ( - 1 ) ^ { n } n ^ { 3 } } { ( n + 1 ) ! } x ^ { n }$的收敛区间及和函数.
+	\item 求$\sum _ { n = 0 } ^ { \infty } \frac { 1 } { 4 n + 1 } x ^ { 2 n }$级数的和函数.
+	\item 求$\sum _ { n = 0 } ^ { \infty } \frac { ( - 1 ) ^ { n } \left( n ^ { 2 } - n + 1 \right) } { 2 ^ { n } }$级数的和函数.
+	\item 设$I _ { n } = \int _ { 0 } ^ { \frac { \pi } { 4 } } \sin ^ { n } x \cos x \mathrm { d } x , n = 0,1,2 , \cdots$，求$\sum _ { m = 0 } ^ { \infty } I _ { n }$.
+	\item 求$\frac { 1 + \frac { \pi ^ { 4 } } { 2 ^ { 4 } \cdot 4 ! } + \frac { \pi ^ { 8 } } { 2 ^ { 8 } \cdot 8 ! } + \frac { \pi ^ { 12 } } { 2 ^ { 12 } \cdot 12 ! } + \ldots } { \frac { 1 } { 2 ! } + \frac { \pi ^ { 4 } } { 2 ^ { 4 } \cdot 6 ! } + \frac { \pi ^ { 8 } } { 2 ^ { 8 } \cdot 10 ! } + \frac { \pi ^ { 12 } } { 2 ^ { 12 } \cdot 14 ! } }$的值.
+	\item 求级数$\sum _ { n = 1 } ^ { \infty } \left( 1 + \frac { 1 } { 2 } + \cdots + \frac { 1 } { n } \right) x ^ { n }$的收敛域与和函数.
+	\item 设$a _ { 0 } = 1 , a _ { 1 } = - 2 , a _ { 2 } = \frac { 7 } { 2 } , a _ { n + 1 } = - \left( 1 + \frac { 1 } { n + 1 } \right) a _ { n } ( n = 2,3 , \cdots )$.证明当$|x|<1$时幂级数$\sum _ { n = 0 } ^ { \infty } a _ { n } x ^ { n }$收敛，并求和函数$S(x)$.
+	\item 给定三个幂级数$u = 1 + \frac { x ^ { 3 } } { 3 ! } + \frac { x ^ { 6 } } { 6 ! } + \cdots , v = x + \frac { x ^ { 4 } } { 4 ! } + \frac { x ^ { 7 } } { 7 ! } + \cdots , w = \frac { x ^ { 2 } } { 2 ! } + \frac { x ^ { 5 } } { 5 ! } + \frac { x ^ { 8 } } { 8 ! } + \cdots$，证明：$u ^ { 3 } + v ^ { 3 } + w ^ { 3 } - 3 u v w = 1$
+	\item 设$f _ { 0 } ( x ) = e ^ { x }$，对于$n = 0,1,2 , \cdots$，定义$f _ { n + 1 } ( x ) = x f _ { n } ^ { \prime } ( x )$.证明$\sum _ { n = 0 } ^ { \infty } \frac { f _ { n } ( x ) } { n ! } = e ^ { ex}$
+	\item 幂级数$\sum _ { n = 0 } ^ { \infty } a _ { n } x ^ { n }$的系数从某项起具有周期性.证明：此级数的和函数是有理函数.
+	\item 设$S ( x ) = \sum _ { n = 1 } ^ { \infty } \frac { 1 \cdot 4 \cdots ( 3 n - 2 ) } { 3 \cdot 6 \cdots ( 3 n ) } \left( \frac { x } { 2 } \right) ^ { n } , ( - 2 \leqslant x < 2 )$
+	\begin{enumerate}
+		\item [(1)]证明$S(x)$满足$\left( 1 - \frac { x } { 2 } \right) S ^ { \prime } ( x ) = \frac { 1 } { 6 } S ( x ) + \frac { 1 } { 6 }$;
+		\item [(2)]求和函数$S(x)$.
+	\end{enumerate}
+	\item 将$f ( x ) = \frac { 1 } { x ^ { 2 } }$展开成$(x-3)$的幂级数
+	\item 将$f ( x ) = \frac { 1 } { 4 } \ln \frac { 1 + x } { 1 - x } + \frac { 1 } { 2 } \arctan x - x$函数展开成$x$的幂级数.
+	\item 将$f ( x ) = \arctan \frac { 1 - 2 x } { 1 + 2 x }$函数展开成$x$的幂级数，并求级数$\sum _ { n = 0 } ^ { \infty } \frac { ( - 1 ) ^ { n } } { 2 n + 1 }$的和.
+	\item 将函数$e ^ { x } \sin x$展开成$x$的幂级数
+	\item 设$f ( x ) = \left\{ \begin{array} { l l } { \frac { x ^ { 2 } + 1 } { x } \arctan x , } & { x \neq 0 } \\ { 1 , } & { x = 0 } \end{array} \right.$函数，求：
+	\begin{enumerate}
+		\item [(1)]$f(x)$的麦克劳林展开式$\sum _ { n = 0 } ^ { \infty } a _ { n } x ^ { n } ( - 1 < x < 1 )$;
+		\item [(2)]幂级数$\sum _ { n = 0 } ^ { \infty } \left| a _ { 2 n } \right| x ^ { 2 n }$的和函数$S ( x ) ( - 1 < x < 1 )$.
+	\end{enumerate}
+	\item 将$f ( x ) = \frac { \pi } { 2 } \cdot \frac { e ^ { x } + e ^ { - x } } { e ^ { \pi } - e ^ { - \pi } }$在$[-\pi,\pi]$上展开为傅里叶级数，并求级数$\sum _ { n = 1 } ^ { \infty } \frac { ( - 1 ) ^ { n } } { 1 + ( 2 n ) ^ { 2 } }$的和.
+	\item 设$f(x)$是以$2\pi$为为周期的连续函数，其傅里叶系数为$a_{0},b_{n},c_{n}$.
+	\begin{enumerate}
+		\item [(1)] 求函数$G ( x ) = \frac { 1 } { \pi } \int _ { - \pi } ^ { \pi } f ( t ) f ( x + t ) \mathrm { d } t$的傅里叶级数$A_{0},B_{n},C_{n}$.
+		\item [(2)]利用(1)的结果证明巴塞瓦(Parseval)等式：$\frac { 1 } { \pi } \int _ { 0 } ^ { 2 \pi } ( f ( x ) ) ^ { 2 } \mathrm { d } x = \frac { a _ { 0 } ^ { 2 } } { 2 } + \sum _ { n = 1 } ^ { \infty } \left( a _ { n } ^ { 2 } + b _ { n } ^ { 2 } \right)$
+	\end{enumerate}
+\end{xiti}
+
+
+\section{综合题 8}
+\begin{enumerate}
+	\item 设$a_{n}=\int_{0}^{\frac{\pi}{2}} t\left|\frac{\sin n t}{\sin t}\right|^{3} \mathrm{d} t$，判断级数$\sum_{m=1}^{\infty} \frac{1}{a_{n}}$的敛散性.
+	\item 求级数$S=\sum_{n=1}^{\infty} \arctan \frac{2}{n^{2}}$的值.
+	\item 设$u_{n}=\frac{1}{(\sqrt{n+1}+\sqrt{n})^{p}} \ln \frac{n+1}{n-1}(p>0)$，判定级数$\sum_{n=1}^{\infty} u_{n}$的敛散性.
+	\item 讨论级数$\sum_{n=1}^{\infty} \frac{1}{n^{p}}\left(1-\frac{x \ln n}{n}\right)^{n}$的敛散性与参数$p,x$的关系.
+	\item 证明弗林克(Frink)判别法：设$\sum_{n=1}^{\infty} a_{n}$为正项级数，$\lim _{n \rightarrow \infty}\left(\frac{a_{n}}{a_{n-1}}\right)^{n}=k$存在，则当$k<\frac{1}{\mathrm{e}}$时，级数收敛；当$k>\frac{1}{\mathrm{e}}$时，级数发散.
+	
+	\item 证明：若正项级数$\sum_{n=1}^{\infty} a_{n}$收敛，则级数$\sum_{n=1}^{\infty} \frac{a_{n}}{a_{n}+a_{n+1}+\cdots}$发散
+	
+	\item 设$a_{1}=a>0, a_{n+1}=\frac{1}{2}\left(a_{n}+\frac{a}{a_{n}}\right)(n=1,2, \cdots)$.证明：级数$\sum_{n=1}^{\infty}\left[\left(\frac{a_{n+1}}{a_{n+2}}\right)^{2}-1\right]$收敛.
+	\item 设有一严格递增的正整数序列 (例如$1,2,3,4,5,6,10, 12, \cdots$).$u_{n}$表示此序列前$n$项的最小公倍数.求级数：$\sum_{n=1}^{\infty}\frac{1}{u_{n}}$收敛.
+	\item 求$\sum_{n=1}^{\infty} \frac{1}{(2 n+1)(3 n+1)}$的值.
+	\item 设$E(n)$表示能使$5^{k}$整除乘积$1^{1} 2^{2} 3^{3} \cdots n^{n}$的最大的整数$k$，计算$\lim _{n \rightarrow \infty} \frac{E(n)}{n^{2}}$.
+	
+	\item 讨论级数的敛散性：$1-\frac{1}{2^{p}}+\frac{1}{3^{q}}-\frac{1}{4^{p}}+\cdots-\frac{1}{(2 n)^{p}}+\frac{1}{(2 n+1)^{q}}+\cdots$.
+	\item 判定级数$\sum_{n=1}^{\infty}(-1)^{n-1} \frac{1}{2 n-1}\left(1+\frac{1}{2}+\cdots+\frac{1}{n}\right)$的敛散性.
+	
+	\item 判定级数$\sum_{n=1}^{\infty} \sin \pi(3+\sqrt{5})^{n}$的敛散性.
+	
+	\item 判定级数$\sum_{n=1}^{\infty} \frac{\cos n x-\cos (n+1) x}{n}$的敛散性.
+	\item 设$\sum_{n=1}^{\infty} a_{n}$收敛于$A$，证明$\sum_{n=1}^{\infty} \frac{a_{1}+2 a_{2}+\cdots+n a_{n}}{n(n+1)}=A$.
+	
+	\item 求$\lim _{m \rightarrow+\infty \atop n \rightarrow+\infty} \sum_{i=1}^{m} \sum_{j=1}^{n} \frac{(-1)^{i+j}}{i+j}$.
+	\item 判定下列反常积分的敛散性.
+	\begin{enumerate}
+		\item [(1)]$\int_{0}^{+\infty}(-1)^{\left[x^{2}\right]} d x$，([$\cdot$]为取整函数)
+		\item [(2)]$\int_{0}^{+\infty} \frac{d x}{1+x^{a} \sin ^{2} x}$
+	\end{enumerate}
+	
+	\item 令$A=\{(x, y) | 0 \leqslant x, y<1\}$，对任何$(x,y)\in A$，令$S(x, y)=\sum_{\frac{1}{2} \leq \frac{m}{n} \leqslant 2} x^{m} y^{n}$.这里的求和对一切满足所列不等式的正整数$m,n$进行.试计算$\lim\limits _{(x, y) \rightarrow(1, y) \in A}\left(1-x y^{2}\right)\left(1-x^{2} y\right) S(x, y)$
+	\item 当$r$取何值时，级数$\frac{1}{2}+r \cos x+r^{2} \cos 2 x+r^{3} \cos 4 x+r^{4} \cos 8 x+$的所有部分和对一切$x$都非负.
+	
+	\item 已知$a_{1}=1, a_{2}=1, a_{n+1}=a_{n}+a_{n-1} \quad(n=2,3, \cdots)$，试求级数$\sum_{n=1}^{\infty} a_{n} x^{n}$的收敛半径与和函数.
+	
+	\item 设$u_{0}=0, u_{1}=1, u_{n+1}=a u_{n}+b u_{n-1} \quad(n=1,2,3, \cdots)$，其中$a,b$是满足$a+b<1$的正的常数，求$\sum_{n=0}^{\infty} \frac{u_{n}}{n !} x^{n}$的和函数
+	篇！
+	
+	\item 设$a_{0}=3, a_{1}=5$，且对任何自然数$n>1$，有$n a_{n}=\frac{2}{3} a_{n-1}-(n-1) a_{n-1}$，证明：当$|x|<1$时级数$\sum_{n=0}^{\infty} a_{n} x^{n}$收敛，并求其和函数。
+	
+	\item 试证幂级数$\sum_{n=0}^{\infty} a_{n} x^{n}$逐项求导后所得的级数与原级数有相同的收敛半径.
+	\item 对于每一个正整数$n$，用$a(n)$表示$n$的3进位数中0的个数。试求$\sum_{n=1}^{\infty} \frac{x^{a(n)}}{n^{3}}$的收敛域
+	\item 幂级数$f(x)=\sum_{n=0}^{\infty} a_{n} x^{n}$的每一个系数$a_{n}$只取值0或1.证明：$f(x)$是有理函数的充要条件为$f(\frac{1}{2})$是有理数
+
+	\item 设$y=y(x)=\frac{1}{4}\left(1+x-\sqrt{1-6 x+x^{2}}\right)$，其幂级数展开式为$y=a_{1} x+a_{2} x^{2}+a_{3} x^{3}+\cdots$，证明该幂级数展开式的系数都是正整数
+	\item 将函数如$\frac{\ln \left(x+\sqrt{1+x^{2}}\right)}{\sqrt{1+x^{2}}}$展开为$x$的幂级数
+	\item 证明：$\sum_{n=1}^{\infty} \frac{1}{n}\left(\frac{2 x^{2}}{1+x^{2}}\right)^{n}=2 \sum_{n=1}^{\infty} \frac{x^{4 n-2}}{2 n-1}(|x|<1)$.
+	\item 证明：$\int_{0}^{1} x^{-x} \mathrm{d} x=\sum_{n=1}^{\infty}\left(\frac{1}{n}\right)^{n}$.
+	\item 设$f(x)$在$[-\pi,\pi]$上可积，并且平方可积，证明Bessel不等式：
+	\[\frac{1}{\pi} \int_{-\pi}^{\pi} f^{2}(x) \mathrm{d} x \geqslant \frac{a_{0}^{2}}{2}+\sum_{n=1}^{\infty}\left(a_{n}^{2}+b_{n}^{2}\right)\]
+	其中$a,b$是$f(x)$在$[-\pi,\pi]$上的傅里叶系数.
+	\item 设$f(x)$是以$2\pi$为周期的可积函数，其傅里叶系数为$a_{0}, a_{n}, b_{n}$，记$S_{0}(x)=a_{0} / 2$，$S_{n}(x)=\frac{a_{0}}{2}+\sum_{k=1}^{n}\left(a_{k} \cos k x+b_{k} \sin k x\right), \quad \sigma_{n}(x)=\frac{1}{n} \sum_{k=0}^{n-1} S_{k}(x)$.证明
+	\begin{enumerate}
+		\item [(1)]$S_{n}(x)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x+t) \frac{\sin (n+1 / 2) t}{\sin (t / 2)} \mathrm{d} t$;
+		\item [(2)]$\sigma_{n}(x)=\frac{1}{2 n \pi} \int_{-\pi}^{\pi} f(x+t)\left[\frac{\sin (n t / 2)}{\sin (t / 2)}\right]^{2} \mathrm{d} t$.
+	\end{enumerate}
+\end{enumerate}

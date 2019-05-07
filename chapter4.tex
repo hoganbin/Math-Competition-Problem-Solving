@@ -1,0 +1,128 @@
+\chapter{多元函数微分学}\label{cha:4}
+\section{多元函数的极限与连续}
+\begin{xiti}
+	\item 	设$u(x, y)=y^{2} F(3 x+2 y)$，其中，求$u(x,y)$.
+	\item 已知$z=\sqrt{y}+f(\sqrt{x}-1)$，若当$y=1$时，$z=x$，求函数$f(t)$和$z$.
+	\item 求下列各极限：
+	\begin{enumerate}
+		\item [(1)]$\lim _{x \rightarrow 0 \atop y \rightarrow 0} \frac{\left(x^{2}+y^{2}\right) \sin \left(x y^{2}\right)}{1-\cos \left(x^{2}+y^{2}\right)}$；
+		\item [(2)]$\lim _{x \rightarrow 0 \atop y \rightarrow 0} \ln (1+x y)^{\frac{1}{x+y}}$;
+		\item [(3)]$\lim _{x \rightarrow+\infty \atop y \rightarrow+\infty}\left(\frac{x y}{x^{2}+y^{2}}\right)^{x^{2}} \sin (x y)$.
+	\end{enumerate}
+	\item 讨论函数$f(x, y)=\left\{\begin{array}{ll}{\frac{(x y)^{n}}{x^{2}+y^{2}},} & {x^{2}+y^{2} \neq 0} \\ {0,} & {x^{2}+y^{2}=0}\end{array}\right.$在$(0,0)$的连续性.
+	\item 讨论函数$f(x, y)=\left\{\begin{array}{ll}{\frac{x \sin (x-2 y)}{x-2 y},} & {x \neq 2 y} \\ {0,} & {x=2 y}\end{array}\right.$的连续性.
+	\item 试证：若函数$f(x,y)$在点$P(x_{0},y_{0})$的某邻域$U(P)$内的两个偏导数$f_{x}(x,y)$与$f_{y}(x,y)$均有界，则$f(x,y)$在$U(P)$内连续.
+\end{xiti}
+
+
+
+\section{多元函数的偏导数与偏微分}
+\begin{xiti}
+	\item 设$S=\mathbf{R}^{2} \backslash\{(x, y) | x=0, y \geqslant 0\},  D=\{(x, y) | x>0, y>0\},  f(x, y)=\left\{\begin{array}{l}{y^{2},(x, y) \in D} \\ {0,(x, y) \in S \backslash D}\end{array}\right.$，试求$f_{x}(x, y),  f_{y}(x, y)$；并说明$f(x,y)$是否与$x$无关.
+	\item 证明：$f(x, y)=\sqrt{|x y|}$在点$(0,0)$连续，$f_{x}(0,0), f_{y}(0,0)$存在，但在点$(0,0)$不可微.
+	\item 设函数$f(x, y)=|x-y| g(x, y)$，其中$g(x,y)$在点$(0,0)$的某邻域内连续，试问：
+	\begin{enumerate}
+		\item [(1)] $g(0,0)$为何值时，偏导数$f_{x}(0,0), f_{y}(0,0)$存在？
+		\item [(2)]$g(0,0)$为何值时，$f(x,y)$在点$(0,0)$处可微.
+
+	\end{enumerate}
+	\item 设$P(x,y,z)$为曲面$S$上一点，$n$为$S$在点$P$处的法向量，点$A(a,b,c)$为空间中一定点(不在$S$上).试证函数$r=\sqrt{(x-a)^{2}+(y-b)^{2}+(z-c)^{2}}$在点$P$处沿$n$方向的方向导数等于$\vec{n}$与$\vec{PA}$夹角余弦的相反数，即$\frac{\partial r}{\partial \boldsymbol{n}}=-\cos (\vec{n}, \overrightarrow{P A})$.
+	\item 设$f(x,y)$在$\mathbf{R}^{2}$上可微，$\vec{l}_{1}, \vec{l}_{2}$是两个给定的方向，它们之间的夹角为$\varphi(0<\varphi<\pi)$.试证：$\left(\frac{\partial f}{\partial x}\right)^{2}+\left(\frac{\partial f}{\partial y}\right)^{2} \leqslant \frac{2}{\sin ^{2} \varphi}\left[\left(\frac{\partial f}{\partial l_{1}}\right)^{2}+\left(\frac{\partial f}{\partial l_{2}}\right)^{2}\right]$
+	\item 设$\triangle ABC$的外接圆半径为一定值，且$\angle A,\angle B,\angle C$所对的边长分别为$a,b,c$，试证：
+	$\frac{\mathrm{d}a}{\cos A}+\frac{\mathrm{d}b}{\cos B}+\frac{\mathrm{d} c}{\cos C}=0$.
+	\item 设$f(x,y)$可微，$l_{1}$与$l_{2}$是$\mathbf{R}^{2}$上一组线性无关的向量，试证：若$\frac{\partial f(x, y)}{\partial l_{i}} \equiv 0(i=1,2)$，则$f(x, y) \equiv\text{常数}$.
+	
+	\item 设$z=f(x,y)$在区域$D$有连续的偏导数，$\Gamma : x=x(t), y=y(t)(a \leqslant t \leqslant b)$是$D$中的光滑曲线，$\Gamma$的端点为$A,B$.若$f(A)=f(B)$，求证：存在点$M_{0}\left(x_{0}, y_{0}\right) \in \Gamma$，使得$\frac{\partial f\left(M_{0}\right)}{\partial l}=0$，其中$\vec{l}$是$\Gamma$在$M_{0}$点的切线的方向向量.
+	
+	\item 已知$\left(a x y^{3}-y^{2} \cos x\right) \mathrm{d} x+\left(1+b y \sin x+3 x^{2} y^{2}\right) \mathrm{d} y$为某函数$f(x,y)$的全微分，求$a,b$的值
+	\item 设函数$f(x,y)$可微，又$f(0,0)=0, f_{x}(0,0)=a, f_{y}(0,0)=b$，且$\varphi(t)=f\left[t, f\left(t, t^{2}\right)\right]$，求$\varphi'(0)$.
+	\item 设$u=f(x,y,z)$有连续的一阶偏导数，又函数$y=y(x)$与$z=z(x)$分别由下列两式确定：$\mathrm{e}^{x y}-x y=2$和$\mathrm{e}^{x}=\int_{0}^{x-z} \frac{\sin t}{t} \mathrm{d} t$，求$\frac{\mathrm{d} u}{\mathrm{d} x}$.
+	\item 设$x=\frac{1}{u}+\frac{1}{v},  y=\frac{1}{u^{2}}+\frac{1}{v^{2}}, z=\frac{1}{u^{3}}+\frac{1}{v^{3}}+\mathrm{e}^{x}$，求$\frac{\partial z}{\partial y}, \frac{\partial z}{\partial v}$.
+	\item 对于函数$F(x,y)$，如果存在常数$k$，使得对于任何$x,y$及$t>0$恒有$F(t x, t y)=t^{k} F(x, y)$成立则称$F(x,y)$是$k$次齐次函数。证明：可微函数$F(x,y)$是$k$次齐次函数的充要条件为对任何$x,y$恒有$x F_{1}(x, y)+y F_{2}(x, y)=k F(x, y)$成立.
+	\item 设$f(u,v)$具有二阶连续偏导数，且满足$\frac{\partial^{2} f}{\partial u^{2}}+\frac{\partial^{2} f}{\partial v^{2}}=1$，又$g(x, y)=f\left[x y, \frac{1}{2}\left(x^{2}-y^{2}\right)\right]$，求$\frac{\partial^{2} g}{\partial x^{2}}+\frac{\partial^{2} g}{\partial y^{2}}$.
+	\item 设函数$u(x,y)$二阶连续可微，且$u_{x x}-u_{y y}=0$与$u(x, 2 x)=x, u_{x}(x, 2 x)=x^{2}$，求$u_{x x}(x, 2 x), u_{x y}(x, 2 x), u_{y y}(x, 2 x)$.
+	\item 设$z^{3}-3 x y z=a^{3}$，求$\Delta z=z_{x x}+z_{y y}$.
+	\item 已知$C^{(2)}$函数$z=z(x, y)$满足方程$\frac{\partial^{2} z}{\partial x^{2}}+\frac{\partial^{2} z}{\partial x \partial y}+\frac{\partial z}{\partial x}=z$，试证：经变换$u=\frac{1}{2}(x+y)$，$v=\frac{1}{2}(x-y), w=z \mathrm{e}^{y}$，以$u,v$作自变量，$w$作因变量，方程可化为$\frac{\partial^{2} w}{\partial u^{2}}+\frac{\partial^{2} w}{\partial u \partial v}=2 w$.
+\end{xiti}
+
+\section{多元函数微分学的应用}
+\begin{xiti}
+	\item 	已知$f(x,y)$在点$(0,0)$的某邻域内连续，且$\lim _{x \rightarrow 0 \atop y \rightarrow 0} \frac{f(x, y)-x y}{\left(x^{2}+y^{2}\right)^{2}}=1$.试问：$f(x,y)$在点$(0,0)$是否取得极值，是极大还是极小值？
+	\item 求函数$z=\left(1+\mathrm{e}^{y}\right) \cos x-y \mathrm{e}^{y}$的极值点与极值
+	\item 设二次函数$y=\varphi(x)$(其中，$x_{2}$项的系数为1)的图形与$x$轴的交点为$\left(\frac{1}{2}, 0\right)$及$(B,0)$，其中$B=\lim _{x \rightarrow 0^{+}}\left(\frac{\mathrm{d}}{\mathrm{d} x} \int_{0}^{\sqrt{x}} 2 e^{\sin t} \mathrm{d} t-\frac{1}{\sqrt{x}}\right)$，求使二元函数（$I(\alpha, \beta)=\int_{0}^{1}[\varphi(x)-(\alpha x+\beta)]^{2} \mathrm{d} x$取得最小的实数$\alpha,\beta$的值.
+	
+	\item 设$z=f(x,y)$是由$x^{2}-6 x y+10 y^{2}-2 y z-z^{2}+18=0$确定的函数，求$z=z(x,y)$的极值点和极值。
+	
+	\item 设$z=f(x,y)$在有界闭区域$D$上有二阶连续偏导数，且$\frac{\partial^{2} z}{\partial x^{2}}+\frac{\partial^{2} z}{\partial y^{2}}=0, \frac{\partial^{2} z}{\partial x \partial y} \neq 0$，证明$z$的最大值只能在$D$的边界上取到.
+	
+	\item 求二元函数$z=f(x, y)=x^{2} y(4-x-y)$在由直线$x+y=6,x$轴和$y$轴所围成的闭区域$D$上的最大值与最小值.
+	
+	\item 证明：当$x\geq 0,y\geq 0$时，有$\frac{x^{2}+y^{2}}{4} \leqslant e^{x+y-2}$.
+	
+	\item 在椭球面$2 x^{2}+2 y^{2}+z^{2}=1$上求一点，使函数$f(x, y, z)=x^{2}+y^{2}+z^{2}$在该点沿方向$l=i-j$的方向导数最大.
+	
+	\item 某公司可通过电台及报纸两种方式做销售某种商品的广告，根据统计资料，销售收入$R$（万元）与电台广告费用$x_{1}$（万元）及报纸广告费用$x_{2}$（万元）之间的关系有如下经验公式：
+	\[R=15+14 x_{1}+32 x_{2}-8 x_{1} x_{2}-2 x_{1}^{2}-10 x_{2}^{2}\]
+	\begin{enumerate}
+		\item [(1)]在广告费用不限的情况下，求最优广告策略；
+		
+		\item [(2)]若提供的广告费用为1.5万元，求相应的最优广告策略.
+	\end{enumerate}
+	\item 从已知$\triangle ABC$的内部的点$P$向三条边作三条垂线，求使此三条垂线的乘积为最大的点$P$的位置.
+	
+	\item 在第一卦限内作椭球面$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$的切平面，使切平面与三个坐标面所围成的四面体体积最小，求切点坐标.
+	
+	\item 设四边形各边长一定，分别为$a,b,c,d$.问何时四边形面积最大？
+	
+	\item 设$f$为可微函数。证明：曲面$z=x f\left(\frac{y+1}{x}\right)+2$上任一点处的切平面都相交于一点。
+	\item 证明：曲面$z+\sqrt{x^{2}+y^{2}+z^{2}}=x^{3} f\left(\frac{y}{x}\right)$任意点处的切平面在$Oz$轴上的截距与切点到坐标原点的距离之比为常数，并求出此常数.
+	\item 证明旋转曲面$z=f\left(\sqrt{x^{2}+y^{2}}\right)\left(f^{\prime} \neq 0\right)$上任一点处的法线与旋转轴相交.
+	\item 在空间（平面）中，设$P_{1}, P_{2}$分别属于点集$T_{1}, T_{2}$，如果距离$\left|P_{1} P_{2}\right|$是$T_{1}, T_{2}$中任意两点距离中的最小（大）值，则称$P_{1}, P_{2}$是点集$T_{1}, T_{2}$的最近（远）点.则下列结论成立：
+	\begin{enumerate}
+		\item [(1)]在空间（平面）中，如果$\Gamma$是光滑闭曲线，点$P$是$\Gamma$上与点$Q$的最近（远）点，则直线$PQ$在点$P$与$\Gamma$垂直（即$PQ$与$\Gamma$在点$P$的切线垂直.如果两点$P$与$Q$重合，则规定$PQ$与任何直线垂直）
+		\item [(2)]在空间中，如果$\Sigma$是光滑闭曲面，点$P$是$\Sigma$上与点$Q$的最近（远）点.则直线$PQ$在点$P$与$\Sigma $垂直（即$PQ$与$\Sigma$在点$P$的切平面垂直.如果两点$P$与$Q$重合，则规定$PQ$与任何平面垂直）
+		\item [(3)]在空间（平面）中，点$P_{1},P_{2}$分别是光滑闭曲线$\Gamma_{1}, \Gamma_{2}$之间的最近（远）点，则直线$P_{1}P_{2}$是$\Gamma_{1}, \Gamma_{2}$的公垂线.
+		
+		\item [(4)]在空间中，点$P_{1},P_{2}$分别是光滑闭曲面$\Sigma_{1}, \Sigma_{2}$，之间的最近（远）点.则直线$P_{1}P_{2}$是$\Sigma_{1}, \Sigma_{2}$的公垂线
+		
+	\end{enumerate}
+\textbf{注}：以上结论统称为最近（远）距离的垂线原理.
+	 \item 设函数$u=F(x, y, z)$在条件$\chi(x,y,z)$与$\phi(x,y,z)$
+	 \item 设有一表面光滑的橄榄球，它的表面形状是由长半轴为6，短半轴为3的椭圆绕其长轴旋转所得的旋转椭球面.在无风的细雨天，将该球放在室外草坪上，使长轴在水平位置，求雨水从椭球面上流下的路线方程.
+\end{xiti}
+\section{综合题 4}
+\begin{enumerate}
+	\item 试求通过三条直线：
+	\[
+	\left\{\begin{array}{l}{x=0} \\ {y-z=0}\end{array}\right., \left\{\begin{array}{l}{x=0} \\ {x+y-z=-2}\end{array}\right., \left\{\begin{array}{l}{x=\sqrt{2}} \\ {y-z=0}\end{array}\right.
+	\]
+	的圆柱面方程.
+	\item 证明：若函数$f(x,y)$在区域$D$内分别对每一个变量$x$和$y$是连续的，而且对其中一个是单调的，则$f(x,y)$是$D$内的二元连续函数.
+	
+	\item 设$F(u,v)$可微，$y=y(x)$是由方程\[
+	F\left(x \mathrm{e}^{x+y}, f(x y)\right)=x^{2}+y^{2}
+	\]所确定的隐函数，其中$f(x)$满足$
+	\int_{1}^{x y} f(t) \mathrm{d} t=x \int_{1}^{y} f(t) \mathrm{d} t+y \int_{1}^{x} f(t) \mathrm{d} t, f(1)=1
+	$的连续函数，求$\frac{ \mathrm{d} y}{ \mathrm{d}x}$.
+	\item 设有方程$\frac{x^{2}}{a^{2}+u}+\frac{y^{2}}{b^{2}+u}+\frac{z^{2}}{c^{2}+u}=1$，试证：$\|\operatorname{grad} u\|^{2}=2 r \cdot \operatorname{grad} u$，其中$r=(x,y,z)$.
+	\item 取$x$作为$y$和$z$的函数，解方程$\left(\frac{\partial z}{\partial y}\right)^{2} \frac{\partial^{2} z}{\partial x^{2}}-2 \frac{\partial z}{\partial x} \frac{\partial z}{\partial y} \frac{\partial^{2} z}{\partial x \partial y}+\left(\frac{\partial z}{\partial x}\right)^{2} \frac{\partial^{2} z}{\partial y^{2}}=0$.
+	\item 记曲面$z=x^{2}+y^{2}-2 x-y$在区域$D :  x \geqslant 0, y \geqslant 0,2 x+y \leqslant 4$上的最低点$P$处的切平面为$\pi$，曲线$x^{2}+y^{2}+z^{2}=6$
+	$x+y+z=0$在点$Q(1,1,-2)$处的切线为$l$，求点$P$到直线$l$在平面$\pi$上的投影$l'$的距离$d$.
+	\item 设$a^{2}+b^{2}+c^{2} \neq 0$ ，求$w=(a x+b y+c z) \mathrm{e}^{-\left(x^{2}+y^{2}+z^{2}\right)}$ 在整个空间上的最大值与最小值.
+	
+	\item 设$a>b>1$ ，求证：$a^{b^{a}}>b^{a^{b}}$
+	\item 求椭球面$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$与平面$Ax+By+Cz=0$相交所得椭圆的面积.
+	
+	\item 在平面上有一$\triangle ABC$，三边长分别为$BC=a,CA=b,AB=c$，以此三角形为底，$h$为高，可做无数个三棱锥，试求其中表面积为最小者.
+	\item 设$f(x,y,z)$在空间区域$\Omega$上有连续偏导数，$\Gamma : x=x(t), y=y(t), z=z(t)(\alpha<t<\beta)$是$\Omega$中的一条光滑曲线.若$P_{0}$是$f(x,y,z)$在$\Gamma$上的极值点，求证：
+	\begin{enumerate}
+		\item [(1)]$\frac{\partial f\left(P_{0}\right)}{\partial \tau}=0$，其中$\tau$是$\Gamma$在$P_{0}$点的单位切向量.
+		\item [(2)]$\Gamma$在$P_{0}$点的切线位于等值面$f(x, y, z)=f\left(P_{0}\right)$在$P_{0}$点的切平面上.
+	\end{enumerate}
+	\item 过椭球面$a x^{2}+b y^{2}+c z^{2}=1$外一定点$(\alpha, \beta, \gamma)$作其切平面，再过原点作切平面的垂线，求垂足的轨迹方程.
+	
+	\item 设$\triangle ABC$的三个顶点$A,B,C$分别位于曲线$L_{1} : f(x, y)=0, L_{2} : g(x, y)=0,  L_{3} :  g(x, y)=0$上，试证：若$\triangle ABC$的面积达到最大值，则曲线在$A,B,C$处的法线都与三角形的对边垂直.
+	\item  在$A,B$两种物质的溶液中，我们想提取出物质$A$，可采取这样的方法：在$A,B$的溶液中加入第三种物质$C$，而$C$与$B$不互溶，利用$A$在$C$中的溶解度较大的特点，将$A$提取出来.这种方法就是化工中的萃取过程.
+	
+	现有稀水溶液的醋酸，利用苯作为溶剂，设苯的总体积为$m$，进行3次萃取来回收醋酸。若萃取时苯中的醋酸重量浓度与水溶液中醋酸重量浓度成正比.问每次应取多少苯量，方使水溶液中取出的醋酸最多？
+\end{enumerate}

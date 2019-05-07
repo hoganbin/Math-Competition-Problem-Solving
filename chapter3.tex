@@ -1,0 +1,196 @@
+\chapter{一元函数积分学}\label{cha:3}
+\section{不定积分}
+\begin{xiti}
+	\item 计算积分：
+	\begin{enumerate}
+		\item[(1)] $\int \frac {\mathrm{d}x } { 1 + \sin x + \cos x }$
+		\item[(2)]  $\int \frac { \mathrm { d } x } { \sqrt { 2 } + \sqrt { 1 + x } + \sqrt { 1 - x } }$
+	\end{enumerate}	
+		\item 计算积分：
+	\begin{enumerate}
+		\item[(1)] $\int \frac { \ln ( \tan x ) } { \sin x \cos x } \mathrm { d } x$
+		\item[(2)]  $\int \frac { 1 - \ln x } { ( x - \ln x ) ^ { 2 } }\mathrm{d}x$
+	\end{enumerate}	
+	\item 计算积分 $\int \max \left\{ x ^ { 3 } , x ^ { 2 } , 1 \right\} \mathrm { d } x$
+	\item 设不定积分$\int x f ( x ) \mathrm { d } x = \arcsin x + C$，求$\int \frac { 1 } { f ( x ) } \mathrm { d } x$.
+	\item 设不定积分$\int \frac { x ^ { 2 } + a x + 2 } { ( x + 1 ) \left( x ^ { 2 } + 1 \right) }\mathrm{d}x$的结果中不含反正切函数，计算该不定积分.
+	\item 计算积分：
+	\begin{enumerate}
+		\item[(1)] $\int \frac { 1 } { x \left( x ^ { 5 } + 1 \right) ^ { 2 } }\mathrm{d}x$
+		\item[(2)]  $\int \frac { x ^ { 4 } + 1 } { x ^ { 6 } + 1 }\mathrm{d}x$
+	\end{enumerate}	
+\item 计算积分：
+\begin{enumerate}
+	\item[(1)] $\int \frac { 1 } { x \sqrt { x ^ { 4 } + 2 x ^ { 2 } - 1 } } \mathrm { d } x$
+	\item[(2)]  $\int \frac { 1 } { \left( 1 + x ^ { 4 } \right) \sqrt [ 4 ] { 1 + x ^ { 4 } } } \mathrm { d } x$
+\end{enumerate}	
+\item 计算积分
+$\int \frac { \cos ^ { 2 } x } { \sin x + \sqrt { 3 } \cos x }\mathrm{d}x$
+
+\item 计算积分：
+\begin{enumerate}
+	\item[(1)] $\int \frac { x e ^ { \arctan x } } { \left( 1 + x ^ { 2 } \right) ^ { \frac { 3 } { 2 } } } \mathrm { d } x$
+	\item[(2)]  $\int e ^ { \sin x } \frac { x \cos ^ { 3 } x - \sin x } { \cos ^ { 2 } x }\mathrm{d}x$
+	\item[(3)]  $\int \frac { \arcsin x } { x ^ { 2 } } \cdot \frac { 1 + x ^ { 2 } } { \sqrt { 1 - x ^ { 2 } } } \mathrm { d } x$
+\end{enumerate}	
+\item 计算积分
+$\int \ln \left( 1 + \sqrt { \frac { 1 + x } { x } } \right) \mathrm { d } x ( x > 0 )$.
+\item 设$F(x)$为$f(x)$的原函数，当$x\geq 0$时，$f ( x ) F ( x ) = \frac { x e ^ { x } } { 2 ( 1 + x ) ^ { 2 } }$，已知$F(0)=1$，求$f(x)$.
+\item 设$y$是由方程$y ^ { 3 } ( x + y ) = x ^ { 3 }$所确定的隐函数，求$\int \frac {\mathrm{d}x } { y ^ { 3 } }$.
+\end{xiti}
+
+
+
+\section{定积分}
+\begin{xiti}
+	\item 设$f''(x)$连续，当$x\rightarrow 0$时，$F ( x ) = \int _ { 0 } ^ { x } \left( x ^ { 2 } - t ^ { 2 } \right) f ^ { \prime \prime } ( t ) \mathrm { d } t$的导数与$x^{2}$为等价无穷小，求$f''(0)$.
+	\item 设$f(x)$为非负连续函数，且当$x>0$时，有$\int _ { 0 } ^ { x } f ( x ) f ( x - t ) \mathrm { d } t = x ^ { 3 }$，求$f(x)$.
+	\item 设函数$f(x)$在点$x=0$处有$f ( 0 ) = 0 , \quad f ^ { \prime } ( 0 ) = - 2$，求$\lim _ { x \rightarrow 0 } \frac { \int _ { 0 } ^ { x } \ln \cos ( x - t ) \mathrm { d } t } { \sqrt { 1 - 2 f ^ { 2 } ( x ) } - 1 }$.
+	\item 设$f(x)$为连续函数，$f(a)\ne 0,f'(a)$存在，求$\lim _ { x \rightarrow a } \left[ \frac { 1 } { f ( a ) ( x - a ) } - \frac { 1 } { \int _ { a } ^ { x } f ( t ) \mathrm { d } t } \right]$.
+	\item 设$f(x)$连续，$\varphi ( x ) = \int _ { 0 } ^ { 1 } f ( x t ) \mathrm { d } t$且$\lim _ { x \rightarrow 0 } \frac { f ( x ) } { x } = A$($A$为常数)，求$\varphi'(x)$，并讨论$\varphi'(x)$在$x=0$处的连续性.
+	\item 确定方程$\int _ { 0 } ^ { x } \sqrt { 1 + t ^ { 2 } } \mathrm { d } t + \int _ { \cos x } ^ { 0 } \mathrm { e } ^ { - t ^ { 2 } } \mathrm { d } t = 0$在$(-\infty,+\infty)$内根的个数.
+	\item 计算下列积分：
+	\begin{enumerate}
+		\item [(1)]$\int _ { - 1 / 2 } ^ { 1 / 2 } \ln \left( \frac { 1 - x } { 1 + x } \right) \arcsin \sqrt { 1 - x ^ { 2 } } \mathrm { d } x$
+		\item [(2)]$\int _ { - \pi / 2 } ^ { \pi / 2 } \frac { \mathrm { e } ^ { x } } { 1 + \mathrm { e } ^ { x } } \sin ^ { 4 } x \mathrm { d } x$
+		\item [(3)]$\int _ { 0 } ^ { \pi } \frac { \mathrm { d } x } { 1 + a \cos x } ( 0 < a < 1 )$
+		\item [(4)]$\int _ { 0 } ^ { \pi } \frac { \pi + \cos x } { x ^ { 2 } - \pi x + 2014 } \mathrm { d } x$
+	\end{enumerate}
+\item 计算下列积分：
+\begin{enumerate}
+	\item [(1)]$\int _ { \frac { 1 } { 2 } } ^ { 2 } \left( 1 + x - \frac { 1 } { x } \right) \mathrm { e } ^ { x + \frac { 1 } { x } } \mathrm { d } x$
+	\item [(2)]$\int _ { 0 } ^ { 2 } \frac { x } { e ^ { x } + e ^ { 2 - x } }\mathrm { d } x$
+\end{enumerate}
+\item 定义$C(\alpha)$为$(1+x)^{\alpha}$在$x=0$处的幂级数展开式中$x^{2014}$的系数.计算积分
+\[\int _ { 0 } ^ { 1 } C ( - y - 1 ) \left( \frac { 1 } { y + 1 } + \frac { 1 } { y + 2 } + \frac { 1 } { y + 3 } + \cdots + \frac { 1 } { y + 2014 } \right) \mathrm { d } y\]
+\item 设$f ( x ) = \int _ { \sqrt { \pi } / 2 } ^ { \sqrt { x } } \frac { \mathrm { d } t } { 1 + \left( \tan t ^ { 2 } \right) ^ { \sqrt { 2 } } }$，求$\int _ { 0 } ^ { \pi / 2 } \frac { 1 } { \sqrt { x } } f ( x ) \mathrm { d } x$.
+\item 设$n$为自然数，$I _ { n } = \int _ { 0 } ^ { \frac { \pi } { 4 } } \tan ^ { 2 n } x \mathrm { d } x$，求(1)建立$I_{n}$关于下标$n$的递推公式;(2)计算$I_{n}$的值.
+\item 计算积分$\int _ { 0 } ^ { \pi } \frac { \sin ( 2 n + 1 ) x } { \sin x } \mathrm { d } x$\quad ($n$为整数).
+\item 设$f ( x ) \in C [ 0,1 ]$，记$I ( f ) = \int _ { 0 } ^ { 1 } x ^ { 2 } f ( x ) \mathrm { d } x , J ( f ) = \int _ { 0 } ^ { 1 } x ^ { 2 } ( f ( x ) ) ^ { 2 } \mathrm { d } t$.求函数$f(x)$使$I ( f ) - J ( f )$取得最大值.
+\item 设$|y|<1$，求$\int _ { - 1 } ^ { 1 } | x - y | \mathrm { e } ^ { x } \mathrm { d } x$.
+\item 设$f ( x ) = x , x \geqslant 0 , g ( x ) = \left\{ \begin{array} { l l } { \sin x , } & { 0 \leqslant x \leqslant \frac { \pi } { 2 } } \\ { 0 , } & { x > \frac { \pi } { 2 } } \end{array} \right.$，求$\Phi ( x ) = \int _ { 0 } ^ { x } f ( t ) g ( x - t ) \mathrm { d } t$的表达式($x\geq 0$).
+\item 证明：$\int _ { 1 } ^ { a } [ x ] f ^ { \prime } ( x ) \mathrm { d } x = [ a ] f ( a ) - ( f ( 1 ) + \cdots + f ( [ a ] ) )$，这里$a$大于1，$[x]$表示不超过$x$的最大整数，并求出$\int _ { 1 } ^ { a } \left[ x ^ { 2 } \right] f ^ { \prime } ( x ) \mathrm { d } x$与上式相当的表达式.
+\item 设函数$f(x)$在区间$[a,b]$上连续，在任意区间$[ \alpha , \beta ] ( a \leqslant \alpha \leqslant \beta \leqslant b )$上具有不等式$\left| \int _ { \alpha } ^ { \beta } f ( x ) \mathrm { d } x \right| \leqslant M | \beta - \alpha | ^ { 1 + \delta }$($M,\delta$是正的常数)，试证：$f(x)$恒等于零.
+\item 设$f(x)$在$[a,b]$上连续，证明：$f(x)$在$[a,b]$上恒为常数的充要条件是：对于任何$[a,b]$上的连续函数$g(x)$且$\int _ { a } ^ { b } g ( x ) \mathrm { d } x = 0$，总有$\int _ { a } ^ { b } f ( x ) g ( x ) \mathrm { d } x = 0$.
+\item 证明：$\int _ { 0 } ^ { x } \mathrm { e } ^ { x t - t ^ { 2 } } \mathrm { d } t = \mathrm { e } ^ { \frac { x ^ { 2 } } { 4 } } \int _ { 0 } ^ { x } \mathrm { e } ^ { - \frac { t ^ { 2 } } { 4 } } \mathrm { d } t$
+\item 证明等式$\int _ { 1 } ^ { a } f \left( x ^ { 2 } + \frac { a ^ { 2 } } { x ^ { 2 } } \right) \frac { \mathrm { d } x } { x } = \int _ { 1 } ^ { a } f \left( x + \frac { a ^ { 2 } } { x } \right) \frac { \mathrm { d } x } { x }$.
+\item 设函数$f(x),g(x)$在$[a,b]$上连续，证明：$\exists \xi \in (a,b)$使得
+\[g ( \xi ) \int _ { a } ^ { \xi } f ( x ) \mathrm { d } x = f ( \xi ) \int _ { \xi } ^ { b } g ( x ) \mathrm { d } x\]
+\item 设函数$f(x)$在$[0,\pi ]$上连续，且$\int _ { 0 } ^ { \pi } f ( x ) \mathrm { d } x = 0 , \int _ { 0 } ^ { \pi } f ( x ) \cos x \mathrm { d } x = 0$.试证明：在$(0,\pi )$内至少存在两个不同的点$\xi_{ 1 },\xi_{ 2 }$，使$f(\xi_{ 1 })=f(\xi_{ 2 })=0$.
+\item 设$f(x)$在$[-1,1]$上二阶导数连续，证明：$\int _ { - 1 } ^ { 1 } x f ( x ) \mathrm { d } x = \frac { 2 } { 3 } f ^ { \prime } ( \xi ) + \frac { 1 } { 3 } \xi f ^ { \prime \prime } ( \xi )$
+\item 设$f(x)=x-[x]$，($[x]$表示不超过$x$的最大整数)，求$\lim _ { x \rightarrow \infty } \frac { 1 } { x } \int _ { 0 } ^ { x } f ( t ) \mathrm { d } t$.
+\item 求$\lim _ { n \rightarrow \infty } \int _ { 0 } ^ { 1 } | \ln t | [ \ln ( 1 + t ) ] ^ { n } \mathrm { d } t$.
+\item 设函数$f(x)$在$[a,b]$上连续，且$f(x)>0$，求$\lim _ { n \rightarrow \infty } \int _ { a } ^ { b } x ^ { 2 } \sqrt [ n ] { f ( x ) } \mathrm { d } x$.
+\item 设$f(x)$是定义在$(-\infty,+\infty)$是以$T>0$为周期的连续函数，且$\int_{0}^{T} f(x) \mathrm{d} x=A$，求$\lim _{x \rightarrow+\infty} \frac{\int_{a}^{b} f(t) \mathrm{d} t}{x}$.
+\item 设$f(x)$在$[0,1]$上连续且严格单调减少，$f(0)=1,f(1)=0$.证明$\forall \delta \in(0,1)$，有$\lim _{n \rightarrow \infty} \frac{\int_{\delta}^{1}[f(x)]^{n} \mathrm{d} x}{\int_{0}^{\delta}[f(x)]^{n} \mathrm{d} x}=0$.
+\item 设$f(x)$在$[0,1]$上有连续导数，证明：$\int_{0}^{1} x^{n} f(x) \mathrm{d} x=\frac{f(1)}{n}+o\left(\frac{1}{n}\right)$.
+\item 设函数$f(x)$在$[0,2]$上连续，且$\int_{0}^{2} f(x) \mathrm{d} x=0, \int_{0}^{2} x f(x) \mathrm{d} x=a>0$.证明：$\exists \xi \in[0,2]$使$|f(\xi)| \geqslant a$.
+\item 设$f(x)=\int_{x}^{x+1} \sin \mathrm{e}^{t} \mathrm{d} x$，试证：$\mathrm{e}^{x}|f(x)| \leqslant 2$.
+\item 设$f(x),g(x)$在$[a,b]$上连续，且满足$\int_{a}^{x} f(t) \mathrm{d} t \geqslant \int_{a}^{x} g(t) \mathrm{d} t, x \in[a, b], \int_{a}^{b} f(t) \mathrm{d} t=\int_{a}^{b} g(t) \mathrm{d} t$.证明：$\int_{a}^{b} x f(x) \mathrm{d} x \leqslant \int_{a}^{b} x g(t) \mathrm{d} x$.
+\item 设$f(x) \in C[0,1]$，且单调减少，证明：对任给$\alpha\in (0,1)$，有$\int_{0}^{\alpha} f(x) \mathrm{d} x>\alpha \int_{0}^{1} f(x) \mathrm{d} x$.
+\item 设$n$为自然数，$f(x)=\int_{0}^{x}\left(t-t^{2}\right) \sin ^{2 n} t \mathrm{d} t$.证明：$f(x)$在$[0,+\infty)$可取得最大值.且$\max _{x \in[0,+\infty)} f(x) \leqslant \frac{1}{(2 n+2)(2 n+3)}$.
+\item 证明：$\int_{0}^{\frac{\pi}{2}} \frac{\sin x}{1+x^{2}} \mathrm{d} x \leqslant \int_{0}^{\frac{\pi}{2}} \frac{\cos x}{1+x^{2}} \mathrm{d} x$.
+\item 证明对任意连续函数$f(x)$，有$\max \left\{\int_{-1}^{1}\left|x-\sin ^{2} x-f(x)\right| \mathrm{d} x, \int_{-1}^{1}\left|\cos x^{2}-f(x)\right| \mathrm{d} x\right\} \geqslant 1$.
+\item 设在$[a,b]$上$\left|f^{\prime}(x)\right| \leqslant M, f\left(\frac{a+b}{2}\right)=0$，试证：$\int_{a}^{b}|f(x)| \mathrm{d} x \leqslant \frac{M}{4}(b-a)^{2}$.
+\item 已知$f(x)$在$[0,1]$上可导，且$\left|f^{\prime}(x)\right| \leqslant M$，证明$\left|\int_{0}^{1} f(x) \mathrm{d} x-\frac{1}{n} \sum_{k=1}^{n} f\left(\frac{k}{n}\right)\right| \leqslant \frac{M}{2 n}$.
+\item 设$f(x)$在$[a,b]$上连续，$f(x)$在$[a,b]$上存在且可积，且$f(a)=f(b)=0$.证明：$|f(x)| \leqslant \frac{1}{2} \int_{a}^{b}\left|f^{\prime}(x)\right| \mathrm{d} x(a<x<b)$.
+\item 设$f(x)$在$[0,1]$上有连续的导数，证明：$\forall x\in(0,1)$，有$|f(x)| \leqslant \int_{0}^{1}\left(|f(t)|+\left|f^{\prime}(t)\right|\right) \mathrm{d} t$.
+\item 设$f :[0,1] \rightarrow R$有连续导数并且$\int_{0}^{1} f(x) \mathrm{d} x=0$.证明：对每一个$b\in (0,1)$，$\left|\int_{0}^{b} f(x) \mathrm{d} x\right| \leqslant \frac{1}{8} \max _{0 \leqslant x \leqslant 1}\left|f^{\prime}(x)\right|$.
+\item 设$f''(x)>0.x\in [a,b]$，求证：$f\left(\frac{a+b}{2}\right)(b-a) \leqslant \int_{a}^{b} f(x) \mathrm{d} x \leqslant \frac{f(a)+f(b)}{2}(b-a)$.
+\item 设函数$f(x)$具有二阶导数，且$f''(x)\geq 0,x\in (-\infty,+\infty)$，函数$g(x)$在区间$[0,a]$上连续($a>0$)，证明：$\frac{1}{a} \int_{0}^{a} f[g(t)] \mathrm{d} t \geqslant f\left[\frac{1}{a} \int_{0}^{a} g(t) \mathrm{d} t\right]$.
+\item 设函数$f(x)$在$[0,1]$上连续，证明：$\left(\int_{0}^{1} \frac{f(x)}{t^{2}+x^{2}} \mathrm{d} x\right)^{2} \leqslant \frac{\pi}{2 t} \int_{0}^{1} \frac{f^{2}(x)}{t^{2}+x^{2}} \mathrm{d} x, t>0$.
+\item 设$f(x)$在$[a,b]$上连续且$f(x) \geqslant 0, \quad \int_{a}^{b} f(x) \mathrm{d} x=1,k$为任意实数，试证明：
+\[\left(\int_{a}^{b} f(x) \cos k x \mathrm{d}  x\right)^{2}+\left(\int_{a}^{b} f(x) \sin k x \mathrm{d}  x\right)^{2} \leqslant 1\]
+\item 求$\sum_{n=1}^{10^{9}} n^{-\frac{2}{3}}$的整数部分.
+\item 计算积分：
+\begin{enumerate}
+	\item [(1)]$\int_{0}^{+\infty} \frac{\arctan x}{\left(1+x^{2}\right)^{\frac{3}{2}}} \mathrm{d} x$
+	\item [(2)]$\int_{0}^{1} \sin (\ln x) \mathrm{d} x$
+\end{enumerate}
+\item 计算积分：
+\begin{enumerate}
+	\item [(1)]$\int_{\frac{1}{2}}^{\frac{3}{2}} \frac{\mathrm{d} x}{\sqrt{\left|x-x^{2}\right|}}$
+	\item [(2)]$\int_{0}^{a} x^{3} \cdot \sqrt{\frac{x}{a-x}} \mathrm{d} x,(a>0)$
+\end{enumerate}
+\item 计算积分$\int_{0}^{+\infty} \frac{\arctan (\pi x)-\arctan x}{x} \mathrm{d} x$.
+\item 设$f(x)=\mathrm{e}^{x^{2} / 2} \int_{x}^{+\infty} \mathrm{e}^{-t^{2} / 2} \mathrm{d} t(x>0)$，试证：$0<f(x)<\frac{1}{x}$.
+\item 设$a,b$均为常数，$a>-2,a\ne 0$，求$a,b$为何值时，使$\int_{1}^{+\infty}\left(\frac{2 x^{2}+b x+a}{x(2 x+a)}-1\right) \mathrm{d} x=\int_{0}^{1} \ln \left(1-x^{2}\right) \mathrm{d} x$.
+\item 判别积分$\int_{0}^{+\infty} \frac{\arctan a x}{x^{n}} \mathrm{d} x(a \neq 0)$的收敛性.
+\item 讨论下列积分的敛散性
+\begin{enumerate}
+	\item [(1)]$\int_{0}^{+\infty}\left(\frac{x}{x^{2}+p}-\frac{p}{1+x}\right) \mathrm{d} x(p \neq 0)$
+	\item [(2)]$\int_{1}^{+\infty} \frac{\mathrm{d} x}{x^{p} \ln ^{q} x}(p, q>0)$
+\end{enumerate}
+\item 设$f(x)$是$[1,+\infty)$上的连续正值函数，且$\lim _{x \rightarrow+\infty} \frac{\ln f(x)}{\ln x}=-\lambda$.证明若$\lambda>1$，则$\int_{1}^{+\infty} f(x) \mathrm{d} x$收敛.
+\item 证明$\int_{0}^{+\infty} \frac{\cos x}{1+x}  \mathrm{d} x$收敛，且$\left|\int_{0}^{+\infty} \frac{\cos x}{1+x} d x\right| \leqslant 1$.
+\item 设$f(x)$是$(-\infty,+\infty)$上的连续正值函数，且在任意有限区域$[-a,b]$上可积，又
+$\int_{-\infty}^{+\infty} \mathrm{e}^{-|x| / k} f(x) \mathrm{d} x \leqslant M$($M$为常数)对任意$k>0$成立.证明：$\int_{-\infty}^{+\infty} f(x) \mathrm{d} x$收敛
+
+\item 设$f(x)=\int_{0}^{x} \cos \frac{1}{t} \mathrm{d}t$，求$f^{\prime}(0)$.
+\item 设函数$f(x)$满足$f(1)=1$，且对$x>1$，有$f^{\prime}(x)=\frac{1}{x^{2}+f^{2}(x)}$，试证极限$\lim _{x \rightarrow \infty} f(x)$存在，且极限值小于$1+\pi / 4$.
+
+\item  设$f(x)=\int_{-1}^{x} t|t| \mathrm{d} t(x \geqslant 1)$，求曲线$y=f(x)$与$x$轴所围成的封闭图形的面积.
+\item 求常数$a$、$b$、$c$，使得曲线$y=a x^{2}+b x+c$满足：(1)通过点$(0,0)$及$(1,2)$；(2)$a<0$；(3)当$x>0$时，与抛物线$y=-x^{2}+2 x$有交点，且与$y=-x^{2}+2 x$所围成的图形面积最小
+\item 设函数$f(x)$在$[a,b]$上连续，且在$(a,b)$内$f(x)>0$.证明：在$(a,b)$内存在唯一的$\xi $使曲线$y=f(x)$与两直线$y=f(x)$与两直线$y=f(\xi )$及$x=a$所围平面图形$S_{1}$是曲线$y=f(x)$与两直线$y=f(\xi )$及$x=b$所围平面图形$S_{2}$的3倍.
+\item 设$D$是曲线$y=2 x-x^{2}$与$x$轴所围成的平面图形，直线$y=kx$把$D$分成$D_{1},D_{2}$两块，若$D_{1}$的面积$S_{1}$与$D_{2}$的面积$S_{2}$之比为$S_{1}:S_{2}=1:7$，求
+\begin{enumerate}
+	\item [(1)] 平面图形$D_{1}$的面积$S_{1}$与$D_{2}$的面积$S_{2}$.
+	\item [(2)] 平面图形$D_{1}$绕$y$轴旋转所得旋转体体积.
+\end{enumerate}
+
+\item 求心脏线$\rho=4(1+\cos \theta)$和直线$\theta=0, \theta=\frac{\pi}{2}$围成图形绕极轴旋转所成旋转体体积.
+\item  设$s$是单位圆周的任意一段整个位于第一象限的弧，$A$是弧段$s$与$x$轴之间的曲边梯形的面积，$B$是弧段$s$与$y$轴之间的曲边梯形的面积的面积.证明：$A+B$只依赖于弧$s$的长度而不依赖于弧$s$的位置.
+
+\item 已知圆$(x-b)^{2}+y^{2}=a^{2}$，其中$b>a>0$，求此圆绕$y$轴旋转所构成的旋转体体积和表面积.
+
+\item 一容器的外表面是曲线$y=x^{2}(0 \leqslant y \leqslant H)$绕$y$轴旋转一周所成的曲面，其容积为$70\pi m^{3}$，其中盛满了水，如果将水汲出$64\pi m^{3}$，问至少需要做多少功？
+
+\item 有一半径为$R$的实心球，其密度$\rho$是离开球心的距离$r$的函数.如果球对球内任意一点的引力量值是$kr^{2}$($k$为常数)，试求出函数$\rho=\rho(r)$.并且求出在球外面距球心为$r$远处的一点所受引力的量值.(对于一薄球壳体作如下假设：如果点$P$在壳体里面，则设壳体对$P$的引力值为零；如果点$P$在壳体外面，则设壳体对$P$的引力值为$m/r^{2}$，其中$m$是壳体的质量，$r$是$P$到球心的距离)
+\end{xiti}
+
+\section{综合题 3}
+\begin{enumerate}
+	\item 计算不定积分$\int x \arctan x \ln \left(1+x^{2}\right) \mathrm{d} x$.
+	\item 计算不定积分$I=\int \frac{\mathrm{e}^{-\sin x} \sin 2 x}{\sin ^{4}\left(\frac{\pi}{4}-\frac{x}{2}\right)} \mathrm{d} x$.
+	\item 计算定积分$\int_{0}^{3 \pi}\left|x-\frac{\pi}{2}\right| \cos ^{3} x \mathrm{d} x$.
+	\item 计算定积分$\int_{0}^{1} \frac{\arctan x}{1+x}\mathrm{d} x$.
+	\item 计算积分$\int_{0}^{\pi} \frac{q-\cos x}{1-2 q \cos x+q^{2}} \mathrm{d} x(|q| \neq 1)$.
+	
+	\item 求$I_{n}=\int_{0}^{\frac{\pi}{2}} \sin ^{n} x \sin n x \mathrm{d} x$($n$为自然数)的递推公式.
+	\item 计算积分$\int_{0}^{\frac{\pi}{2}} \ln \left(\cos ^{2} x+a^{2} \sin ^{2} x\right) \mathrm{d} x(a>0)$.
+	\item 设$f''(x)$连续，且$f^{\prime \prime}(x)>0, f(0)=f^{\prime}(0)=0$.试求极限$\lim _{x \rightarrow 0^{+}} \frac{\int_{0}^{u(x)} f(t) \mathrm{d} t}{\int_{0}^{x} f(t) \mathrm{d} t}$，其中$u(x)$是曲线$y=f(x)$在点$(x,f(x))$处的切线在$x$轴上的截距.
+	\item 刘维尔(Liouville)曾证明了：如果$f(x),g(x)$为有理函数，$g(x)$的阶大于0，且$\int f(x) \mathrm{e}^{g(x)} \mathrm{d} x$为初等函数，则$\int f(x) \mathrm{e}^{g(x)} \mathrm{d} x=h(x) \mathrm{e}^{g(x)}$，其中$h(x)$为有理函数.试应用刘维尔的这一结果证明$\int \mathrm{e}^{-x^{2}} \mathrm{d} x$不是初等函数.
+	
+	\item 设函数$f(x)$在闭区间$[a,b]$上具有连续导数，证明
+	\[
+	\lim _{n \rightarrow \infty} n\left[\int_{a}^{b} f(x) \mathrm{d} x-\frac{b-a}{n} \sum_{k=1}^{n} f\left(a+\frac{k(b-a)}{n}\right)\right]=\frac{b-a}{2}[f(a)-f(b)]
+	\]
+	
+	\item 设$a(x),b(x),c(x)$和$d(x)$都是$x$的多项式.试证：$\int_{1}^{x} a(x) c(x) \mathrm{d} x \cdot \int_{1}^{x} b(x) d(x) \mathrm{d} x-\int_{1}^{x} a(x) d(x) \mathrm{d} x \cdot \int_{1}^{x} b(x) c(x) \mathrm{d} x$可被$(x-1)^{4}（$除尽.
+	\item 设连续实函数$f$与$g$都是周期为1的周期函数，求证
+	\[\lim _{n \rightarrow \infty} \int_{0}^{1} f(x) g(n x) \mathrm{d} x=\left(\int_{0}^{1} f(x) \mathrm{d} x\right)\left(\int_{0}^{1} g(x) \mathrm{d} x\right)\]
+	
+	\item 在$0 \leqslant x \leqslant 1,0 \leqslant y \leqslant 1$上函数$K(x,y)$是正的且连续的，在$0 \leqslant x \leqslant 1$上函数$f(x)$和$g(x)$是正的且连续的，假设对于所有满足$0 \leqslant x \leqslant 1$的$x$有$\int_{0}^{1} f(y) K(x, y) \mathrm{d} y=g(x)$和$\int_{0}^{1} g(y) K(x, y) \mathrm{d} y=f(x)$.
+	证明：对于$0 \leqslant x \leqslant 1$，有$f(x)=g(x)$.
+	
+	\item (1)设函数$f$在闭区间$[0,\pi ]$上连续，且有$\int_{0}^{\pi} f(\theta) \cos \theta \mathrm{d} \theta=\int_{0}^{\pi} f(\theta) \sin \theta \mathrm{d} \theta=0$求证：在$(0,x)$内存在两点$\alpha,\beta$，使得$f(\alpha)=f(\beta)=0$.(2)设$D$是欧氏平面上任一有界的凸的开区域(即$D$是被某一圆域包含的连通开集，$D$内任意二点间的线段完全位于其内部).试应用(1)的结论证明：$D$的形心(重心)至少平分$D$内三条不同的弦.
+	
+	\item 设$f$在$[a,b]$上不恒为零，且其导数$f'$连续，并有$f(a)=f(b)$.试证明：存在点$\xi \in[a,b]$，使得$\left|f^{\prime}(\xi)\right|>\frac{1}{(b-a)^{2}} \int_{a}^{b} f(x) \mathrm{d} x$.
+	
+	\item 设$f(x)$是以$T$为周期的连续函数，$\int_{0}^{T} f(x) \mathrm{d} x=0,|f(x)-f(y)| \leqslant L|x-y|(-\infty<x, y<+\infty)$，证明：$|f(x)| \leqslant L T / 2$.
+	
+	\item 给定一个$[a,b]$上的函数列$\left\{f_{n}(x)\right\}$，并且$\int_{a}^{b} f_{n}^{2}(x) \mathrm{d} x=1$，证明：可以找到自然数$N$及数$c_{1}, c_{2}, \cdots, c_{N}$，使$\sum_{k=1}^{N} c_{k}^{2}=1, \max _{x \in[a, b]}\left|\sum_{k=1}^{N} c_{k} f_{k}(x)\right|>100$.
+	\item 试证：对于每个正整数$n$，有$\frac{2}{3} n \sqrt{n}<\sqrt{1}+\sqrt{2}+\dots+\sqrt{n}<\frac{4 n+3}{6} \sqrt{n}$
+	\item 计算$\int_{0}^{\infty}\left(x-\frac{x^{3}}{2}+\frac{x^{5}}{2 \cdot 4}-\frac{x^{7}}{2 \cdot 4 \cdot 6}+\cdots\right) \cdot\left(1+\frac{x^{2}}{2^{2}}+\frac{x^{4}}{2^{2} \cdot 4^{2}}+\frac{x^{6}}{2^{2} \cdot 4^{2} \cdot 6^{2}}+\cdots\right) \mathrm{d}x$
+	\item 证明：反常积分$\int_{1}^{+\infty} \sin x \sin x^{2} d x$收敛.
+	
+	
+	\item 证明：对于每个整数$n\geq 0$都有$1+(n / 1 !)+\left(n^{2} / 2 !\right)+\cdots+\left(n^{n} / n !\right)>\mathrm{e}^{n} / 2$.
+	
+	\textbf{提示：}可利用积分余项形式的泰勒公式：$\mathrm{e}^{x}=\sum_{k=0}^{n} \frac{x^{k}}{k !}+\frac{1}{n !} \int_{0}^{x}(x-t)^{n} \mathrm{e}^{t} \mathrm{d} t$，以及$n !=\int_{0}^{\infty} t^{n} \mathrm{e}^{-1} \mathrm{d} t$.
+	
+	\item 证明：边界由至多为数目有限的直线段组成，而面积不小于$\frac{\pi}{4}$的平面凸区域中，至少存在一对相距为1的点.
+	
+	\item 如果$x$轴、曲线$y=f(x)(f(x)>0)$、直线$x=0$与$x=a$所包围的面积的质量中心的$x$坐标$\tilde{x}$是由$\tilde{x}=g(a)$给定的.证明$f(x)=A \frac{g^{\prime}(x)}{(x-g(x))^{2}} \mathrm{e}^{\int \frac{\mathrm{d} x}{x-g(x)}}$.这里$A$是正的常数.
+	\item 有一个立体，两底位于水平面$z=h/2$与$z=-h/2$内，包围它的侧面是曲面。它的每一个水平截面的面积为$a_{0} z^{3}+a_{1} z^{2}+a_{2} z+a_{3}$(特殊情形系数可以为零).证明：它的体积为$V=(1 / 6) h\left(B_{1}+B_{2}+4 M\right)$.这里$B_{1}$与$B_{2}$是底的面积，$M$是正中间的水平截面的面积当$a_{0}=0$时，这个公式包含锥与球的体积公式.
+\end{enumerate}

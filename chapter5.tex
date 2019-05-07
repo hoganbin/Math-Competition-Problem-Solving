@@ -1,0 +1,139 @@
+\chapter{多元数量值函数积分学}\label{cha:5}
+\section{二重积分}
+\begin{xiti}
+	\item 设$D$为中心在原点，半径为$r$的圆域，求$\lim _{r \rightarrow 0} \frac{1}{\pi r^{2}} \iint_{D} \mathrm{e}^{x^{2}-y^{2}} \cos (x+y) \mathrm{d} x \mathrm{d} y$
+	\item 求$\iint_{D} x y\left[1+x^{2}+y^{2}\right] \mathrm{d} \sigma$，其中$D=\left\{(x, y) | x^{2}+y^{2} \leqslant \sqrt{2}, x \geqslant 0, y \geqslant 0\right\}$，其中$[\cdot]$为取整函数.
+	\item 计算$\int_{0}^{1} \mathrm{d} x \int_{\sqrt{x}}^{x} \sin \frac{\pi x}{2 y} \mathrm{d} y+\int_{2}^{4} \mathrm{d} x \int_{\sqrt{x}}^{2} \sin \frac{\pi x}{2 y} \mathrm{d} y$.
+	\item 计算二重积分$\iint_{D} \mathrm{e}^{\max \left\{x^{2}, y^{2}\right\rangle} \mathrm{d} x \mathrm{d} y$，其中$D=\{(x, y)|0 \leqslant x \leqslant 1, \quad 0 \leqslant y \leqslant 1|\}$.
+	\item 设函数$f(x)$在$[0,1]$上连续，并设$\int_{0}^{1} f(x) \mathrm{d} x=A$，求$I=\int_{0}^{1} \mathrm{d} x \int_{x}^{1} f(x) f(y) \mathrm{d} y$.
+	\item 计算积分$\iint_{D}(x+y) \mathrm{d} x \mathrm{d}y$，其中$D=\left\{(x, y) | x^{2}+y^{2} \leqslant 2 x+2 y\right\}$.
+	
+	\item 计算$\int_{0}^{a} \mathrm{d} x \int_{-x}^{-a+\sqrt{a^{2}-x^{2}}} \frac{1}{\sqrt{x^{2}+y^{2}}} \frac{1}{\sqrt{4 a^{2}-x^{2}-y^{2}}} \mathrm{d} y (a>0)$
+	\item 计算$\iint_{D} |\sin (x-y) | \mathrm{d} \sigma, D : 0 \leqslant x \leqslant y \leqslant 2 \pi$
+	\item 计算积分$\iint_{D}(x+y) \mathrm{d} x \mathrm{d}y$，其中$D=\left\{(x, y) | y^{2} \leqslant x+2, x^{2} \leqslant y+2\right\}$.
+	\item 已知$f(x,y)$具有二阶连续偏导数，且$f(1, y)=f(x, 1)=0,  \iint_{D} f(x, y) \mathrm{d} x \mathrm{d} y=a$，其中$D=\{(x, y) | 0 \leqslant x \leqslant 1,0 \leqslant y \leqslant 1\}$，计算二重积分$I=\iint_{D} x y f_{x y}(x, y) \mathrm{d} x \mathrm{d} y$.
+	\item 设$D$是由直线$x+y=1$与两坐标轴围成的区域，求$\iint_{D} \frac{(x+y) \ln (1+y / x)}{\sqrt{1-x-y}} d x d y$.	
+	
+	\item 计算二重积分$\iint_{D} \frac{x^{2}}{y} \sin (x y) \mathrm{d} \sigma$，其中$D=\left\{(x, y) | 0<\frac{\pi y}{2} \leqslant x^{2} \leqslant \pi y, \quad 0<x \leqslant y^{2} \leqslant 2 x\right\}$.
+	\item 设有一半径为$R$，高维$H$的圆柱形容器，盛有高$\frac{2}{3}H$的水，放在离心机上高速旋转，因受离心力的作用，水面呈抛物面形，问当水刚要溢出容器时，液面的最低点在何处？
+	
+	\item 求曲面$(z+1)^{2}=(x-z-1)^{2}+y^{2}$与平面$z=0$所围成立体的体积.
+	
+	\item 设$f(x)$在$(-\infty,+\infty)$上连续，且$f\left(t\right)=\iint\limits_{x^2+y^2\leq t^2}{\left(x^2+y^2\right)}f\left(\sqrt{x^2+y^2}\right)\textrm{d}x\textrm{d}y+t^4$.求$f(t)$.
+	\item 	设函数$f(t)$在$[0,+\infty)$上连续，且满足方程$f\left(t\right)=\textrm{e}^{4\pi t^2}+\iint\limits_{x^2+y^2\leq 4t^2}{f\left(\frac{1}{2}\sqrt{x^2+y^2}\right)\textrm{d}x\textrm{d}y}$.
+	
+	\item 设$D : 0 \leqslant x \leqslant 2,0 \leqslant y \leqslant 2$
+	\begin{enumerate}
+		\item [(1)] 求$B=\iint_{D}|x y-1| \mathrm{d} x \mathrm{d} y$
+		\item [(2)]设$f(x,y)$在$D$上连续，且$\iint_{D} f(x, y) \mathrm{d} x \mathrm{d} y=0, \iint_{D} x y f(x, y) \mathrm{d} x \mathrm{d} y=1$，试证：存在$(\xi, \eta) \in D$，使$|f(\xi, \eta)| \geqslant \frac{1}{B}$
+	\end{enumerate}
+	\item 设$f(x) \in C[0,1]$且正值递减，试证：$\frac{\int_{0}^{1} x f^{2}(x) \mathrm{d} x}{\int_{0}^{1} x f(x) \mathrm{d} x} \leqslant \frac{\int_{0}^{1} f^{2}(x) \mathrm{d} x}{\int_{0}^{1} f(x) \mathrm{d} x}$
+	\item 证明：$\frac{\pi}{4}\left(1-\mathrm{e}^{-1}\right)<\left(\int_{0}^{1} \mathrm{e}^{-x^{2}} \mathrm{d} x\right)^{2}<\frac{\pi}{4}\left(1-\mathrm{e}^{-\sqrt{2}}\right)$
+	\item 证明1$\leqslant \iint_{D}\left(\cos x^{2}+\sin y^{2}\right) \mathrm{d} x \mathrm{d} y \leqslant \sqrt{2}$，其中$D : 0 \leqslant x \leqslant 1,0 \leqslant y \leqslant 1$.
+	\item 	设$f(x) \in C[0,+\infty)$，且满足$\forall x, y \geqslant 0$，有$f(x) f(y) \leqslant x f\left(\frac{y}{2}\right)+y f\left(\frac{x}{2}\right)$，试证：$\int_{0}^{x} f(t) \mathrm{d} t \leqslant 2 x^{2}$
+\end{xiti}
+
+
+
+\section{三重积分}
+\begin{xiti}
+	\item 	求由下列曲面所围的体积$
+	\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1, \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=\frac{z}{c}$
+	\item 计算$
+	I=\int_{0}^{1} \mathrm{d} x \int_{0}^{1-x} \mathrm{d} z \int_{0}^{1-x-z}(1-y) \mathrm{e}^{-(1-y-z)^{2}} \mathrm{d} y$
+	\item 设f（x）在闭区间[0，1]上连续，且ff（x）dx=m.试求
+	\item 设三元函数$f(x,y,z)$连续，且$\int_{0}^{1} \mathrm{d} x \int_{0}^{\sqrt{1-x^{2}}} \mathrm{d} y \int_{\frac{1}{4}\left(x^{2}+y^{2}\right)}^{\frac{1}{4}} f(x, y, z) \mathrm{d} z=\iiint_{\Omega} f(x, y, z) \mathrm{d} V$.在积分区域$\Omega$的边界曲面$S$上求一点$P\left(x_{0}, y_{0}, z_{0}\right)$，使$S$在点$P$处的切平面$\pi$经过点$Q_{1}(1,-1,-1)$和$Q_{2}(3,0,2)$.
+	
+	\item 设有一半径为$R$的球形物体，其内任意一点$P$处的体密度$\rho=\frac{1}{\left|P P_{0}\right|}$，其中$P_{0}$为一定点，且$P_{0}$到球心的距离$r_{0}$大于$R$，求该物体的质量.
+	\item 求曲线$AB$的方程，使图形$QABC$绕$x$轴旋转所形成的旋转体的重心的横坐标等于$B$点的横坐标的$\frac{4}{5}$
+	\item 求密度为常数$\mu $的球体(半径为$R$)，对于它的某条切线的转动惯量.
+	\item 在某平地上向下挖一个坑，坑分为上下两部分，上半部分是底面半图5.21径与高度均为$a$圆柱形，下半部分是半径为$a$的半球.若某点泥土的密度为$ \mu=\rho^{2} / a^{2}$，其中$\rho$为此点离坑中心轴的距离，求挖此坑需做的功.
+	
+	\item 一均匀圆锥体高为$h$，半顶角为$\alpha$.求圆锥体对位于其顶点处且质量为$m$的质点的引力.
+	
+	\item 设函数$f(x)$连续且恒大于零，记
+	\[
+	F\left(t\right)=\frac{\iiint\limits_{\Omega\left(t\right)}{f\left(x^2+y^2+z^2\right)\textrm{d}V}}{\iint\limits_{D\left(t\right)}{f\left(x^2+y^2\right)\textrm{d}\sigma}},G\left(t\right)=\frac{\iint\limits_{D\left(t\right)}{f\left(x^2+y^2\right)\textrm{d}\sigma}}{\int_{-t}^t{f\left(x^2\right)\textrm{d}x}}
+	\]
+	其中$
+	\Omega(t)=\left\{(x, y, z) | x^{2}+y^{2}+z^{2} \leqslant t^{2}\right\}, D(t)=\left\{(x, y) | x^{2}+y^{2} \leqslant t^{2}\right\}$
+	\begin{enumerate}
+		\item [(1)]讨论$F(t)$在$(0,+\infty)$上的单调性.
+		\item [(2)]证明：当$t>0$时，$F(t)>\frac{2}{\pi} G(t)$
+	\end{enumerate}
+\end{xiti}
+
+
+\section{第一型曲线与曲面积分}
+\begin{xiti}
+	\item 	计算$\oint_{L}\left(2 x^{2}+3 y^{2}\right) \mathrm{d} s$，其中$L$为$x^{2}+y^{2}=2(x+y)$.
+	\item 计算$\oint_{L}\left(x^{3}+z\right) \mathrm{d} s$，其中$L$为圆柱面$x^{2}+y^{2}=x$与圆锥面$z=\sqrt{x^{2}+y^{2}}$的交线.
+	
+	\item 求八分之一球面$x^{2}+y^{2}+z^{2}=R^{2}, x \geqslant 0, y \geqslant 0, z \geqslant 0$的边界曲线的质心.设曲线的密度为1.
+	\item 求柱面$ x^{\frac{2}{3}}+y^{\frac{2}{3}}=1$在平面$z=0$与马鞍面$z=xy$之间部分的面积
+	\item 计算$I=\oint_{\Gamma}(x y+y z+z x) \mathrm{d} s$.其中$\Gamma : \left\{\begin{array}{l}{x^{2}+y^{2}+z^{2}=4} \\ {x+y+z=1}\end{array}\right.$
+	\item 	计算球面$x^{2}+y^{2}+z^{2}=a^{2}$包含在柱面$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1(b \leq a)$内那部分的面积
+	\item 计算曲面积分$\iint\limits_{x^2+y^2+y^2=1}{\left(ax+by+cz\right)^2\textrm{d}S}$.
+	
+	\item 求$F(t)=\iint\limits_{x+y+z=t} f(x, y, z) \mathrm{d} S$，其中$f\left(x,y,z\right)=\left\{\begin{matrix}
+	1-x^2-y^2-z^2,&x^2+y^2+z^2\le 1\\
+	0,&		x^2+y^2+z^2>1\\
+	\end{matrix}\right. $
+	
+	\item 已知球$A$的半径为$R$，另一半径为$r$的球$B$的中心在球$A$的表面上($r<2R$).
+	\begin{enumerate}
+		\item [(1)]求球$B$被夹在球$A$内部的表面积：
+		\item [(2)]问$r$值为多少时这表面积为最大？并求最大表面积的值.
+	\end{enumerate}	
+	\item 在半径为$R$的圆柱体上，镗上一个半径为$r(r\leq R)$的圆柱形的孔，两轴成直角.
+	\begin{enumerate}
+		\item [(1)]证明：小圆柱套上大圆柱的表面的面积为$S=8 r^{2} \int_{0}^{1} \frac{1-v^{2}}{\sqrt{\left(1-v^{2}\right)\left(1-m^{2} v^{2}\right)}} \mathrm{d} v$，这里$m=r/R$.
+		\item [(2)]如果$K=\int_{0}^{1} \frac{\mathrm{d} v}{\sqrt{\left(1-v^{2}\right)\left(1-m^{2} v^{2}\right)}},  E=\int_{0}^{1} \sqrt{\frac{1-m^{2} v^{2}}{1-v^{2}}} \mathrm{d} v$.证明：$S=8\left[R^{2} E-\left(R^{2}-r^{2}\right) K\right]$
+	\end{enumerate}
+	
+		
+	\item 	设$\Sigma$为椭球面$\frac{x^{2}}{2}+\frac{y^{2}}{2}+z^{2}=1$的上半部分，点$P(x, y, z) \in \Sigma$，$\pi $为$\Sigma$在点$P$处的切平面，$\rho(x, y, z)$是点$O(0,0,0)$到平面元的距离，求$\iint\limits_{\Sigma} \frac{z}{\rho(x, y, z)} \mathrm{d} S$.
+	
+	\item 求高度为$2h$，半径为$R$，质量均匀的正圆柱面对柱面中央横截面一条直径的转动惯量
+	\item  设球面$\Sigma : x^{2}+y^{2}+z^{2}=a^{2}$的密度等于点到$xOy$平面的距离，求球面被柱面$x^{2}+y^{2}=a x$截下部分曲面的重心.
+	
+\end{xiti}
+\section{综合题 5}
+\begin{enumerate}
+	\item 计算积分$\iint_{D} \frac{a \sqrt{f(x)}+b \sqrt{f(y)}}{\sqrt{f(x)}+\sqrt{f(y)}} d \sigma$ ，其中$D=\left\{(x, y) | x^{2}+y^{2} \leqslant 4, x \geqslant 0, y \geqslant 0\right\}$.
+	\item 计算积分$\iint_{D} \sqrt{\left[y-x^{2}\right]} \mathrm{d} x \mathrm{d} y$ ，其中$D=\left\{(x, y) | x^{2} \leqslant y \leqslant 4\right\}$，$[\cdot]$为取整函数.
+	\item $f(x,y)$是$\left\{(x, y) | x^{2}+y^{2} \leqslant 1\right\}$上二次连续可微函数，满足$\frac{\partial^{2} f}{\partial x^{2}}+\frac{\partial^{2} f}{\partial y^{2}}=x^{2} y^{2}$，计算积分$I=\iint\limits_{x^{2}+y^{y} \leqslant 1}\left(\frac{x}{\sqrt{x^{2}+y^{2}}} \cdot \frac{\partial f}{\partial x}+\frac{y}{\sqrt{x^{2}+y^{2}}} \cdot \frac{\partial f}{\partial y}\right) \mathrm{d} x \mathrm{d} y$
+	\item 设二元函数$f(x, t)=\frac{\int_{0}^{\sqrt{t}} \mathrm{d} x \int_{x^{2}}^{t} \sin y^{2} \mathrm{d} y}{\left[\left(\frac{2}{\pi} \arctan \frac{x}{t^{2}}\right)^{x}-1\right] \arctan t^{\frac{3}{2}}}$，计算二次极限$\lim _{t \rightarrow 0^{+}} \lim _{x \rightarrow+\infty} f(x, t)$
+	\item 设$f(x)\in C[a,b]$，而在$[a,b]$之外等于0，记$\varphi(x)=\frac{1}{2 h} \int_{x-h}^{x+h} f(t) \mathrm{d} t(h>0)$，试证：$\int_{a}^{b}|\varphi(t)| \mathrm{d} t \leqslant \int_{a}^{b}|f(t)| \mathrm{d} t$
+	
+	\item 设$p(x),f(x),g(x)$是区间$[a,b]$上的可积函数，且$p(x)$非负，$f(x)$与$g(x)$有相同的单调性.证明：$\int_{a}^{b} p(x) f(x) \mathrm{d} x \int_{a}^{b} p(x) g(x) \mathrm{d} x \leqslant \int_{a}^{b} p(x) \mathrm{d} x \int_{a}^{b} p(x) f(x) g(x) \mathrm{d} x$
+	\item 设$F(x)=\frac{x^{4}}{\mathrm{e}^{x^{3}}} \int_{0}^{x} \int_{0}^{x-u} \mathrm{e}^{u^{3}+v^{3}} \mathrm{d} u \mathrm{d} v$，求$\lim _{x \rightarrow \infty} F(x)$或者证明它不存在
+	
+	\item 设$D : x^{2}+y^{2} \leqslant 1$，证明不等式是$\frac{61}{165} \pi \leqslant \iint_{D} \sin \sqrt{\left(x^{2}+y^{2}\right)^{3}} \mathrm{d} x \mathrm{d} y \leqslant \frac{2}{5} \pi$.
+	\item 设$f(x,y)$在区域$D : a \leqslant x \leqslant b, \varphi(x) \leqslant y \leqslant \phi(x)$上可微，其中$\varphi(x), \phi(x)$在$[a,b]$上连续，且$f(x, \varphi(x))=0$，证明：$\exists K>0$，使得$\iint_{D} f^{2}(x, y) \mathrm{d} x \mathrm{d} y \leqslant K \iint_{D}\left(\frac{\partial f}{\partial y}\right)^{2} \mathrm{d} x \mathrm{d} y$.
+	\item 令$f(x)$是定义在区间$[0,1]$上的一个实值连续函数.证明：
+\[
+\int_{0}^{1} \int_{0}^{1}|f(x)+f(y)| \mathrm{d} x \mathrm{d} y \geqslant \int_{0}^{1}|f(x)| \mathrm{d} x
+\]
+	
+	\item 设函数$f(x,y)$在$
+	D : 0 \leqslant x \leqslant 1,0 \leqslant y \leqslant 1
+	$连续，对任意$(a,b)\in D$，设$D(a,b)$是以$(a,b)$（为中心含于$D$内且各边与$D$的边平行的最大正方形，若总有$
+	\iint_{D(a, b)} f(x, y) \mathrm{d} x \mathrm{d} y=0
+	$，证明在$D$上$f(x, y) \equiv 0$.
+	
+	\item 计算积分$\iiint_{\Omega} \sqrt{x^{2}+y^{2}+z^{2}} \mathrm{d}x \mathrm{d} y \mathrm{d}z$，其中$\Omega$是由曲线$\Gamma : \left\{\begin{array}{l}{x^{2}+z^{2}=x} \\ {y=\sqrt{x^{2}+z^{2}}}\end{array}\right.$绕$z$轴旋转一周所成曲面所围成的区域
+	
+	\item 设$f(x)$在$[0,+\infty)$上连续可导，$f(x)\ne 0$且$\lim _{x \rightarrow+\infty} \frac{x f^{\prime}(x)}{f(x)}=c>0$.记
+	\[F(t)=\iiint\limits_{x^{2}+y^{2}+z^{2} \leqslant t^{2}} f\left(\sqrt{x^{2}+y^{2}+z^{2}}\right) \mathrm{d} V,G(t)=\iint\limits_{x^{2}+y^{2}} f\left(\sqrt{x^{2}+y^{2}}\right) \mathrm{d} \sigma\]
+	试求函数$h(x)$使得$\lim _{t \rightarrow+\infty} \frac{F(t)}{h(t) G(t)}=1$.
+	
+	\item 设椭球$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}} \leqslant 1(a>b>c>0)$的密度为1，求它对过原点的任一直线$L : \frac{x}{l}=\frac{y}{m}=\frac{z}{n}$的转动惯量（其中$l^{2}+m^{2}+n^{2}=1$），并求此转动惯量的最大、最小值.
+	\item 求曲线$L_{1} : y=\frac{1}{3} x^{3}+2 x(0 \leqslant x \leqslant 1)$绕直线$L_{2} : y=\frac{4}{3} x$旋转所生成旋转曲面的面积.
+	
+	
+	\item 设曲线$C : y=\sin x, 0 \leqslant x \leqslant \pi$，证明：$\frac{3 \sqrt{2}}{8} \pi^{2} \leqslant \int_{C} x \mathrm{d} s \leqslant \frac{\sqrt{2}}{2} \pi^{2}$.
+	\item 设曲面$\Sigma:x^{2}+y^{2}+z^{2}=2(x+y+z)$，计算$\oiint\limits_{\Sigma}(x+y+1)^{2} \mathrm{d} S$.
+	
+	\item 设曲面$\Sigma$为球面$x^{2}+y^{2}+z^{2}=a^{2},  M_{0}\left(x_{0}, y_{0}, z_{0}\right)$是空间中任意一点，计算曲面积分$\oiint\limits_{\Sigma} \frac{\mathrm{d} S}{\rho}$，其中$\rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}+\left(z-z_{0}\right)^{2}}$.
+\end{enumerate}

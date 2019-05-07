@@ -1,0 +1,125 @@
+\chapter{一元函数微分学}\label{cha:2}
+\section{导数、微分的概念与计算}
+\begin{xiti}
+	\item 设$f(x)$可导，$F ( x ) = f ( x ) ( 1 + | \sin x | )$	，若$F(x)$在$x=0$处可导，求$f(0)$.
+	\item 设函数$f(x)$在$x=0$可导，且对所有$xy\ne 1$的实数$x,y$，都有$f ( x ) + f ( y ) + f \left( \frac { x + y } { 1 - x y } \right)$，求证$f(x)$在$(-\infty,+\infty)$内处处可导，并求$f(x)$的表达式.
+	\item 设$f : I \rightarrow \mathrm { R }$是任一函数，$x_{0}\in I$，证明$f(x)$在$x_{0}$处可导的充要条件是：存在一个函数$\varphi : I \rightarrow \mathrm { R }$，使
+	\begin{enumerate}
+		\item[(1)] $f ( x ) - f \left( x _ { 0 } \right) = \varphi ( x ) \left( x - x _ { 0 } \right) , \forall x \in I$
+		\item[(2)]$\varphi$在$x_{0}$处连续，且 $f ^ { \prime } \left( x _ { 0 } \right) = \varphi \left( x _ { 0 } \right)$.
+	\end{enumerate}
+	\item 设曲线$y=f(x)$在原点与$y=\sin x$相切，试求极限$\lim _ { n \rightarrow \infty } n ^ { \frac { 1 } { 2 } } \sqrt { f \left( \frac { 2 } { n } \right) }$.
+	\item 设$f ( x ) = \lim _ { n \rightarrow \infty } \frac { x ^ { 2 } e ^ { n ( x - 1 ) } + a x + b } { 1 + e ^ { n ( x - 1 ) } }$，讨论$f(x)$的连续性与可导性；确定$a$、$b$的值使$f(x)$可导并求$f'(x)$.
+	\item 确定$a,b$的值，使函数
+	\[f ( x ) = \left\{ \begin{array} { l } { \frac { 1 } { x } ( 1 - \cos a x ) , x < 0 } \\ { 0 , x = 0 } \\ { \frac { 1 } { x } \ln \left( b + x ^ { 2 } \right) , x > 0 } \end{array} \right.\]
+	在$(-\infty,+\infty)$内处处可导，并求它的导函数.
+	\item 设$f ( x ) = a _ { 1 } \sin x + a _ { 2 } \sin 2 x + \cdots + a _ { n } \sin n x \left( a _ { i } \in \mathrm { R } , i = 1,2 , \cdots , n \right)$，且$| f ( x ) | \leqslant | \sin x |$，证明：$\left| a _ { 1 } + 2 a _ { 2 } + \cdots + n a _ { n } \right| \leqslant 1$.
+	\item 设$f(x)$可导，$F ( x ) = \left\{ \begin{array} { l l } { f \left( x ^ { 2 } \sin \frac { 1 } { x } \right) , } & { x \neq 0 } \\ { f ( 0 ) , } & { x = 0 } \end{array} \right.$，求$F'(x)$.
+	\item 设$n \in \mathrm{ N } _ { + }$，试讨论函数$f ( x ) = \left\{ \begin{array} { l l } { x ^ { n } \sin \frac { 1 } { x } , } & { x \neq 0 } \\ { 0 , } & { x = 0 } \end{array} \right.$在$x=0$处的连续性与可导性以及$f'(x)$在$x=0$处的连续性.
+	\item 设$f ( x ) = \left\{ \begin{array} { l l } { \frac { g ( x ) - e ^ { - x } } { x } , } & { x \neq 0 } \\ { 0 , } & { x = 0 } \end{array} \right.$，其中$g(x)$有二阶连续导数，且$g ( 0 ) = 1 ,  g ^ { \prime } ( 0 ) = 1$.求$f'(x)$，并讨论$f'(x)$在$(-\infty,+\infty)$上的连续性.
+	\item 设函数$\varphi : \left( - \infty , x _ { 0 } \right] \rightarrow \mathrm { R }$是二阶可导函数，选择$a,b,c$，使$f(x)$在$\mathrm{ R }$上二阶可导.
+	\[f ( x ) = \left\{ \begin{array} { l l } { \varphi ( x ) , } & { x \leqslant 0 } \\ { a \left( x - x _ { 0 } \right) ^ { 2 } + b \left( x - x _ { 0 } \right) + c , } & { x = 0 } \end{array} \right.\]
+	\item 设$y=y(x)$是由方程组$\left\{ \begin{array} { l } { x = 3 t ^ { 2 } + 2 t + 3 } \\ { e ^ { y } \sin t - y + 1 = 0 } \end{array} \right.$所确定的隐函数，求$\left. \frac { \mathrm { d } ^ { 2 } y } { \mathrm { d } x ^ { 2 } } \right| _ { t = 0 }$.
+	\item 设函数$y=y(x)$是由参数方程$\left\{ \begin{array} { l } { x = 2 t + | t | } \\ { y = t ^ { 2 } + 2 t | t | } \end{array} \right.$所确定，求$\frac { \mathrm { d } y } { \mathrm { d } x }$.
+	\item 求心脏线$r = a ( 1 + \cos \theta )$在$\theta=\frac{\pi}{3}$处的切线方程与法线方程.
+	\item 由方程$x ^ { y } = y ^ { x } + \cos \left( x ^ { 3 } \right)$确定了隐函数，试确定$A(x,y)$满足$\mathrm{ d }y=A(x,y)\mathrm{ d }x$(\text{其中}$x>0,y>0$).
+	\item 设$f(x)$任意可导，且$f ^ { \prime } ( x ) = e ^ { - f ( x ) } , f ( 0 ) = 1$，求$f^{(n)}(0)$.
+	\item 设$f ( x ) = \min \{ \sin x , \cos x \} ( - \infty < x < + \infty )$，求$f^{(n)}(x)$.
+	\item 求$n$阶导数$\left( x ^ { n - 1 } \ln x \right) ^ { ( n ) } ( n \geqslant 1 )$.
+	\item 设$f ( x ) = \arctan \frac { 1 - x } { 1 + x }$，求$f^{(n)}(0)$.
+\end{xiti}
+
+
+
+\section{微分中值定理与导数的应用}
+\begin{xiti}
+	\item 证明当$| x | \leqslant \frac { 1 } { 2 }$，有$3 \arccos x - \arccos \left( 3 x - 4 x ^ { 3 } \right) = \pi$.
+	\item 设函数$f(x)$在$[0,1]$可导，且满足$f ( 1 ) - 2 \int _ { 0 } ^ { \frac { 1 } { 2 } } x f ( x ) \mathrm { d } x = 0$，证明：$\exists \xi \in (0,1)$，使得$f ^ { \prime } ( \xi ) = - \frac { f ( \xi ) } { \xi }$.
+	\item 已知$a<b$，且$a\cdot b>0$，$f(x)$在$[a,b]$上连续，在$(a,b)$可导，试证：存在$\xi \in(a,b)$满足$\frac { 1 } { a - b } \left| \begin{array} { c c } { a } & { b } \\ { f ( a ) } & { f ( b ) } \end{array} \right| = f ( \xi ) - \xi \cdot f ^ { \prime } ( \xi )$.
+	\item 设函数$f(x)$在区间$[0,3]$二阶可导，且$2 f ( 0 ) = \int _ { 0 } ^ { 2 } f ( x ) \mathrm { d } x = f ( 2 ) + f ( 3 )$，证明：$\exists \xi \in(0,3)$，使得$f''(\xi )=0$.
+	\item 函数$f(x)$与$g(x)$在$[a,b]$上存在二阶可导，且$g''(x)\ne 0,f ( a ) = f ( b ) = g ( a ) = f ( b ) = 0$，试证：
+	\begin{enumerate}
+		\item[(1)] 在$(a,b)$内$g(x)\ne 0$.
+		\item[(2)] 在$(a,b)$内至少存在一点$\xi $，满足$\frac { f ( \xi ) } { g ( \xi ) } = \frac { f ^ { \prime \prime } ( \xi ) } { g ^ { \prime \prime } ( \xi ) }$.
+	\end{enumerate}
+	\item 假设函数$f(x)$在$[0,1]$上连续，在$(0,1)$内二阶可导，过点$A(0,f(0))$，与点$B(1,f(1))$的直线与曲线$y=f(x)$相交于点$C(c,f(c))$，其中$0<c<1$.证明：在$(0,1)$内至少存在一点$\xi $，使$f"(\xi)=0$.
+	\item 设$f$在$[a,b]$上二阶可微，$f(a)=f(b)=0,f _ { + } ^ { \prime } ( a ) f _ { - } ^ { \prime } ( b ) > 0$，证明方程$f''(x)=0$在$(a,b)$内至少有一个根.
+	\item 证明：无穷区间上的罗尔定理.
+	\begin{enumerate}
+		\item[(1)] 设$f(x)$在$\left[ a,+\infty\right) $上连续，在$\left( a,+\infty\right] $可导，且$f ( a ) = \lim _ { x \rightarrow + \infty } f ( x )$，证明：存在$\xi \in(a,+\infty)$使得$f'(\xi )=0$
+		\item[(2)] 设$f(x)$在$\left( -\infty ,a\right]  $上连续，在$\left( -\infty ,a\right)  $ 可导，且$f(a)=\lim _ { x \rightarrow -\infty } f ( x )$，证明：存在$\xi \in\left( -\infty ,a\right)$使得$f'(\xi )=0$.
+		\item[(3)] 设$f(x)$在$(-\infty,+\infty)$上可导且$\lim _ { x \rightarrow - \infty } f ( x ) = \lim _ { x \rightarrow + \infty } f ( x )$，证明：存在$\xi \in(-\infty,+\infty)$使得$f'(\xi )=0$.
+	\end{enumerate}
+	\item 设$f(x)$在$\left[ 0,+\infty\right) $ 上可导，且$0 \leqslant f ( x ) \leqslant \frac { x } { 1 + x ^ { 2 } }$，证明：存在$\xi \in ( 0 , + \infty )$使得$f ^ { \prime } ( \xi ) = \frac { 1 - \xi ^ { 2 } } { \left( 1 + \xi ^ { 2 } \right) ^ { 2 } }$.
+	\item 设$f ( x ) \in C [ a , b ] \cap D ( a , b )$，且$f'(x)\ne 0$，证明：$\exists \xi , \eta \in ( a , b )$，使得$\frac { f ^ { \prime } ( \xi ) } { f ^ { \prime } ( \eta ) } = \frac { e ^ { b } - e ^ { a } } { b - a } \cdot e ^ { - \eta }$.
+	\item 设$f(x)$在闭区间$[a,b]$上连续，开区间$(a,b)$内可导，$0\leq a\leq b\leq \frac{\pi}{2}$.证明在区间$(a,b)$内至少两点$\xi_{1},\xi_{2}$，使
+	\[f ^ { \prime } \left( \xi _ { 2 } \right) \tan \frac { a + b } { 2 } = f ^ { \prime } \left( \xi _ { 1 } \right) \frac { \sin \xi _ { 2 } } { \cos \xi _ { 1 } }\]
+	\item 证明：多项式$P _ { n } ( x ) = \frac { 1 } { 2 ^ { n } n ! } \cdot \frac { \mathrm { d } ^ { n } } { \mathrm { d } x ^ { n } } \left( x ^ { 2 } - 1 \right) ^ { n }$的全部根都是实数，且均分布在$(-1,1)$上.
+	\item 证明不等式$\frac { a ^ { \frac { 1 } { n + 1 } } } { ( n + 1 ) ^ { 2 } } < \frac { a ^ { \frac { 1 } { n } } - a ^ { \frac { 1 } { n + 1 } } } { \ln a } < \frac { a ^ { \frac { 1 } { n } } } { n ^ { 2 } } \quad ( a > 1 , n \geqslant 1 )$.
+	\item 设$f$在$[a,b]$上连续，在$(a,b)$内可导，证明：存在$x _ { 1 } , x _ { 2 } , x _ { 3 } \in ( a , b )$，使
+	\[f ^ { \prime } \left( x _ { 1 } \right) = ( b + a ) \frac { f ^ { \prime } \left( x _ { 2 } \right) } { 2 x _ { 2 } } = \left( b ^ { 2 } + a b + a ^ { 2 } \right) \frac { f ^ { \prime } \left( x _ { 3 } \right) } { 3 x _ { 3 } ^ { 2 } }\]
+	\item 设$f(x)$在区间$[0,1]$上可微，$f ( 0 ) = 0 , f ( 1 ) = 1 , \lambda _ { 1 } , \lambda _ { 2 } , \cdots , \lambda _ { n }$是$n$个正数，且$\lambda _ { 1 } + \lambda _ { 2 } + \cdots + \lambda _ { n } = 1$，证明：存在$n$个不同的数$x _ { 1 } , x _ { 2 } , \cdots , x _ { n } \in ( 0,1 )$，使得
+	\[\frac { \lambda _ { 1 } } { f ^ { \prime } \left( x _ { 1 } \right) } + \frac { \lambda _ { 2 } } { f ^ { \prime } \left( x _ { 2 } \right) } + \cdots + \frac { \lambda _ { n } } { f ^ { \prime } \left( x _ { n } \right) } = 1\]
+	\item 设函数$f(x)$在$( x_{0} - \delta , x_{0} + \delta )$有$n$阶连续导数，且$f ^ { ( k ) } \left( x _ { 0 } \right) = 0 ( k = 2,3 , \cdots , n - 1 ) , f ^ { ( n ) } \left( x _ { 0 } \right) \neq 0$，当$0 < | h | < \delta$时，$f \left( x _ { 0 } + h \right) - f \left( x _ { 0 } \right) = h f ^ { \prime } \left( x _ { 0 } + \theta h \right) , ( 0 < \theta < 1 )$.试证：$\lim _ { h \rightarrow 0 } \theta = \frac { 1 } { n \sqrt [ n - 1 ] { n } }$.
+	\item 设$f(x)$在$[0,1]$上二阶可导，且满足条件$| f ( x ) | \leqslant a , \left| f ^ { \prime \prime } ( x ) \right| \leqslant b$，其中$a,b$都是正实数，$c$是$(0,1)$内任意一点，证明：$\left| f ^ { \prime } ( c ) \right| \leqslant 2 a + \frac { b } { 2 }$.
+	\item 设$f ( x ) \in C ^ { 3 } [ 0,1 ]$，且$f ( 0 ) = 1 , f ( 1 ) = 2 , f ^ { \prime } \left( \frac { 1 } { 2 } \right) = 0$，证明在$(0,1)$内至少一点$\xi \in (0,1)$满足$\left| f ^ { \prime \prime } ( \xi ) \right| \geqslant 24$.
+	\item 设函数$f(x)$在$[-1,1]$上三阶可导.
+	\begin{enumerate}
+		\item[(1)] 证明当$f(-1)=0,f(1)=1,f'(0)=0$时，存在一点$\xi_{ 1 }\in (-1,1)$，使得$f'''(\xi_{ 1 })\leq 3$.
+		\item[(2)] 又设$f'''(x)$在$[-1,1]$上连续，证明存在一点$\xi_{ 2 }\in (-1,1)$，使得$f'''(\xi_{ 2 })= 3$.
+	\end{enumerate}
+\item 试证明：当$0<x<a$时，多项式$( a - x ) ^ { 6 } - 3 a ( a - x ) ^ { 5 } + \frac { 5 } { 2 } a ^ { 2 } ( a - x ) ^ { 4 } - \frac { 1 } { 2 } a ^ { 4 } ( a - x ) ^ { 2 }$仅取负值.
+\item 试比较$\pi ^{e}$与$e^{\pi}$的大小.
+\item 比较$\prod _ { n = 1 } ^ { 25 } \left( 1 - \frac { n } { 365 } \right)$与$\frac{1}{2}$的大小.
+\item 比较$( \sqrt { n } ) ^ { \sqrt { n + 1 } }$与$( \sqrt { n + 1 } ) ^ { \sqrt { n } }$的大小，这里$n>8$.
+\item 求函数$f ( x ) = \left( 1 + x + \cdots + \frac { x ^ { n } } { n ! } \right) e ^ { - x }$的极值.
+\item 设$f(x)$满足方程$3 f ( x ) + 4 x ^ { 2 } f \left( - \frac { 1 } { x } \right) + \frac { 7 } { x } = 0$，求$f(x)$的极大值与极小值.
+\item 求由参数方程$\left\{ \begin{array} { l } { x = t - \lambda \sin t } \\ { y = 1 - \lambda \cos t } \end{array} \right.$所确定的函数$y=y(x)$的极值，其中$0<\lambda<1$.
+\item 若$0<a<b$，证明：$( 1 + a ) \ln ( 1 + a ) + ( 1 + b ) \ln ( 1 + b ) < ( 1 + a + b ) \ln ( 1 + a + b )$.
+\item 设$x\in (0,1)$，证明：$\frac { 1 } { \ln 2 } - 1 < \frac { 1 } { \ln ( 1 + x ) } - \frac { 1 } { x } < \frac { 1 } { 2 }$.
+\item 在区间$(-\infty,+\infty)$内确定方程$| x | ^ { \frac { 1 } { 4 } } + | x | ^ { \frac { 1 } { 2 } } - \cos x = 0$根的个数.
+\item 方程$xe^x=a(a>0)$有几个实根.
+\item 设$x>0$时，方程$kx+\frac{1}{x^{2}}=1$有且仅有一个实根，求$k$的取值范围.
+\item 设曲线$y = 4 - x ^ { 2 }$与$y=2x+1$相交于$A$、$B$两点，$C$弧段AB上的一点，问C点在何处时$\angle ABC$的面积最大？并求此最大面积.
+\item 求曲线$y = x ^ { 2 } \ln ( a x ) ( a > 0 )$的拐点，并求当$a$变动时，拐点的轨迹方程.
+\item 设$a,b$是正数，证明：$a^{s}b^{t}\leq sa+tb$，其中$s,t$是正数，$s+t=1$.
+\item 对于$i=1,2,\cdots,n$，设$0<x_{i}<\pi $并且取$\overline { x } = \frac { x _ { 1 } + x _ { 2 } + \cdots + x _ { n } } { n }$，证明：$\prod _ { i = 1 } ^ { n } \frac { \sin x _ { i } } { x _ { i } } \leqslant \left( \frac { \sin \overline { x } } { \overline { x } } \right) ^ { n }$.
+\item 过正弦曲线$y=\sin x$上点$M(\frac{\pi}{2},1)$处作一抛物线$y=ax^{2}+bx+c$，使抛物线与正弦曲线在$M$点具有相同的曲率和凹凸，并写出$M$点处两曲线的公共曲率圆方程.
+
+\end{xiti}
+
+\section{综合题 2}
+\begin{enumerate}
+	\item 设$ f ( x ) = \left\{ \begin{array} { l } { \lim _ { x \rightarrow \infty } \left( \frac { | x | ^ { 1 / n } } { n + \frac { 1 } { n } } + \frac { | x | ^ { 2 / n } } { n + \frac { 2 } { n } } + \cdots + \frac { | x | ^ { n / n } } { n + \frac { n } { n } } \right) , \quad x \neq 0 } \\ { \lim _ { x \rightarrow \infty } \frac { 1 } { n } \ln \left( \frac { \pi } { 2 } - \arctan n \right) , \quad x = 0 } \end{array} \right.$，求$f(x)$.
+	\item 求证极坐标方程$r=f(\theta)$给出的曲线$C$在曲线上点$M(\theta,f(\theta))$处的切线与向径$OM$的夹角$\varphi = \arctan \frac { f ( \theta ) } { f ^ { \prime } ( \theta ) }$.
+	\item 求证：$\frac { 1 } { 2 } \tan \frac { x } { 2 } + \frac { 1 } { 4 } \tan \frac { x } { 4 } + \dots + \frac { 1 } { 2 ^ { n } } \tan \frac { x } { 2 ^ { n } } = \frac { 1 } { 2 ^ { n } } \cot \frac { x } { 2 ^ { n } } - \cot x$.
+	\item 某人以5/3（m/s）的速率，沿直径为200/3（m）四周有围墙的圆形球场的一条直径前进，在与此直径相垂直的另一直径的一端有一灯，灯光照射人影于围墙上，问此人行进到离中心20/3（m）时，围墙上人影的移动速率是多少？
+	\item 设$y=\cos (\beta\arcsin x)$，求$y^{(n)}(0)$.
+	\item 设$f(x)$在$a\leq x\leq b$上有定义，并且有二阶导数.证明：在$a<x<b$内有
+	\[\frac { 1 } { x - b } \left[ \frac { f ( x ) - f ( a ) } { x - a } - \frac { f ( b ) - f ( a ) } { b - a } \right] = \frac { 1 } { 2 } f ^ { \prime \prime } ( \xi )\]
+	这里$\xi $是$a$与$b$之间的某数.
+	\item 设$f(x)$在$(0,1)$ 内有三阶导数，证明：存在$\xi \in(a,b)$，使得
+	\[f ( b ) = f ( a ) + \frac { 1 } { 2 } ( b - a ) \left[ f ^ { \prime } ( a ) + f ^ { \prime } ( b ) \right] - \frac { ( b - a ) ^ { 3 } } { 12 } f ^ { \prime \prime } ( \xi )\]
+	\item 证明方程$\sum _ { k = 0 } ^ { 2 n + 1 } \frac { x ^ { k } } { k ! } = 0$有且仅有一个实数根，其中$n$为自然数.
+	
+	\item 设$P(x)$是一个实系数多项式.构造多项式$Q(x)$如下：
+	\[Q ( x ) = \left( x ^ { 2 } + 1 \right) P ( x ) P ^ { \prime } ( x ) + x \left[ ( P ( x ) ) ^ { 2 } + \left( P ^ { \prime } ( x ) \right) ^ { 2 } \right]\]
+	假定方程$P(x)=0$有$n$个大于1的互异实数根.证明或否定下列结论：方程$Q(x)=0$至少有$2n-1$个互异的实数根.
+	\item 设函数$f(x)$在$(a,+\infty)$内有二阶可导，且$f ( a + 1 ) = 0 , \lim _ { x \rightarrow a ^ { + } } f ( x ) = 0 , \lim _ { x \rightarrow + \infty } f ( x ) = 0$.求证在$(a,+\infty)$内至少存在有一点$\xi $，满足$f''(\xi )=0$.
+	\item 设函数在$[-2,2]$上二阶可导，且$|f(x)|<1$，又$f ^ { 2 } ( 0 ) + \left[ f ^ { \prime } ( 0 ) \right] ^ { 2 } = 4$.试证在$(-2,2)$内至少存在一点$\xi $，使得$f(\xi )+f''(\xi)=0$.
+	\item 设$s$为正数，证明$\frac { n ^ { s + 1 } } { s + 1 } < 1 ^ { s } + 2 ^ { s } + \dots + n ^ { s } < \frac { ( n + 1 ) ^ { s + 1 } } { s + 1 }$.
+
+	\item 设函数$f(x)$二阶可导，且$f ( 0 ) = 0 , f ^ { \prime } ( 0 ) = 0 , f ^ { \prime \prime } ( 0 ) > 0$.在曲线$y=f(x)$上任意取一点$(x,f(x))(x\ne 0)$作曲线的切线，此切线在$x$轴上的截距记作$u$，求$\lim_{ x \rightarrow 0 }\frac{xf(u)}{uf(u)}$.
+	\item 设函数$f(x)$在$(-1,1)$上具有任意阶导数，且在$x=0$处所有导数都不等于零，设$f ( x ) = f ( 0 ) + f ^ { \prime } ( 0 ) x + \cdots + \frac { f ^ { ( n - 1 ) } ( 0 ) } { ( n - 1 ) ! } x ^ { n - 1 } + \frac { f ^ { ( n ) } ( \theta x ) } { n ! } x ^ { n } , 0 < \theta < 1$.试求$\lim_{ x \rightarrow 0 }\theta$.
+	\item 证明$\sin 1$是无理数.
+	\item 对于所有整数$n>1$，证明：$\frac { 1 } { 2 n e } < \frac { 1 } { e } - \left( 1 - \frac { 1 } { n } \right) ^ { n } < \frac { 1 } { n e }$.
+	\item 设$n$为自然数，试证$\left( 1 + \frac { 1 } { 2 n + 1 } \right) \left( 1 + \frac { 1 } { n } \right) ^ { n } < e < \left( 1 + \frac { 1 } { 2 n } \right) \left( 1 + \frac { 1 } { n } \right) ^ { n }$.
+	\item 设$f(x)$是二次可微的函数，满足$f(1)=6,f'(1)=0$，且任意的$x\geq 1$有$x ^ { 2 } f ^ { \prime \prime } ( x ) - 3 x f ^ { \prime } ( x ) - 5 f ( x ) \geqslant 0$.证明：对$\forall x\geq 1$，都有$f ( x ) \geqslant x ^ { 5 } + \frac { 5 } { x }$.
+	\item 对于一切满足$1 \leqslant r \leqslant s \leqslant t \leqslant 4$的实数$r,s,t$，定出$( r - 1 ) ^ { 2 } + \left( \frac { s } { r } - 1 \right) ^ { 2 } + \left( \frac { t } { s } - 1 \right) ^ { 2 } + \left( \frac { 4 } { t } - 1 \right) ^ { 2 }$的最小值.
+	\item 方程$x^{3}-3x+1=0$有几个实数根？求出其绝对值最小的一个近似根.精确到0.001.
+	\item 设$f(x)$是一具有三阶连续导数的实函数，并且对所有的$x , f ( x ) , f ^ { \prime } ( x ) , f ^ { \prime \prime } ( x ) , f ^ { \prime \prime \prime } ( x )$为正值.假设对$\forall x , f '' ( x ) \leqslant f ( x )$.证明：对一切$x$有$f ^ { \prime } ( x ) < 2 f ( x )$
+	\item 研究由微分方程$f ^ { \prime \prime } ( x ) = \left( x ^ { 3 } + a x \right) f ( x )$及初始条件$f ( 0 ) = 1 , f ^ { \prime } ( 0 ) = 0$定义的函数$f$.求证：$f(x)$	的根有上界而无下界.
+	\item 点$A$到点$B$的距离为$S$，若质点$M$从点$A$沿直线由静止状态运动到点$B$停止，费时$T(s)$，证明：在此运动过程中某一时刻加速度的绝对值大于等于$\frac{4S}{T^{2}}$.
+	\item 众所周知，为判别二次三项式$x ^ { 2 } + b x + c$的实根的情况，我们可以引入判别式$\Delta = b ^ { 2 } - 4 c$.那么，当$\Delta > 0 , \quad \Delta = 0$和$\Delta < 0$时，二次三项式$x ^ { 2 } + b x + c$分别具有两个不等实根、两个相等实根、没有实根。对于三次三项式$p ( x ) = x ^ { 3 } + b x + c$，请你给出一个利用$b,c$判别$p(x)$实根情况的方法，并且证明你的结论.
+	
+\end{enumerate}

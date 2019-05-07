@@ -1,0 +1,94 @@
+\chapter{多元向量值函数积分学}\label{cha:6}
+\section{第二型曲线积分}
+\begin{xiti}
+	\item 设$L$为封闭曲线$|x|+|x+y|=1 |$的正向一周，计算$\oint_{L} x^{2} y^{2} \mathrm{d} x-\cos (x+y) \mathrm{d} y$.
+	\item 设质点在力$F=\frac{-y-x^{2}}{x^{2}+y^{2}+2|x y|} i+\frac{x+y^{2}}{x^{2}+y^{2}+2|x y|}$作用下沿闭曲线$|x|+|y|=1$逆时针方向运动一周，求力$F$所做的功.
+	\item 计算$\int_{C}\left(2 x y^{3}-y^{2} \cos x\right) d x+\left(1+x y-2 y \sin x+3 x^{2} y^{2}\right) d y$，其中$C$为抛物线$2 x=\pi y^{2}$从点$(0,0)$到点$(\frac{\pi}{2},1)$的一段弧.
+	\item 计算$I=\int_{L} \frac{(x-y) \mathrm{d} x+(x+4 y) \mathrm{d} y}{x^{2}+4 y^{2}}$，其中$L$从点$(1,0)$沿上半圆周$x^{2}+y^{2}=1$到点$(-1,0)$.
+	
+	\item 计算$\oint_{L} \frac{x \mathrm{d} y-y \mathrm{d} x}{4 x^{2}+y^{2}}$其中L是以$(1,0)$为中心，半径为$R( \neq 0,1)$的逆时针方向的圆
+	\item 计算$\int_{L} \frac{\left(x-\frac{1}{2}-y\right) \mathrm{d} x+\left(x-\frac{1}{2}+y\right) \mathrm{d} y}{\left(x-\frac{1}{2}\right)^{2}+y^{2}}$，其中$L$是由点$(0,-1)$到点$(0,1)$经过圆$x^{2}+y^{2}=1$右部分的路径.
+	
+	\item 设函数$f(x)$和$g(x)$有连续导数，且$f(0)=1,g(0)=0$，$L$为平面上任意简单光滑闭曲线，$L$围成的平面区域为$D$，已知$\oint_{L} y[x-f(x)] \mathrm{d} x+[y f(x)+g(x)] \mathrm{d} y=\iint_{D} y g(x) \mathrm{d} \sigma$，求函数$f(x)$和$g(x)$.
+	\item 设$u(x,y)$于圆盘$D : x^{2}+y^{2} \leqslant \pi$内有二阶连续偏导数，且$\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}=\mathrm{e}^{\pi-x^{2}-y^{2}} \sin \left(x^{2}+y^{2}\right)$，记$D$的正向边界曲线为$\partial D, \partial D$的外法线向量为$n$，求$\int_{\partial D} \frac{\partial u}{\partial n} \mathrm{d} s$.
+	
+	\item 设积分$\oint_{L} 2[x f(y)+g(y)] \mathrm{d} x+\left[x^{2} g(y)+2 x y^{2}-2 x f(y)\right] \mathrm{d} y=0$，其中$L$为任一条平面曲线.求：
+	\begin{enumerate}
+		\item [(1)] 可微函数$f(y),g(y)$，已知$f(0)=-2, g(0)=1$.
+		
+		\item [(2)]沿$L$从原点$(0,0)$到点M$(\pi ,\frac{\pi}{2})$的曲线积分.
+	\end{enumerate}
+	
+	\item 设函数$P(x, y), Q(x, y)$）在光滑曲线$\Gamma$上可积，$L$为$\Gamma$的弧长，而$M=\max _{(x, y) \in \Gamma} \sqrt{P^{2}+Q^{2}}$.试证：
+	$\left|\int_{\Gamma} P \mathrm{d} x+Q \mathrm{d} y\right| \leqslant M L$
+	\item 设$C$是圆周$(x-1)^{2}+(y-1)^{2}=1$，取逆时针方向，又$f(x)$为正值连续函数.试证：$\oint_{C} x f(y) \mathrm{d} y-\frac{y}{f(x)} \mathrm{d} x \geqslant 2 \pi$
+	\item 设$\mathrm{d} u=\frac{(x+y-z)(\mathrm{d} x+\mathrm{d} y)+(x+y+z) \mathrm{d} z}{x^{2}+y^{2}+z^{2}+2 x y}$，求$u(x,y,z)$.
+	\item 计算曲线积分$\oint_{\Gamma} z^{3} d x+x^{3} d y+y^{3} d z$，其中曲线$\Gamma$是$z=2\left(x^{2}+y^{2}\right)$与$z=3-x^{2}-y^{2}$的交线，从$Oz$的正向看$\Gamma$是逆时针方向的.
+	
+	\item 设一力场$F$的大小与作用点$M(x,y,z)$到原点$O$的距离成反比(比例系数为$k>0$)，方向总是指向原点，质点受$F$的作用从点$A(0,0,e)$沿螺旋线$x=\frac{1}{2}(1+\cos t), y=\sin t, z=\frac{e}{\pi} t$到点$B(l,0,0)$，求力场$F$对质点所做的功$W$.
+	
+	 	
+	
+\end{xiti}
+
+
+
+\section{第二型曲面积分}
+\begin{xiti}
+	\item 计算$I=\iint_{S}-y \mathrm{d} z \mathrm{d} x+(z+1) \mathrm{d} x \mathrm{d} y$，其中$S$为圆柱面$x^{2}+y^{2}=4$被平面$x+z=2$和$z=0$所截部分的外侧.
+	\item 计算曲面积分$\iint_{S} \frac{x \mathrm{d} y \mathrm{d} z+z^{2} \mathrm{d} x \mathrm{d} y}{x^{2}+y^{2}+z^{2}}$，其中$S$是由曲面$x^{2}+y^{2}=R^{2}$及两平面$z=R, z=-R(R>0)$所围成立体表面的外侧.
+	\item 设函数$u(x,y,z)$在由球面$S : x^{2}+y^{2}+z^{2}=2 z$所包围的闭区域Q上具有二阶连续偏导数，且满足关系式$\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}+\frac{\partial^{2} u}{\partial z^{2}}=x^{2}+y^{2}+z^{2}$.$n$为$S$的外法线方向的单位向量，试计算$\iint_{s} \frac{\partial u}{\partial n} \mathrm{d} S$.
+	\item 计算向量场$\boldsymbol{r}=(x, y, z)$对有向曲面$S$的通量
+	\begin{enumerate}
+		\item [(1)]$S$为球面$x^{2}+y^{2}+z^{2}=1$的外侧；
+		\item [(2)]$S$为锥面$z=\sqrt{x^{2}+y^{2}}$与平面$z=1$所围锥体表面的外侧.
+	\end{enumerate}
+	
+	
+	\item 设$u=\frac{1}{\left(x^{2}+y^{2}+z^{2}\right)^{1 / 2}}$，求向量场grad $u$通过曲面$S : 1-\frac{z}{5}=\frac{(x-2)^{2}}{16}+\frac{(y-1)^{2}}{9}(z \geqslant 0)$上侧的通量.
+	
+	\item 设$S$是锥面x=√y2+22与两球面x2+y2+z2=1，x2+y2+z2=2所围成立体表面的外侧，计算曲面积分$\iint_{S} x^{3} \mathrm{d} y \mathrm{d} z+\left[y^{3}+f(y z)\right] \mathrm{d} z\mathrm{d}x+\left[z^{3}+f(y z)\right] \mathrm{d}x\mathrm{d} y$，其中$f(u)$是连续可微的奇函数.
+	\item 设$S$是以$L$为边界的光滑曲面，试求可微函数$\varphi(x)$使曲面积分$\iint_S{\left(1-x^2\right)}\varphi\left(x\right)\textrm{d}y\textrm{d}z+4xy\varphi\left(x\right)\textrm{d}z\textrm{d}x+4xz\textrm{d}x\textrm{d}y$与曲面$S$的形状无关.
+	\item 	设函数$u(x,y,z)$和$v(x,y,z)$在闭区域$\Omega$上具有一阶及二阶连续偏导数，证明
+\[
+\iiint_{\Omega} u \Delta v d x d y d z=\oiint_{S} u \frac{\partial v}{\partial n} \mathrm{d} S-\iiint_{\Omega}\left(\frac{\partial u}{\partial x} \frac{\partial v}{\partial x}+\frac{\partial u}{\partial y} \frac{\partial v}{\partial y}+\frac{\partial u}{\partial z} \frac{\partial v}{\partial z}\right) \mathrm{d} x \mathrm{d} y \mathrm{d} z
+\]
+	其中$S$是闭区域$\Omega$的整个边界曲面，$\frac{\partial v}{\partial n}$为函数（$v(x,y,z)$沿$S$的外法线方向的方向导数.
+	
+	
+\end{xiti}
+
+
+\section{综合题 6}
+\begin{enumerate}
+	\item 假设$L$为平面上一条不经过原点的光滑闭曲线，试确定$k$的值，使曲线积分$\oint_{L} \frac{x \mathrm{d} x-k y \mathrm{d} y}{x^{2}+4 y^{2}}=0$，并说明理由.
+	
+	\item 半径为$a$的圆在内半径为$3a$的一个圆环的内侧滚动，求在动圆圆周上一点生成的闭曲线所包围的面积.
+	\item 设$f(x)$在$[1,4]$上具有连续的导数，且$f(1)=f(4)$，计算曲线积分$I=\oint_{L} \frac{1}{y} f(x y) \mathrm{d} y$，其中$L$是由$y=x, y=4 x, x y=1, x y=4$所围成区域$D$的正向边界.
+	\item 设$f(x)$、$g(x)$为连续可微函数，且	$w=y f(x y) \mathrm{d} x+x g(x y) \mathrm{d} y$.
+	\begin{enumerate}
+		\item [(1)]若存在$u$，使得$ \mathrm{d}u=w$，求$f-g$.
+		
+		\item [(2)]若$f(x)=g(x)$，求$u$使得$ \mathrm{d}u=w$.
+		
+	\end{enumerate}
+	\item 设函数$f(x)=\int_{x}^{x+\frac{\pi}{2}}|\cos t| \mathrm{d} t$，$L$是从点$A(1，0)$到原点的位于第一象限的光滑曲线，并且与线段可围成的闭区域$D$的面积为1.
+	\begin{enumerate}
+		\item [(1)]求$f(x)$在$[0,\pi]$上的最大值$a$与最小值$b$.
+		\item [(2)] 对(1)的$a$、$b$，求曲线积分$I=\int_{L}\left(3+b y+\mathrm{e}^{x} \sin y\right) \mathrm{d} x+\left(a x+\mathrm{e}^{x} \cos y\right) \mathrm{d} y$.
+	\end{enumerate}
+	\item 已知曲线积分$\int_{L} \frac{1}{\varphi(x)+y^{2}}(x \mathrm{d} y-y \mathrm{d} x) \equiv A$(常数)，其中$\varphi(x)$是可导函数且$\varphi(1)=1$，$L$是绕原点$(0,0)$一周的任意正向闭曲线，试求出$\varphi(x)$及$A$.
+	
+	\item 已知点$A(0,0,0)$与点$B(1,,1,1)$，$\Sigma$是由直线$AB$绕$Oz$轴旋转一周而成的旋转曲面介于平面$z=0$与$z=1$之间部分的外侧，函数$f(u)$在$(-\infty,+\infty)$内具有连续导数，计算曲面积分
+	\[
+	I=\iint_{\Sigma}[x f(x y)-2 x] \mathrm{d} y \mathrm{d} z+\left[y^{2}-y f(x y)\right] \mathrm{d} z \mathrm{d} x+(z+1)^{2} \mathrm{d} x \mathrm{d} y
+	\]
+	
+	\item 计算曲面积分$I=\iint_{S}(x y+y-z) \mathrm{d} y \mathrm{d} z+[y z+\cos (z+x)] \mathrm{d} z \mathrm{d} x+\left(6 z+\mathrm{e}^{x+y}\right) \mathrm{d} x \mathrm{d} y$，其中$S$为曲面$|x-y+z|+|y-z+x|+|z-x+y|=1$的外侧.
+	\item 设$S$为一光滑闭曲面，原点不在$S$上，$\boldsymbol{n}$为$S$上点$(x,y,z)$处的外法问量，$\boldsymbol{r}=(x, y, z)$，计算曲面积分$I=\oiint_{S} \frac{\cos (\boldsymbol{r}, \boldsymbol{n})}{r^{2}} \mathrm{d} S$，其中$r=\|\boldsymbol{r}\|$.
+	
+	\item 设$A=\iint_{S} x^{2} z \mathrm{d} y \mathrm{d} z+y^{2} z \mathrm{d} z \mathrm{d} x+z^{2} x \mathrm{d} x \mathrm{d} y$，$S$是曲面$a z=x^{2}+y^{2}(0 \leqslant z \leqslant a)$的第一卦限部分的上侧.求二阶可导函数$f(x)$，使之满足$f(0)=A, f^{\prime}(0)=-A$，并使$y\left[f(x)+3 \mathrm{e}^{2 x}\right] \mathrm{d} x+f^{\prime}(x) \mathrm{d} y$是某个函数的全微分.	
+	
+	
+	
+\end{enumerate}

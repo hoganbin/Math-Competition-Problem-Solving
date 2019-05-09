@@ -4,7 +4,7 @@
 
 完善蒲和平大学生数学竞赛课后习题解析
 
-# 分工
+###分工
 
 - 第一章（八一）
 - 第二章（朝信）
@@ -15,7 +15,7 @@
 - 第七章（周星，宋洋）
 - 第八章（田文涛 ，yh）
 
-# 排版约定
+###排版约定
 
 1. **中英文之间一定要加空格！！！**
 2. 标点符号全部使用英文符号，文本模式中，标点符号后需要加空格
@@ -29,7 +29,9 @@
    - 使用`~\ref{label}` 进行引用，注意空格，示例：`在表~\ref{tab:3.1.2} 中...`
 10. 公式里面距离，一般距离用 `\;`，然后大距离用 `\quad` 或者 `\qquad`（基本用 `\quad`）
 
-### 几点说明
+###几点说明
+
+____
 
 1. 蒲和平更侧重于学生的计算能力，针对于那些报考`华中科技大学`、`天津大学`、`兰州大学`、`大连理工大学`与`电子科技大学`等院校的同学可以在考研期间可参考蒲和平数学竞赛教程；
 2. 对准备`第十一届全国大学数学竞赛`可以说是很好的辅导资料，当然基础不好的同学用陈兆斗也没问题，基础好的同学除了蒲和平，也可以选择裴礼文与陈纪修等人的数分辅导资料，对你参加数学竞赛来说是有益的；
@@ -37,9 +39,31 @@
 
 这里我征稿一下，如果有愿意帮我一同做蒲和平数学竞赛解析的同学，可与我邮箱联系hoganbin1995@outlook.com，这个项目会让你锻炼到通过LaTeX排版书籍，同时可以很快地让你熟悉github操作，谢谢支持！
 
+### 贡献
 
+如果您有任何改进意见或者功能需求，欢迎提交 [issue](https://github.com/stone-zeng/fduthesis/issues) 或 [pull request](https://github.com/stone-zeng/fduthesis/pulls)。
 
-# 其他工具效率推荐
+### 许可证
+
+本模板的发布遵守 [LaTeX Project Public License](http://www.latex-project.org/lppl.txt)（版本 1.3c 或更高）
+
+### Contributing
+
+[Issues](https://github.com/stone-zeng/fduthesis/issues) and [pull requests](https://github.com/stone-zeng/fduthesis/pulls) are always welcome.
+
+### License
+
+This work may be distributed and/or modified under the conditions of the [LaTeX Project Public License](http://www.latex-project.org/lppl.txt), either version 1.3c of this license or (at your option) any later version.
+
+------
+
+Copyright (C) 2019-2021 by hoganbin.
+
+......
+
+......
+
+#其他工具效率推荐
 
 1. notepad++ 文本编辑器
 2. VSCode  前端编辑器/文本编辑器
@@ -55,9 +79,7 @@
 
 好了，我暂时就推荐这么几个工具给大家。回到 Git 教学。
 
-
-
-### 开始安装Git
+#开始安装Git
 
 打开Git的官方网站，下载下来之后安装时选择默认选项即可
 
@@ -75,7 +97,9 @@
 
 ### 使用 Git 和 GitHub 步骤：
 
-提前推荐个软件，你在用的：Typora。
+_________
+
+提前推荐个软件，你在用的：`typora/sumline/VS-vode/notepad++`。
 
 1. 先配置 SSH（一个协议）。请看演示
    1. 电脑 Git Bash： ssh-keygen -t rsa  过程中，回车即可。
@@ -102,9 +126,7 @@
 这个期间应该会要求你配置下name和email的，你这里肯定是你之前已经配置过了。
 ```
 
-###如何使用 GitHub 作为图床？
-
-__________________
+#如何使用 GitHub 作为图床？
 
 1. Github上新建一个仓库，作为存储图片的。（仓库私有、公有，随你吧）
 2. 新建 token，比如这是你的：8692ec2d94698d7cc14408257ee5bf4e***..
@@ -128,7 +150,7 @@ This team is mainly used for template making in universities. Welcome to LaTeX u
 
 TeX-degree-template-making
 
-## Git 分支操作
+#Git 分支操作
 
 1. 创立分支 test `git branch test`
 2. 切换到分支 test `git checkout test`

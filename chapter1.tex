@@ -346,6 +346,15 @@ x+2,x\geq 0\\
 \end{solution}
 \item 求$\lim _ { n \rightarrow \infty } \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { \sin ^ { n } x } { 1 + x } \mathrm { d } x$.
 \item 设$x _ { n } = 1 + \frac { 1 } { \sqrt { 2 } } + \dots + \frac { 1 } { \sqrt { n } } - 2 \sqrt { n }$，证明数列$\left\lbrace x_{n}\right\rbrace $收敛.
+\begin{solution}
+利用不等式
+\[
+\frac{1}{\sqrt{k}}>\frac{2}{\sqrt{k}+\sqrt{k+1}}=2(\sqrt{k+1}-\sqrt{k})
+\]
+得$x_{n}=\sum_{k=1}^{n} \frac{1}{\sqrt{k}}-2 \sqrt{n}>2 \sqrt{n+1}-2-2 \sqrt{n}>-2$，即有上限.
+
+又由$x_{n+1}-x_{n}=\frac{1}{\sqrt{n+1}}-2 \sqrt{n+1}+2 \sqrt{n}=\frac{1}{\sqrt{n+1}}-\frac{2}{\sqrt{n+1}+\sqrt{n}}<0$，即$x_{n+1}<x_{n}$，故$ x_{n} $单调递减，有下界.即证数列$\left\lbrace x_{n}\right\rbrace $收敛.
+\end{solution}
 \item 求下列极限
 \begin{enumerate}
 	\item[(1)] $\lim _ { n \rightarrow \infty } \frac { n ^ { k } } { a ^ { n } } ( a > 1 , k > 0 )$
@@ -383,17 +392,16 @@ x+2,x\geq 0\\
 		任取$x_1\in(-\infty,+\infty),$
 		令$x_{n+1}=f(x_n)(n=1,2,3\cdots ),$则
 		
-		$|x_{n+1}-x_n|=|f(x_n)-f(x_{n-1})| \leq \alpha |x_n-x_{n-1}|\leq \cdots \leq \alpha ^{n-1}|x_2-x_1|$
+		\[|x_{n+1}-x_n|=|f(x_n)-f(x_{n-1})| \leq \alpha |x_n-x_{n-1}|\leq \cdots \leq \alpha ^{n-1}|x_2-x_1|\]
 		
 		注意到$0<\alpha<1,$可知级数$ \sum_{n=2}^{\infty}(x_n-x_{n-1})$
 		绝对收敛，
-		设$x_0=\lim_{n \rightarrow \infty}x_n.$再有$f(x)$的连续性可知
-		$x_0=\lim_{n \rightarrow \infty}x_n=f(\lim_{n \rightarrow \infty}x_{n-1})=f(x_0)$
-		即$f(x_0)$是$f(x)$的一个不动点
+		设$x_0=\lim_{n \rightarrow \infty}x_n.$再由$f(x)$的连续性可知
+		$x_0=\lim_{n \rightarrow \infty}x_n=f(\lim_{n \rightarrow \infty}x_{n-1})=f(x_0)$，即$f(x_0)$是$f(x)$的一个不动点
 		
 		 再证不动点的唯一性，设另有不动点$\overline x_0=f(\overline{x_0}),$则
 		
-		$|\overline{x_0}-x_0|=|f(\overline{x_0})-F(x_0)|\leq \alpha |\overline{x_0}-x_0|$
+		\[|\overline{x_0}-x_0|=|f(\overline{x_0})-F(x_0)|\leq \alpha |\overline{x_0}-x_0|\]
 		
 		注意到$0<\alpha<1,$这个不等式只有在$|\overline{x_0}-x_0|=0$时才成立，即$\overline{x_0}=x_0.$
 		\item[(2)] 由拉格朗日中值定理可知，对任何$x,y$都有

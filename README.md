@@ -4,18 +4,18 @@
 
 完善蒲和平大学生数学竞赛课后习题解析
 
-#分工
+### 分工
 
 - 第一章（八一）
 - 第二章（朝信）
-- 第三章（静安）
-- 第四章（蛋蛋）
+- 第三章（静安，yangjing）
+- 第四章（蛋蛋，avis）
 - 第五章（刘力手，杨彦坡）
 - 第六章（帅帅，董朔，闫皖民）
 - 第七章（周星，宋洋）
 - 第八章（田文涛 ，yh）
 
-#排版约定
+###排版约定
 
 1. **中英文之间一定要加空格！！！**
 2. 标点符号全部使用英文符号，文本模式中，标点符号后需要加空格
@@ -29,7 +29,7 @@
    - 使用`~\ref{label}` 进行引用，注意空格，示例：`在表~\ref{tab:3.1.2} 中...`
 10. 公式里面距离，一般距离用 `\;`，然后大距离用 `\quad` 或者 `\qquad`（基本用 `\quad`）
 
-#几点说明
+###几点说明
 
 1. 蒲和平更侧重于学生的计算能力，针对于那些报考`华中科技大学`、`天津大学`、`兰州大学`、`大连理工大学`与`电子科技大学`等院校的同学可以在考研期间可参考蒲和平数学竞赛教程；
 2. 对准备`第十一届全国大学数学竞赛`可以说是很好的辅导资料，当然基础不好的同学用陈兆斗也没问题，基础好的同学除了蒲和平，也可以选择裴礼文与陈纪修等人的数分辅导资料，对你参加数学竞赛来说是有益的；
@@ -37,7 +37,7 @@
 
 这里我征稿一下，如果有愿意帮我一同做蒲和平数学竞赛解析的同学，可与我邮箱联系hoganbin1995@outlook.com，这个项目会让你锻炼到通过LaTeX排版书籍，同时可以很快地让你熟悉github操作，谢谢支持！
 
-#贡献
+###贡献
 
 如果您有任何改进意见或者功能需求，欢迎提交 [issue](https://github.com/hoganbin/Math-Competition-Problem-Solving/issues) 或 [pull request](https://github.com/hoganbin/Math-Competition-Problem-Solving/pulls)。
 
@@ -60,8 +60,6 @@ Copyright (C) 2019-2021 by hoganbin.
 ......
 
 ......
-
-![](https://raw.githubusercontent.com/hoganbin/Personal-ImagesBed-Repository/master/images/cover.png?token=AIUVT4SWGKMWUH3MQVLPD52424AYU)
 
 
 

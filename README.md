@@ -1,4 +1,4 @@
- ![](https://img.shields.io/badge/Language-TeX-yellow.svg)![](https://img.shields.io/badge/version-0.1-red.svg)![](https://img.shields.io/github/last-commit/hoganbin/TeX-degree-template-making.svg)![](https://img.shields.io/github/repo-size/hoganbin/TeX-degree-template-making.svg)![](https://img.shields.io/github/languages/code-size/hoganbin/TeX-degree-template-making.svg)![](https://img.shields.io/github/followers/hoganbin.svg?label=Follow)
+﻿ ![](https://img.shields.io/badge/Language-TeX-yellow.svg)![](https://img.shields.io/badge/version-0.1-red.svg)![](https://img.shields.io/github/last-commit/hoganbin/TeX-degree-template-making.svg)![](https://img.shields.io/github/repo-size/hoganbin/TeX-degree-template-making.svg)![](https://img.shields.io/github/languages/code-size/hoganbin/TeX-degree-template-making.svg)![](https://img.shields.io/github/followers/hoganbin.svg?label=Follow)
 
 # Math-Competition-Problem-Solving
 
@@ -175,4 +175,4 @@ TeX-degree-template-making
 git checkout test
 git branch --set-upstream-to=origin/test
 ```
-
+。。。

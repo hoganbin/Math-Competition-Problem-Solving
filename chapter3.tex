@@ -1,45 +1,204 @@
-% !TeX program = XeLaTeX
 % !TeX root = main.tex
 % Edit by: 静安
+
+
 \chapter{一元函数积分学}\label{cha:3}
 \section{不定积分}
 \begin{xiti}
 	\item 计算积分：
 	\begin{enumerate}
 		\item[(1)] $\int \frac {\mathrm{d}x } { 1 + \sin x + \cos x }$
+		\begin{solution}
+		\begin{align*}	
+		&{}=\int \! \frac{1}{2}  \frac{1}{\sin \frac{x}{2} \cos \frac{x}{2} +\cos^2 \frac{x}{2} } \mathrm{dx}=\int\!\frac{1}{2} \frac{\sec^2 \frac{x}{2}}{1+\tan \frac{x}{2}} \mathrm{dx}\\
+		&{}=\int \frac{1}{1+\tan \frac{x}{2}}\mathrm{d\tan \frac{x}{2}
+		=\ln|1+\tan \frac{x}{2}| +C}
+	\end{align*}
+		\end{solution}
+		
 		\item[(2)]  $\int \frac { \mathrm { d } x } { \sqrt { 2 } + \sqrt { 1 + x } + \sqrt { 1 - x } }$
+		
+		\begin{solution}
+		\begin{align*}
+			&{}\int\! \frac{1}{\sqrt{2}}\frac{dx}{1+ {\sqrt{\frac{1+x}{2}}}+\sqrt{\frac{1-x}{2}}}\
+			\xlongequal{t=\sqrt{\frac{1+x}{2}},x=2t^2-1 }\int\! \frac{1}{\sqrt{2}} \frac{4t dt } { 1+t+\sqrt{1-t^2} }\\
+			&{}\xlongequal{t=\sin x}\int\! \frac{1}{\sqrt{2}}\frac{4\sin x \cos x dx }{1+\sin x +\cos x}= \frac{4}{\sqrt{2}}\int\!\frac{1}{2}\frac{(\sin x+\cos x)^2-1}{1+\sin x+\cos x }dx\\
+			&{}=\sqrt{2}\int\!\sin x+\cos x-1dx= \sqrt{2}(-\cos x+\sin x-x +C)\\
+			&{}=\sqrt{2}(-\cos (\arcsin t)+\sin (\arcsin t)- \arcsin t+C)\\
+			&{}=\sqrt{2}(-\sqrt{1-t^2}+t-\arcsin t+C)\\
+			&{}=\sqrt{2}( -\sqrt{\frac{1-x}{2}}+\sqrt{\frac{1+x}{2}}-\arcsin \bigg(\sqrt{\frac{1+x}{2}}\bigg)+C )	
+		\end{align*}
+		\end{solution}
+
+		\item[(3)] $\int \frac{1}{1+\sqrt{1+x}+\sqrt{2+x}+\sqrt{x-1}} d x$
+		\begin{solution}
+			\begin{note}
+				附注:八一特别赠送:
+			\end{note}
+		\begin{align*}			
+		\end{align*}
+		\end{solution}		
+		
 	\end{enumerate}	
+
+
 		\item 计算积分：
 	\begin{enumerate}
 		\item[(1)] $\int \frac { \ln ( \tan x ) } { \sin x \cos x } \mathrm { d } x$
+		\begin{solution}
+			\begin{align*}
+			&{}=\int\frac{\ln(\tan x) \cos x}{\sin x \cos^{2} x}\mathrm{dx}=\int\frac{\ln(\tan x)}{\tan x}\mathrm{\mathrm {\tan x}}=\frac{1}{2}\ln^2|\tan x| +C
+			\end{align*}
+			
+		\end{solution}
+	
 		\item[(2)]  $\int \frac { 1 - \ln x } { ( x - \ln x ) ^ { 2 } }\mathrm{d}x$
+		\begin{solution}
+		
+		令$x=\frac{1}{t}$,则$dx=- \frac{1}{t^2}dt$\\
+		
+		\begin{align*}
+			&=\int \frac{1-\ln x}{(x-\ln x)^{2}} \mathrm{d} x=\int \frac{1+\ln t}{\left(\frac{1}{t}+\ln t\right)^{2}}\left(-\frac{1}{t^{2}}\right) \mathrm{d} t=-\int \frac{1+\ln t}{(1+t \ln t)^{2}} \mathrm{d} t \\ 
+			&=-\int \frac{\mathrm{d}(1+t \ln t)}{(1+t \ln t)^{2}}=\frac{1}{1+t \ln t}+C=\frac{x}{x-\ln x}+C
+		\end{align*}
+		\end{solution}
 	\end{enumerate}	
+
+
 	\item 计算积分 $\int \max \left\{ x ^ { 3 } , x ^ { 2 } , 1 \right\} \mathrm { d } x$
+		\begin{solution}				
+				$f(x)=\max \left(1, x^{2}, x^{3}\right)=\left\{\begin{array}{cc}{x^{3},} & {x \geqslant 1} \\ {x^{2}} & {x \leqslant-1} \\ {1,} & {|x|<1}\end{array}\right.$
+				\\				
+				$\int f(x) \mathrm{d}x=\max \left(1, x^{2}, x^{3}\right)=\left\{\begin{array}{cc}{\frac{1}{4} x^{4}+C_{1},} & {x \geqslant 1} \\ {\frac{1}{3} x^{3}+C_2} & {x \leqslant-1} \\ {x+C,} & {|x|<1}\end{array}\right.$ \\				
+				\\由于原函数的连续性,有:\\
+				$\lim _{x \rightarrow 1^{+}}\left(\frac{1}{4} x^{4}+C_{1}\right)=\lim _{x \rightarrow 1^{-}}\left(x+C_{3}\right)$,即$\frac{1}{4}+C_{1}=1+C_{3}$
+				
+				$\lim _{x \rightarrow-1^{+}}\left(x+C_{3}\right)=\lim _{x \rightarrow-1^{-}}\left(\frac{1}{3} x^{3}+C_{2}\right)$,即$-\frac{1}{3}+C_{2}=-1+C_{3}$
+				
+				另 $C_{3}=C$,则:$C_{1}=\frac{3}{4}+C, \quad C_{2}=-\frac{2}{3}+C$
+				
+				$\int \max \left(1, x^{2}, x^{3}\right) \mathrm{d} x=\left\{\begin{array}{cc}{\frac{1}{4} x^{4}+\frac{3}{4}+C,} & {x \geqslant 1} \\ {\frac{1}{3} x^{3}-\frac{2}{3}+C,} & {x \leqslant-1} \\ {x+C,} & {-1<x<1}\end{array}\right.$
+		
+		\end{solution}
 	\item 设不定积分$\int x f ( x ) \mathrm { d } x = \arcsin x + C$，求$\int \frac { 1 } { f ( x ) } \mathrm { d } x$.
+	\begin{solution}
+		两边同时进行求导,整理可得\\
+		\begin{align*}
+			& \int \frac{1}{f(x)} \mathrm{d} x =\int -x\sqrt{1-x^2} \mathrm{d}x =\frac{1}{2} \int \sqrt{1-x^2} \mathrm{d} (1-x^2) \\
+			&=- \frac{1}{3} (1-x^2)^{\frac{3}{2}} + C
+		\end{align*}
+	\end{solution}
 	\item 设不定积分$\int \frac { x ^ { 2 } + a x + 2 } { ( x + 1 ) \left( x ^ { 2 } + 1 \right) }\mathrm{d}x$的结果中不含反正切函数，计算该不定积分.
+	\begin{solution}
+		先进行有理式拆分,保证 $\frac{1}{x^2+1}$ 的分子不为常数,则a=-1
+		\begin{align*}
+			&= \int \frac{2}{x+1} -\frac{x}{x^2+1} \mathrm{d}x= 2 \ln (x+1)-\frac{1}{2} \ln \left(x^{2}+1\right)+C \\
+		\end{align*}
+	\end{solution}	
 	\item 计算积分：
 	\begin{enumerate}
 		\item[(1)] $\int \frac { 1 } { x \left( x ^ { 5 } + 1 \right) ^ { 2 } }\mathrm{d}x$
+		\begin{solution}
+			另 $t=x^5$
+		\begin{align*}
+			&=\int \frac{x^4}{x^5(x^5+1)^2} \mathrm{d}x =  \frac{1}{5} \int \frac{1}{t(t+1)^2} \mathrm{ d}t\\
+			&=\frac{1}{5} \int \frac{1}{t(t+1)}-\frac{1}{(t+1)^2} \mathrm{d}t = \frac{1}{5} ( \ln |\frac{t}{1+t}| +\frac{1}{1+t}) + C  \\
+			&=\frac{1}{5} ( \ln |\frac{x^5}{1+x^5}| +\frac{1}{1+x^5}) + C
+		\end{align*}
+		\end{solution}
+
 		\item[(2)]  $\int \frac { x ^ { 4 } + 1 } { x ^ { 6 } + 1 }\mathrm{d}x$
+		\begin{solution}
+		\begin{align*}
+		&=\int \frac{x^{4}+1+x^{2}-x^{2}}{x^{b}+1} \mathrm{ d}x= \int \frac{x^4+x^2+1}{(x^2+1)(x^4+x^2+1)}-\frac{x^2}{x^6+1} \mathrm{ d}x \\
+		&=\int \frac{1}{x^{2}+1}-\frac{x^{2}}{x^{6}+1} \mathrm{d} x =\arctan x^{2}-\frac{1}{3} \arctan x^{3}+x	
+		\end{align*}
+		\end{solution}	
+		
 	\end{enumerate}	
+
 \item 计算积分：
 \begin{enumerate}
 	\item[(1)] $\int \frac { 1 } { x \sqrt { x ^ { 4 } + 2 x ^ { 2 } - 1 } } \mathrm { d } x$
+		\begin{solution}
+			\begin{align*}
+				&=\frac{1 }{2} \int  \frac{d x^2}{x^2 \sqrt{x^4+2x^2-1}} \xlongequal{t=x^2 } =\frac{1 }{2} \int  \frac{d t}{t \sqrt{t^2+2t-1}} \\
+				& \xlongequal{u= \frac{1}{t},dt= -\frac{1}{u^2}}= - \frac{1}{2} \int \frac{d \frac{1-u}{\sqrt{2}} }{\sqrt{1-(\frac{1-u}{\sqrt{2}})^2}}\\
+				&=  \frac{1}{2} \arcsin \frac{1-u}{\sqrt {2}} +C \xlongequal{u= \frac{1}{x^2}}=  \frac{1}{2} \arcsin \frac{x^2-1}{\sqrt {2} x^2} +C 
+			\end{align*}
+		\end{solution}	
+
+ 
 	\item[(2)]  $\int \frac { 1 } { \left( 1 + x ^ { 4 } \right) \sqrt [ 4 ] { 1 + x ^ { 4 } } } \mathrm { d } x$
+		\begin{solution}
+			\begin{align*}
+			\end{align*}
+		\end{solution}	
 \end{enumerate}	
 \item 计算积分
 $\int \frac { \cos ^ { 2 } x } { \sin x + \sqrt { 3 } \cos x }\mathrm{d}x$
 
+	\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
 \item 计算积分：
 \begin{enumerate}
 	\item[(1)] $\int \frac { x e ^ { \arctan x } } { \left( 1 + x ^ { 2 } \right) ^ { \frac { 3 } { 2 } } } \mathrm { d } x$
+	\begin{solution}
+		令 $t=\arctan x$ 
+		\begin{align*}
+			&= \int \frac{\tan t e^t}{\sec^3 t} \sec^2 t \mathrm{d} t= \int \sin t e^t \mathrm{d}t \\
+			&=\frac{1}{2} e^t(\sin t-\cos t) +C \\
+			%=\xlongequal{x=\arctan x,\sin t=\frac{x}{\sqrt{1+x^2}},\cos t=\frac{1}{1+x^2}
+			&=\frac{1}{2} e^{\arctan x} \frac{x-1}{\sqrt{1+x^2}}+C%
+		\end{align*}
+	\end{solution}
 	\item[(2)]  $\int e ^ { \sin x } \frac { x \cos ^ { 3 } x - \sin x } { \cos ^ { 2 } x }\mathrm{d}x$
+	\begin{solution}
+		\begin{align*}
+			&=\int e^{\sin x}(x \cos t-\frac{\sin x}{1-\sin^2 x})\mathrm{d} x=
+		\end{align*}
+	\end{solution}	
 	\item[(3)]  $\int \frac { \arcsin x } { x ^ { 2 } } \cdot \frac { 1 + x ^ { 2 } } { \sqrt { 1 - x ^ { 2 } } } \mathrm { d } x$
+	\begin{solution}
+		\begin{align*}
+			&=\int \arcsin x (\frac{1}{x^2}+1) \mathrm{d} (\arcsin x)= \int \frac{\arcsin t}{x^2} \mathrm{d} (\arcsin x) +\frac{1}{2} \arcsin^2 x +C\\
+			&
+		\end{align*}
+	\end{solution}
 \end{enumerate}	
 \item 计算积分
 $\int \ln \left( 1 + \sqrt { \frac { 1 + x } { x } } \right) \mathrm { d } x ( x > 0 )$.
+	\begin{solution}
+	另$t=\sqrt{\frac {1 + x}{x}}$ ,则$x=\frac{1}{t^2 - 1}$,于是 \\
+	\begin{align*} 
+		&{} \int \frac{x^{2}}{\left(1-x^{2}\right)^{3}} \mathrm{d} x =-\frac{1}{2} \int \frac{x}{\left(1-x^{2}\right)^{3}} \mathrm{d}\left(1-x^{2}\right)=\frac{1}{4} \int x d \frac{1}{\left(1-x^{2}\right)^{2}} \\ 
+		&{}=\frac{1}{4} \frac{x}{\left(1-x^{2}\right)^{2}}-\frac{1}{4} \int \frac{1}{\left(1-x^{2}\right)^{2}} \mathrm{d} x = \int \frac{1}{\left(1-x^{2}\right)^{2}} \mathrm{d} x \\
+		&=\int \frac{x^{2}-x^{2}+1}{\left(1-x^{2}\right)^{2}} \mathrm{d} x=\int \frac{x^{2}}{\left(1-x^{2}\right)^{2}} \mathrm{d} x+\int \frac{1}{1-x^{2}} \mathrm{d} x \\ &{}=-\frac{1}{2} \int \frac{x}{\left(1-x^{2}\right)^{2}} \mathrm{d}\left(1-x^{2}\right)+\frac{1}{2} \ln \left|\frac{1+x}{1-x}\right| 
+	\end{align*}	
+\end{solution}
 \item 设$F(x)$为$f(x)$的原函数，当$x\geq 0$时，$f ( x ) F ( x ) = \frac { x e ^ { x } } { 2 ( 1 + x ) ^ { 2 } }$，已知$F(0)=1$，求$f(x)$.
+\begin{solution}
+	两边同时积分
+	\begin{align*}
+		&\int F(x)  \mathrm{d}F(x) =\int \frac{x e^{x}}{2(1+x)^{2}} dx \\
+		& F^2(x)\xlongequal{e^x=t,x=\ln t}=  \int \frac{\ln t}{(1+\ln t)^2} \mathrm{d}t\\
+		&= - \int t \ln t \mathrm{d} (1+\ln t)^{-1} = -\frac{t \ln t}{1+ \ln t} +t +C = \xlongequal{F(0)=1}\frac{e^x }{1+ x} \\
+		&F(x)=\sqrt{\frac{e^x}{1+x}} \\
+		&f(x)= \frac{x\sqrt{e^x}}{2\sqrt{(1+x)^3}}
+	\end{align*}
+\end{solution}	
 \item 设$y$是由方程$y ^ { 3 } ( x + y ) = x ^ { 3 }$所确定的隐函数，求$\int \frac {\mathrm{d}x } { y ^ { 3 } }$.
+\begin{solution}
+	令 $\frac{x}{y}=t,x=yt \quad dx=ydt \quad y= \frac{t^3}{(t+1)} $ 
+	\begin{align*}
+		&\int \frac{dx}{y^2} = \int \frac{(t+1)^2}{t^6} \mathrm{d}t = \int \frac{1}{t^4} + \frac{2}{t^5} +\frac{1}{t^6} \mathrm{d} t\\
+		&=  -\left( \frac{1}{t^3} +\frac{7}{4t^4} +\frac{4}{5t^5}\right) +C  \xlongequal{\frac{x}{y}=t}\\
+		&=-\left(\frac{y^{3}}{x^{3}}+\frac{7}{4} \frac{y^{4}}{x^{4}}+\frac{4}{5} \frac{y^{5}}{x^{5}}\right)+C 
+	\end{align*}
+\end{solution}	
 \end{xiti}
 
 
@@ -47,17 +206,75 @@ $\int \ln \left( 1 + \sqrt { \frac { 1 + x } { x } } \right) \mathrm { d } x ( x
 \section{定积分}
 \begin{xiti}
 	\item 设$f''(x)$连续，当$x\rightarrow 0$时，$F ( x ) = \int _ { 0 } ^ { x } \left( x ^ { 2 } - t ^ { 2 } \right) f ^ { \prime \prime } ( t ) \mathrm { d } t$的导数与$x^{2}$为等价无穷小，求$f''(0)$.
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+
+
 	\item 设$f(x)$为非负连续函数，且当$x>0$时，有$\int _ { 0 } ^ { x } f ( x ) f ( x - t ) \mathrm { d } t = x ^ { 3 }$，求$f(x)$.
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+	
 	\item 设函数$f(x)$在点$x=0$处有$f ( 0 ) = 0 , \quad f ^ { \prime } ( 0 ) = - 2$，求$\lim _ { x \rightarrow 0 } \frac { \int _ { 0 } ^ { x } \ln \cos ( x - t ) \mathrm { d } t } { \sqrt { 1 - 2 f ^ { 2 } ( x ) } - 1 }$.
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+	
 	\item 设$f(x)$为连续函数，$f(a)\ne 0,f'(a)$存在，求$\lim _ { x \rightarrow a } \left[ \frac { 1 } { f ( a ) ( x - a ) } - \frac { 1 } { \int _ { a } ^ { x } f ( t ) \mathrm { d } t } \right]$.
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+	
 	\item 设$f(x)$连续，$\varphi ( x ) = \int _ { 0 } ^ { 1 } f ( x t ) \mathrm { d } t$且$\lim _ { x \rightarrow 0 } \frac { f ( x ) } { x } = A$($A$为常数)，求$\varphi'(x)$，并讨论$\varphi'(x)$在$x=0$处的连续性.
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+	
 	\item 确定方程$\int _ { 0 } ^ { x } \sqrt { 1 + t ^ { 2 } } \mathrm { d } t + \int _ { \cos x } ^ { 0 } \mathrm { e } ^ { - t ^ { 2 } } \mathrm { d } t = 0$在$(-\infty,+\infty)$内根的个数.
+	
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
 	\item 计算下列积分：
 	\begin{enumerate}
 		\item [(1)]$\int _ { - 1 / 2 } ^ { 1 / 2 } \ln \left( \frac { 1 - x } { 1 + x } \right) \arcsin \sqrt { 1 - x ^ { 2 } } \mathrm { d } x$
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
 		\item [(2)]$\int _ { - \pi / 2 } ^ { \pi / 2 } \frac { \mathrm { e } ^ { x } } { 1 + \mathrm { e } ^ { x } } \sin ^ { 4 } x \mathrm { d } x$
+		
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
 		\item [(3)]$\int _ { 0 } ^ { \pi } \frac { \mathrm { d } x } { 1 + a \cos x } ( 0 < a < 1 )$
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
 		\item [(4)]$\int _ { 0 } ^ { \pi } \frac { \pi + \cos x } { x ^ { 2 } - \pi x + 2014 } \mathrm { d } x$
+		\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
 	\end{enumerate}
 \item 计算下列积分：
 \begin{enumerate}
@@ -100,10 +317,42 @@ $\int \ln \left( 1 + \sqrt { \frac { 1 + x } { x } } \right) \mathrm { d } x ( x
 \item 设$f(x)$在$[0,1]$上有连续的导数，证明：$\forall x\in(0,1)$，有$|f(x)| \leqslant \int_{0}^{1}\left(|f(t)|+\left|f^{\prime}(t)\right|\right) \mathrm{d} t$.
 \item 设$f :[0,1] \rightarrow R$有连续导数并且$\int_{0}^{1} f(x) \mathrm{d} x=0$.证明：对每一个$b\in (0,1)$，$\left|\int_{0}^{b} f(x) \mathrm{d} x\right| \leqslant \frac{1}{8} \max _{0 \leqslant x \leqslant 1}\left|f^{\prime}(x)\right|$.
 \item 设$f''(x)>0.x\in [a,b]$，求证：$f\left(\frac{a+b}{2}\right)(b-a) \leqslant \int_{a}^{b} f(x) \mathrm{d} x \leqslant \frac{f(a)+f(b)}{2}(b-a)$.
+	\begin{solution}
+		由函数的凹凸性和连续性
+	\begin{align*}
+		 \quad x\in[a,b] ,f(x)=f(\frac{b-x}{b-a} a+\frac{x-a}{b-a} b) \le \frac{f(a)(b-x)+f(b)(x-a)}{b-a} \\
+		&=\quad x=\frac{a+b}{2}+t \\
+		\int_{a}^{b} f(x) \mathrm{d}x =\int_{-\frac{b-a}{2}}^{\frac{b+a}{2}} f(\frac{a+b}{2} +t)\mathrm{d}t=\int_{0}^{\frac{b-a}{2}} (f(\frac{a+b}{2}+t) +f(\frac{a+b}{2}-t))\mathrm{d}t\\
+		\ge \int_{0}^{\frac{b-a}{2}} 2f(\frac{a+b}{2}) \mathrm{d}t=(b-a)f(\frac{a+b}{2})
+		\end{align*}
+		%\textrm{右边} ,\textrm{左边} :
+	\end{solution}
+
 \item 设函数$f(x)$具有二阶导数，且$f''(x)\geq 0,x\in (-\infty,+\infty)$，函数$g(x)$在区间$[0,a]$上连续($a>0$)，证明：$\frac{1}{a} \int_{0}^{a} f[g(t)] \mathrm{d} t \geqslant f\left[\frac{1}{a} \int_{0}^{a} g(t) \mathrm{d} t\right]$.
+\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+
 \item 设函数$f(x)$在$[0,1]$上连续，证明：$\left(\int_{0}^{1} \frac{f(x)}{t^{2}+x^{2}} \mathrm{d} x\right)^{2} \leqslant \frac{\pi}{2 t} \int_{0}^{1} \frac{f^{2}(x)}{t^{2}+x^{2}} \mathrm{d} x, t>0$.
+	\begin{solution}
+		\begin{align*}
+		\end{align*}
+	\end{solution}
+
+
 \item 设$f(x)$在$[a,b]$上连续且$f(x) \geqslant 0, \quad \int_{a}^{b} f(x) \mathrm{d} x=1,k$为任意实数，试证明：
 \[\left(\int_{a}^{b} f(x) \cos k x \mathrm{d}  x\right)^{2}+\left(\int_{a}^{b} f(x) \sin k x \mathrm{d}  x\right)^{2} \leqslant 1\]
+		\begin{proof}
+			利用cauchy-schwarz
+			\begin{align*}	
+				left:&=(\int_{a}^{b} f(x) \cos kx \mathrm{d} x)^2 =[\int_{a}^{b} \sqrt{f(x)} \sqrt{f(x)}  \cos kx \mathrm{d} x]^2 \le \int_{a}^{b} f(x) dx \int f(x) \cos^2 kx \mathrm{d}x =\int_{a}^{b} f(x)\cos^2kx \mathrm{d}x\\ 
+				right:&= (\int_{a}^{b} f(x) \sin kx \mathrm{d} x)^2 =[\int_{a}^{b} \sqrt{f(x)} \sqrt{f(x)}  \sin kx \mathrm{d} x]^2 \le \int_{a}^{b} f(x)   \sin^2 kx \mathrm{d}x 
+			\end{align*}
+			所以:对部分同时利用cauchy-schwarz,结合即得证.
+		\end{proof}
+
 \item 求$\sum_{n=1}^{10^{9}} n^{-\frac{2}{3}}$的整数部分.
 \item 计算积分：
 \begin{enumerate}
@@ -131,6 +380,11 @@ $\int_{-\infty}^{+\infty} \mathrm{e}^{-|x| / k} f(x) \mathrm{d} x \leqslant M$($
 
 \item 设$f(x)=\int_{0}^{x} \cos \frac{1}{t} \mathrm{d}t$，求$f^{\prime}(0)$.
 \item 设函数$f(x)$满足$f(1)=1$，且对$x>1$，有$f^{\prime}(x)=\frac{1}{x^{2}+f^{2}(x)}$，试证极限$\lim _{x \rightarrow \infty} f(x)$存在，且极限值小于$1+\pi / 4$.
+
+\begin{solution}
+		\begin{align*}
+		\end{align*}
+\end{solution}
 
 \item  设$f(x)=\int_{-1}^{x} t|t| \mathrm{d} t(x \geqslant 1)$，求曲线$y=f(x)$与$x$轴所围成的封闭图形的面积.
 \item 求常数$a$、$b$、$c$，使得曲线$y=a x^{2}+b x+c$满足：(1)通过点$(0,0)$及$(1,2)$；(2)$a<0$；(3)当$x>0$时，与抛物线$y=-x^{2}+2 x$有交点，且与$y=-x^{2}+2 x$所围成的图形面积最小
@@ -196,4 +450,4 @@ $\int_{-\infty}^{+\infty} \mathrm{e}^{-|x| / k} f(x) \mathrm{d} x \leqslant M$($
 	
 	\item 如果$x$轴、曲线$y=f(x)(f(x)>0)$、直线$x=0$与$x=a$所包围的面积的质量中心的$x$坐标$\tilde{x}$是由$\tilde{x}=g(a)$给定的.证明$f(x)=A \frac{g^{\prime}(x)}{(x-g(x))^{2}} \mathrm{e}^{\int \frac{\mathrm{d} x}{x-g(x)}}$.这里$A$是正的常数.
 	\item 有一个立体，两底位于水平面$z=h/2$与$z=-h/2$内，包围它的侧面是曲面。它的每一个水平截面的面积为$a_{0} z^{3}+a_{1} z^{2}+a_{2} z+a_{3}$(特殊情形系数可以为零).证明：它的体积为$V=(1 / 6) h\left(B_{1}+B_{2}+4 M\right)$.这里$B_{1}$与$B_{2}$是底的面积，$M$是正中间的水平截面的面积当$a_{0}=0$时，这个公式包含锥与球的体积公式.
-\end{enumerate}
+\end{enumerate} 

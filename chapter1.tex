@@ -139,7 +139,17 @@ x+2,x\geq 0\\
 		\[
 		\textrm{原极限}=\lim_{n\rightarrow\infty}\sum_{k=1}^n{\frac{2k+1}{k^2\left(k+1\right)^2}}=\lim_{n\rightarrow\infty}\sum_{k=1}^n{\left(\frac{1}{k^2}-\frac{1}{\left(k+1\right)^2}\right)}=\lim_{n\rightarrow\infty}\left(1-\frac{1}{\left(n+1\right)^2}\right)=1
 		\]
-		\item[(3)] 
+		\item[(3)] 很容易得到在$x=-1$极限为$0$，在$x<-1$与$x\geq 1$时，无极限，现在我们来讨论在$|x|<1$时的情况，可考虑
+		\[a_n=(1+x)(1+x^2)(1+x^4)(1+x^8)\cdots (1+x^{2^n})\]
+		然后两边乘$1-x$有
+		\begin{align*}
+		(1-x)a_n&=(1-x^2)(1+x^2)(1+x^4)\cdots(1+x^{2^n})\\
+		& = (1-x^4)(1+x^4)\cdots(1+x^{2^n})\\
+		&=\cdots =1-x^{2^{n+1}},
+		\end{align*}
+		即
+		\[\lim_{n\to\infty}a_n=\lim_{n\to\infty}\frac{1-x^{2^{n+1}}}{1-x}=\frac{1}{1-x}.\]
+		
 	\end{enumerate}
 	
 \end{solution}
@@ -148,6 +158,18 @@ x+2,x\geq 0\\
 	\item[(1)] $\lim _ { x \rightarrow \infty } \frac { \mathrm { e } ^ { x } - x \arctan x } { \mathrm { e } ^ { x } + x }$
 	\item[(2)] $\lim _ { x \rightarrow 0 } \left( \frac { 2 + e ^ { \frac { 1 } { x } } } { 1 + e ^ { \frac { 4 } { x } } } + \frac { \sin x } { | x | } \right)$
 \end{enumerate}
+\begin{solution}
+	\begin{enumerate}
+		\item[(1)] 极限不存在.
+		\item[(2)] 考虑左右极限
+		\[\lim\limits_{x \to 0^{+} } \left(\frac{{2 + {e^{\frac{1}{x}}}}}{{1 + {e^{\frac{4}{x}}}}} + \frac{{\sin x}}{{|x|}}\right) = \mathop {\lim }\limits_{x \to 0^{+} }\left(\frac{{2 + {e^{\frac{1}{x}}}}}{{1 + {e^{\frac{4}{x}}}}} + \frac{{\sin x}}{x}\right) = 0 + 1 = 1\]
+		\[\lim \limits_{x \to 0^{-} } \left(\frac{{2 + {e^{\frac{1}{x}}}}}{{1 + {e^{\frac{4}{x}}}}} + \frac{{\sin x}}{{|x|}}\right) = \mathop {\lim }\limits_{x \to 0^{-} } \left(\frac{{2 + {e^{\frac{1}{x}}}}}{{1 + {e^{\frac{4}{x}}}}} - \frac{{\sin x}}{x}\right) = 2 - 1 = 1\]
+	\end{enumerate}
+\begin{note}
+	这里出现了绝对值函数(绝对值函数实际上是分段函数)以及$e^{\frac{1}{x}}(\text{这里由于}\lim _{x \rightarrow 0^{+}} e^{\frac{1}{x}}=+\infty, \lim _{x \rightarrow 0^{-}} e^{\frac{1}{x}}=0)$，容易想到考虑左、右极限.
+\end{note}
+	
+\end{solution}
 \item 求下列极限.
 \begin{enumerate}
 	\item[(1)] $\lim _ { x \rightarrow 0 ^ { - } } \frac { 1 - \sqrt { \cos x } } { x ( 1 - \cos \sqrt { x } ) }$
@@ -166,12 +188,66 @@ x+2,x\geq 0\\
 	\item[(2)] $\lim _ { n \rightarrow \infty } \sum _ { k = 1 } ^ { n } \frac { n + k } { n ^ { 2 } + k }$
 	\item[(3)] $a _ { n } = \sum _ { k = 1 } ^ { n } \frac { 1 } { \sqrt [ k ] { k } }$，求$\lim _ { n \rightarrow \infty } \sqrt [ n ] { a _ { n } }$.
 \end{enumerate}
+\begin{solution}
+	\begin{enumerate}
+		\item[(1)] 法1：利用不等式
+		\[x-\frac{1}{6} x^{3} \leq \sin x \leq x, \quad x \in[0, \pi / 2)\]
+		则有
+		\[
+		\frac{\pi}{\sqrt{n^{2}+k}}-\frac{1}{6} \frac{\pi^{3}}{\left(n^{2}+k\right)^{3 / 2}} \leq \sin \left(\frac{\pi}{\sqrt{n^{2}+k}}\right) \leq \frac{\pi}{\sqrt{n^{2}+k}}
+		\]
+		即
+		\[\frac{n\pi}{\sqrt{n^2 + n}} - \frac{1}{6}\frac{\pi^3}{n^2} \leq \sum_{k = 1}^n\sin\left(\frac{\pi}{\sqrt{n^2 + k}}\right) \leq \pi.\]
+		根据夹逼法则有$\lim_{n \to \infty} \sum_{k = 1}^n\sin\left(\frac{\pi}{\sqrt{n^2 + k}}\right) = \pi.$
+		
+		法2：利用泰勒展开，当$n\rightarrow \infty$，有
+		\[
+		\sin \left(\frac{\pi}{\sqrt{n^{2}+k}}\right)=\frac{\pi}{\sqrt{n^{2}+k}}+O\left(\frac{\pi}{\left(n^{2}+k\right)^{3 / 2}}\right)
+		\]
+		得到
+		\[
+		\sum_{k=1}^{n} \sin \left(\frac{\pi}{\sqrt{n^{2}+k}}\right)=\sum_{k=1}^{n} \frac{\pi}{\sqrt{n^{2}+k}}+\sum_{k=1}^{n} O\left(\frac{\pi}{\left(n^{2}+k\right)^{3 / 2}}\right)
+		\]
+		对$\exists C\geq 0$，当$n\rightarrow \infty$，有
+		\[\frac{C\pi n}{(n^2+n)^{3/2}}\leq \sum_{k=1}^nO\left(\frac\pi{(n^2+k)^{3/2}}\right)\leq\frac{C\pi n}{(n^2+1)^{3/2}}\]
+		即
+		\[
+		\lim_{n\rightarrow\infty}\sum_{k=1}^n{O}\left(\frac{\pi}{\left(n^2+k\right)^{3/2}}\right)=0
+		\]
+		因此$\lim_{n\to\infty}\sum_{k=1}^n \sin\left(\frac\pi{\sqrt{n^2+k}}\right)= \pi.$
+		\item[(2)] 由于$\sum_{k=1}^{n} \frac{n+k}{n^{2}+k}=\frac{1}{n} \sum_{k=1}^{n} \frac{1+\frac{k}{n}}{1+\frac{k}{n^{2}}}$，即对$\forall k\in [1,n]$有
+		\[\dfrac{n}{n+1}\left(1 + \dfrac{k}{n}\right) = \dfrac{1 + \frac{k}{n}}{1+\frac{1}{n}} \le \dfrac{1+\frac{k}{n}}{1+\frac{k}{n^2}} \le \dfrac{1 + \frac{k}{n}}{1+0} = 1 + \dfrac{k}{n}\]
+		因此
+		\[
+		\frac{n}{n+1} \cdot \frac{1}{n} \sum_{k=1}^{n}\left(1+\frac{k}{n}\right) \leq \frac{1}{n} \sum_{k=1}^{n} \frac{1+\frac{k}{n}}{1+\frac{k}{n^{2}}} \leq \frac{1}{n} \sum_{k=1}^{n}\left(1+\frac{k}{n}\right)
+		\]
+		考虑到$\lim_{n \to \infty}\dfrac{n}{n+1} = 1$，即有
+		\[
+		\lim _{n \rightarrow \infty} \sum_{k=1}^{n} \frac{n+k}{n^{2}+k}=\int_{0}^{1}(1+x) \mathrm{d} x=\frac{3}{2}
+		\]
+		\item[(3)] 由$\frac{1}{\sqrt[k]{k}}<1(k>1)$，即1$\leqslant a_{n} \leqslant n$，可知1$\leqslant \sqrt[n]{a_{n}} \leqslant \sqrt[n]{n} \rightarrow 1(n \rightarrow \infty)$，则$\lim _ { n \rightarrow \infty } \sqrt [ n ] { a _ { n } }=1$.
+	\end{enumerate}
+	
+\end{solution}
 \item 设$F ( x ) = \left( \frac { a _ { 1 } ^ { x } + a _ { 2 } ^ { x } + \ldots + a _ { n } ^ { x } } { n } \right) ^ { \frac { 1 } { x } } , a _ { 1 } , a _ { 2 } , \cdots , a _ { n }$都是正数.求下列极限：
 \begin{enumerate}
 	\item[(1)] $\lim _ { x \rightarrow + \infty } F ( x )$
 	\item[(2)] $\lim _ { x \rightarrow - \infty } F ( x )$
 	\item[(3)] $\lim _ { x \rightarrow 0 } F ( x )$.
 \end{enumerate}
+\begin{solution}
+	考虑$M=\max \left\{a_{1}, a_{2}, \cdots, a_{n}\right\}$与$m=\min \left\{a_{1}, a_{2}, \cdots, a_{n}\right\}$，则有
+	\begin{enumerate}
+		\item[(1)] 当$x>0$时，有$M\cdot\frac{1}{n^{\frac{1}{2}}}\leq F\left(x\right)\leq M$，由夹逼法则可知$\lim _{x \rightarrow+\infty} F(x)=M$.
+		\item[(2)] 当$x>0$时，有$m\cdot\frac{1}{n^{\frac{1}{2}}}\leq F\left(x\right)\leq m$，由夹逼法则可知$\lim _{x \rightarrow-\infty} F(x)=m$.
+		\item[(3)] 由$\lim _{x \rightarrow 0} F(x)=\lim _{x \rightarrow 0} \frac{\ln \frac{a_{1}^{x}+a_{2}^{x}+\cdots+e_{n}^{x}}{\pi}}{x}$，即可得
+		\[
+		\lim_{x\rightarrow 0}F\left(x\right)=\exp\left(\frac{\ln a_1+\ln a_2+\cdots +\ln a_n}{n}\right)=\sqrt[n]{a_1a_2\cdots a_n}
+		\]
+	\end{enumerate}
+	
+\end{solution}
+
 \item 设$0<x_{1}<3,x _ { n + 1 } = \sqrt { x _ { n } \left( 3 - x _ { n } \right) } ( n = 1,2 , \cdots )$，证明数列${x_{n}}$的极限存在，并求出极限.
 \item $0 < a < 1 , x _ { 1 } = \frac { a } { 2 } , x _ { n } = \frac { a } { 2 } + \frac { x _ { n - 1 } ^ { 2 } } { 2 } \quad ( n = 2 , \cdots )$，证明$\lim_{ n \rightarrow \infty }$存在，并求此极限.
 \item 设数列${x_{n}}$满足$0 < x _ { 1 } < \pi , x _ { n + 1 } = \sin x _ { n } ( n = 1,2 , \cdots )$，求$\lim _ { n \rightarrow \infty } \left( \frac { x _ { n + 1 } } { \tan x _ { n } } \right) ^ { \frac { 1 } { x _ { n } ^ { 2 } } }$.
@@ -179,6 +255,24 @@ x+2,x\geq 0\\
 \item 设$x _ { n + 1 } = x _ { n } \left( 2 - A x _ { n } \right) , n = 0,1,2 , \cdots$，其中$A>0$.确定初始值$x_{0}$，使得${x_{n}}$收敛.
 \item 设曲线$y=f(x)$在原点与$y=\sin x$相切，试求极限$\lim _ { n \rightarrow \infty } n ^ { \frac { 1 } { 2 } } \sqrt { f \left( \frac { 2 } { n } \right) }$.
 \item 设函数$f(x)>0$，在$x=a$处可导，试求$\lim _ { n \rightarrow \infty } \left[ \frac { f \left( a + \frac { 1 } { n } \right) } { f \left( a - \frac { 1 } { n } \right) } \right] ^ { n }$.
+\begin{solution}
+由题设易知
+\begin{equation*}
+	\begin{aligned}
+	&\lim_{n\rightarrow\infty}\left[\frac{f\left(a+\frac{1}{n}\right)}{f\left(a-\frac{1}{n}\right)}\right]^n=\lim_{n\rightarrow\infty}\left[1+\frac{f\left(a+\frac{1}{n}\right)-f\left(a-\frac{1}{n}\right)}{f\left(a-\frac{1}{n}\right)}\right]^n\\
+	&=\lim_{n\rightarrow\infty}\left[1+\frac{f\left(a+\frac{1}{n}\right)-f\left(a-\frac{1}{n}\right)}{f\left(a-\frac{1}{n}\right)}\right]^{\frac{f\left(a-\frac{1}{n}\right)}{f\left(a+\frac{1}{n}\right)-f\left(a-\frac{1}{n}\right)}\cdot\frac{f\left(a+\frac{1}{n}\right)-f\left(a-\frac{1}{n}\right)}{\frac{1}{n}}\cdot\frac{1}{f\left(a-\frac{1}{n}\right)}}\\
+	&=e^{\frac{2f'\left(a\right)}{f\left(a\right)}}
+	\end{aligned}
+\end{equation*}
+或取对数得
+\[
+\lim_{n\rightarrow\infty}\left[\frac{f\left(a+\frac{1}{n}\right)}{f\left(a-\frac{1}{n}\right)}\right]^n=\lim_{n\rightarrow\infty}\exp\left(n\left(\ln f\left(a+\frac{1}{n}\right)-\ln f\left(a-\frac{1}{n}\right)\right)\right)=e^{\frac{2f'\left(a\right)}{f\left(a\right)}}
+\]
+\end{solution}
+\begin{note}
+	该极限属于型的问题，一般可利用重要极限或利用指数、对数去解决.
+\end{note}
+
 \item 求极限：
 \begin{enumerate}
 	\item[(1)] $\lim _ { x \rightarrow + \infty } x ^ { 2 } \ln \frac { \arctan ( x + 1 ) } { \arctan x }$
@@ -247,6 +341,7 @@ x+2,x\geq 0\\
 \begin{solution}
 	
 	\begin{enumerate}
+		\item[(1)] 由定积分定义\[\lim _ { n \rightarrow \infty } \left(\frac { n } { n ^ { 2 } + 1 ^ { 2 } } + \frac { n } { n ^ { 2 } + 2 ^ { 2 } } + \cdots + \frac { n } { n ^ { 2 } + n ^ { 2 } } \right)= \lim _ { n \rightarrow \infty } \frac { 1 } { n } \cdot\sum _ { i = 1 } ^ { n } \frac { 1 } { 1 + \left( \frac { i } { n } \right) ^ { 2 } }  = \int _ { 0 } ^ { 1 } \frac { 1 } { 1 + x ^ { 2 } } \mathrm{ d } x = \frac { \pi } { 4 }\]
 		\item[(2)] 由于$\frac{1}{n} \cdot \frac{1}{1+\left(\frac{i+1}{n}\right)^{2}}<\frac{1}{n+\frac{i^{2}+1}{n}}=\frac{1}{n} \cdot \frac{1}{1+\frac{i^{2}+1}{n^{2}}}<\frac{1}{n} \cdot \frac{1}{1+\left(\frac{i}{n}\right)^{2}}$，即
 		\[\sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i+1}{n}\right)^{2}}<\sum_{i=1}^{n} \frac{1}{n+\frac{i^{2}+1}{n}}<\sum_{i=1}^{n} \frac{1}{n} \cdot \frac{1}{1+\left(\frac{i}{n}\right)^{2}}\]
 		
@@ -275,7 +370,7 @@ x+2,x\geq 0\\
 		\[
 		\lim _{n \rightarrow \infty} \frac{\sqrt[n]{n !}}{n}=\lim _{n \rightarrow \infty} \sqrt[n]{\frac{n !}{n^{n}}}=\lim _{n \rightarrow \infty} \exp{\frac{1}{n} \sum_{i=1}^{n} \frac{i}{n}}=\exp{\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{i=1}^{n} \ln \frac{i}{n}}=\exp\int_{0}^{1} \ln x \mathrm{d} x=\frac{1}{e}
 		\]
-		即$\int_{0}^{1} \ln x \mathrm{d} x=x \ln \left.x\right|_{0} ^{1}-\int_{0}^{1} \mathrm{d} x=-1$.
+		其中$\int_{0}^{1} \ln x \mathrm{d} x=x \ln \left.x\right|_{0} ^{1}-\int_{0}^{1} \mathrm{d} x=-1$.
 		
 		法三:
 		\begin{theorem}{柯西命题}{1}
@@ -332,29 +427,77 @@ x+2,x\geq 0\\
 	
 	然后用上题的定理可证.
 	
-	\begin{note}
-		因此
+	因此
 		$$\lim_{n \rightarrow \infty}\frac{\sqrt[n]{n!}}{n}=
-		\lim_{n \rightarrow \infty}\frac{1}{\frac{n}{\sqrt[n]{n!}}}=\frac{1}{e}$$
-		
-	\end{note}
+		\lim_{n \rightarrow \infty}\frac{1}{\frac{n}{\sqrt[n]{n!}}}=\frac{1}{e}$$.
 	
-	法四：斯特林公式
+	法四：斯特林公式$n !=\sqrt{2 \pi n}\left(\frac{n}{\mathrm{e}}\right)^{n} \mathrm{e}^{\frac{\theta_{\mathrm{n}}}{12 n}}\left(0<\theta_{n}<1\right)$，也就$n!\sim\left(\frac{n}{e}\right)^n\sqrt{2\pi n}$，即有
+	\[\frac{\sqrt[n]{n!}}{n}\sim\frac{\frac{n}{e}\sqrt[n]{2\pi n}}{n}=\frac{1}{e}\sqrt[n]{2\pi n}\Rightarrow\lim_{n\rightarrow\infty}\frac{\sqrt[n]{n!}}{n}=\lim_{n\rightarrow\infty}\frac{1}{e}\sqrt[n]{2\pi n}=\frac{1}{e}\]	
 	
-	\[n !=\sqrt{2 \pi n}\left(\frac{n}{\mathrm{e}}\right)^{n} \mathrm{e}^{\frac{\theta_{\mathrm{n}}}{12 n}}\left(0<\theta_{n}<1\right)\]	
+	法五：考虑到$\frac{\sqrt[n]{n!}}{n}=e^{\frac{\ln n!}{n}-\ln n}\sim e^{\frac{n\ln n-n+1}{n}-\ln n}=e^{-1+\frac{1}{n}}$，有$\lim_{n\rightarrow\infty}\frac{\sqrt[n]{n!}}{n}=\lim_{n\rightarrow\infty}e^{-1+\frac{1}{n}}=\frac{1}{e}$.
+	
+	法六：令$\ a_n=\frac{n!}{n^n}$，有$\frac{a_{n+1}}{a_n}=\frac{1}{\left(1+\frac{1}{n}\right)^n}
+	$，
+	即$\lim_{n\rightarrow\infty}\frac{a_{n+1}}{a_n}=\frac{1}{e}\Rightarrow \lim_{n\rightarrow\infty}\sqrt[n]{a_n}=\frac{1}{e}$
+	
+	法七：考虑
+	\[
+	\lim_{n\rightarrow\infty}\frac{n+1}{\sqrt[n]{n!}}=\lim_{n\rightarrow\infty}\sqrt[n]{\frac{\left(n+1\right)^n}{n!}}=\lim_{n\rightarrow\infty}\sqrt{\frac{2}{1}\cdots\frac{\left(n+1\right)^n}{n^n}}=\lim_{n\rightarrow\infty}\sqrt[n]{\left(1+\frac{1}{1}\right)^1\left(1+\frac{1}{2}\right)^2\cdots\cdots\left(1+\frac{1}{n}\right)^n}
+	\]
+	由正项数列可得到$\sqrt[n]{a_1a_2\cdots a_n}\longrightarrow a\left(n\rightarrow\infty\right)$
+	
+	又因为$\lim_{n\rightarrow\infty}\left(1+\frac{1}{n}\right)^n=e$，所以
+	$
+	\lim_{n\rightarrow\infty}\frac{\sqrt[n]{n!}}{n}=\lim_{n\rightarrow\infty}\frac{\sqrt[n]{n!}}{n+1}=\frac{1}{e}
+	$
+	
+	法八：考虑$
+	\int_{k=1}^{k} \ln x \mathrm { d } x<\ln k<\int_{k}^{k+1} \ln x \mathrm { d }x,  k=1,2, \ldots$，即$\int_{0}^{n} \ln x \mathrm { d } x<\ln (n !)<\int_{1}^{n+1} \ln x \mathrm { d } x$，则有
+	\[
+	n \ln n-n<\ln n !<(n+1) \ln (n+1)-n\Rightarrow
+	\frac{n^{n}}{e^{n}}<n !<\frac{(n+1)^{n+1}}{e^{n}}
+	\]
+	因此
+	\[
+	\frac{n}{e}<\sqrt{n !}<\frac{n+1}{e} \cdot \sqrt[n]{n+1}\Rightarrow\frac{1}{e}<\frac{\sqrt[n]{n !}}{n}<\frac{1}{e} \cdot \frac{n+1}{n} \cdot \sqrt[n]{n+1}
+	\]
+	由夹逼准则可得$\lim _{n \rightarrow \infty} \frac{\sqrt[n]{n !}}{n !}=\frac{1}{e}$.
 	\end{enumerate}
 \end{solution}
+\begin{note}
+	因此这个题$\lim _ { n \rightarrow \infty } \sqrt [ n ] { n ! } \ln \left( 1 + \frac { 2 } { n } \right)=\frac{2}{e}$.
+\end{note}
 \item 求$\lim _ { n \rightarrow \infty } \int _ { 0 } ^ { \frac { \pi } { 2 } } \frac { \sin ^ { n } x } { 1 + x } \mathrm { d } x$.
-\item 设$x _ { n } = 1 + \frac { 1 } { \sqrt { 2 } } + \dots + \frac { 1 } { \sqrt { n } } - 2 \sqrt { n }$，证明数列$\left\lbrace x_{n}\right\rbrace $收敛.
 \begin{solution}
-利用不等式
+	考虑$f_n\left(x\right)=\frac{\sin^nx}{1+x},g\left(x\right)=\frac{1}{1+x}$，对$k\in \mathcal{Z}$在$a\ne \frac{\pi}{2},\frac{3\pi}{2}$，有$|\sin(a)| < 1$，即当$n\rightarrow \infty$有$f_n (a) \to 0$.注意到$|f_n (x)| \le |g(x)|$且$g(x)$在$[0,\frac{\pi}{2}]$可积，因此根据勒贝格控制收敛定理有
+	\[
+	\lim_{n\rightarrow\infty}\int_0^{\pi/2}{\frac{\sin^nx}{1+x}}\,\mathrm { d }x=\lim_{n\rightarrow\infty}\int_0^{\pi/2}{f_n}\left(x\right)\,\mathrm { d }x=\int_0^{\pi/2}{\lim_{n\rightarrow\infty}}f_n\left(x\right)\,\mathrm { d }x=\int_0^{\pi/2}{0}\,\mathrm { d }x=0.
+	\]
+	
+\end{solution}
+\item 设$x _ { n } = 1 + \frac { 1 } { \sqrt { 2 } } + \dots + \frac { 1 } { \sqrt { n } } - 2 \sqrt { n }$，证明数列$\left\lbrace x_{n}\right\rbrace $收敛.
+\begin{proof}
+法1：单调有界数列必收敛，利用不等式
 \[
 \frac{1}{\sqrt{k}}>\frac{2}{\sqrt{k}+\sqrt{k+1}}=2(\sqrt{k+1}-\sqrt{k})
 \]
 得$x_{n}=\sum_{k=1}^{n} \frac{1}{\sqrt{k}}-2 \sqrt{n}>2 \sqrt{n+1}-2-2 \sqrt{n}>-2$，即有上限.
 
 又由$x_{n+1}-x_{n}=\frac{1}{\sqrt{n+1}}-2 \sqrt{n+1}+2 \sqrt{n}=\frac{1}{\sqrt{n+1}}-\frac{2}{\sqrt{n+1}+\sqrt{n}}<0$，即$x_{n+1}<x_{n}$，故$ x_{n} $单调递减，有下界.即证数列$\left\lbrace x_{n}\right\rbrace $收敛.
-\end{solution}
+
+法2：本题利用级数的知识证明数列收敛更容易
+\[
+0<a_{n}-a_{n+1}=\frac{1}{\sqrt{n+1}(\sqrt{n+1}+\sqrt{n})^{2}}<\frac{1}{n \sqrt{n}}
+\]
+由正项级数审敛法知$\sum_{n=1}^{\infty}\left(a_{n}-a_{n+1}\right)$ 收敛，从而数列$\left\lbrace x_{n}\right\rbrace $收敛.
+\begin{note}
+利用级数的知识去说明数列收敛甚至求极限也是要掌握的方法，一般有两种情况：
+\begin{enumerate}
+	\item[(1)]若$\sum_{n=1}^{\infty} a_{n}$收敛，则$\lim _{n \rightarrow \infty} a_{n}=0$；
+	\item[(2)] 数列$\left\lbrace x_{n}\right\rbrace $收敛$\Leftrightarrow$级数$\sum_{n=1}^{\infty}\left(a_{n}-a_{n+1}\right)$，且$\lim _{n \rightarrow \infty} a_{n}=a_{1}+\sum_{n=1}^{\infty}\left(a_{n+1}-a_{n}\right)$.
+\end{enumerate}
+\end{note}
+\end{proof}
 \item 求下列极限
 \begin{enumerate}
 	\item[(1)] $\lim _ { n \rightarrow \infty } \frac { n ^ { k } } { a ^ { n } } ( a > 1 , k > 0 )$
@@ -486,9 +629,27 @@ x+2,x\geq 0\\
 	\item [(2)]证明$\lim_{ n \rightarrow \infty }x_{n}$存在，并求其值$A$;
 	\item [(3)]证明当$n\rightarrow \infty$，$x_{n}-A$与$\frac{1}{n}$是同阶无穷小.
 \end{enumerate}
+\begin{proof}
+	\begin{enumerate}
+		\item [(1)] 很容易知道$f_{n}(x)$是关于自变量$x$单调递增，且$f_{n}(0)=1>0, f_{n}(-1)=e^{-1}-1<0$，由函数连续性可知方程存在唯一的实根$x_{n}\in (-1,0)$;
+		\item [(2)]考虑$f_{n}\left(x_{n}\right)=\mathrm{e}^{x_{n}}+\left(x_{n}\right)^{2 n+1}=0$，则$x_{n}=-e^{\frac{x_{n}}{2n+1}}$，又因为$x_{n}\in (-1,0)$，即$\lim _{n \rightarrow \infty} \frac{x_{n}}{2 n+1}=0$.
+		
+		由函数连续性可知存在极限$A=\lim _{n \rightarrow \infty} x_{n}=-e^{0}=-1$.
+		\item [(3)]根据拉格朗日中值定理得
+		\[
+		x_{n}-A=x_{n}+1=\mathrm{e}^{0}-\mathrm{e}^{\frac{x_{n}}{2 \pi+1}}=-\mathrm{e}^{\xi_{n}} \frac{x_{n}}{2 n+1}
+		\]
+		其中$\xi _{n}$介于$0$与$\frac{x_{n}}{2 n+1}$之间，即
+		\[
+		\lim _{n \rightarrow \infty} \frac{x_{n}+1}{1 / n}=\lim _{n \rightarrow \infty}\left(-\mathrm{e}^{\varepsilon_{n}} \cdot x_{n} \cdot \frac{n}{2 n+1}\right)=\frac{1}{2}
+		\]
+		即证.
+	\end{enumerate}
+	
+\end{proof}
 \item 设$\Omega$是定义在$(-\infty,+\infty)$上某些连续函数所构成的集合，满足当$f(x)=Q$，存在常数$k$，使得$f ( f ( x ) ) = k x ^ { 9 }$.试确定常数$k$的取值范围.
 \begin{proof}
-	充要条件是$k \ge 0$.若$k \ge 0 $,我们发现$ f(x) =\sqrt[4]{k}x^3 $满足$f(f(x)) = kx^9 $. 相反地,我们注意到$ k\not =0 $及对一切实数$ x $有$ f(f(x)) = kx^9 $ 可推出$ f $能取到一切实数值.由$ kx^9 $确定了$ f $是一对一的.事实上从$ f(a) = f(b) $可导出 $ ka^9= f(f(a)) = kb^9, $所以$ a = b. $但是,从实数集$ R $到其自身上的一个连续的一对一函数$ f $必定是严格单调的.当f为单调时,通常是递增的或者是递减的,$ f(f(x)) $将总是递增的.所以当$ k < 0 $时,不可能等于$ kx^9 $.
+	充要条件是$k \ge 0$.若$k \ge 0 $,我们发现$ f(x) =\sqrt[4]{k}x^3 $满足$f(f(x)) = kx^9 $. 相反地,我们注意到$ k\not =0 $及对一切实数$ x $有$ f(f(x)) = kx^9 $ 可推出$ f $能取到一切实数值.由$ kx^9 $确定了$ f $是一对一的.事实上从$ f(a) = f(b) $可导出 $ ka^9= f(f(a)) = kb^9, $所以$ a = b. $但是,从实数集$ R $到其自身上的一个连续的一对一函数$ f $必定是严格单调的.当$f$为单调时,通常是递增的或者是递减的,$ f(f(x)) $将总是递增的.所以当$ k < 0 $时,不可能等于$ kx^9 $.
 \end{proof}
 \item 设函数$f(x)$在$(-\infty,+\infty)$内连续，且$f[f(x)]=x$.证明：在$(-\infty,+\infty)$内至少有一个$x_{0}$满足$f(x_{0})=x_{0}$.
 

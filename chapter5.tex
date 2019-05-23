@@ -29,7 +29,7 @@
 	\begin{solution}
 		积分区域如下图所示：(紫色区域表示的是前面一部分的积分区域,褐色部分表示的是后面一部分的积分区域,下图为geogebra软件制作,由刘力手和本本蛋蛋提供,在此做出感谢)
 		
-		\includegraphics[width=0.80\textwidth]{Problem_3.png}
+		\includegraphics[width=0.80\textwidth]{5.1.3.png}
 	
 		则原式$=\int_{1}^{2} \mathrm{d} y \int_{y}^{y^{2}} \sin \frac{\pi x}{2 y} \mathrm{d} x=\int_{1}^{2} \mathrm{d} y\left(\frac{2}{\pi} y \int_{\frac{\pi}{2}}^{\frac{\pi}{2} y} \sin u \mathrm{d} u\right)=-\int_{1}^{2}\left(\frac{2}{\pi} y \cos \frac{\pi}{2} y\right) \mathrm{d} y$
 		
@@ -400,11 +400,11 @@
 	\item 证明1$\leqslant \iint_{D}\left(\cos x^{2}+\sin y^{2}\right) \mathrm{d} x \mathrm{d} y \leqslant \sqrt{2}$，其中$\mathrm{d}: 0 \leqslant x \leqslant 1,0 \leqslant y \leqslant 1$.
 	%证明题
 	\begin{proof}
-		由于区域$D$关于$y=x$对称（也就是区域$D$交换$x$和$y$之后,区域$D$不变）
+		由于区域$D$关于$y=x$对称（也就是区域$D$交换$x$和$y$之后,区域$D$不变），故由
 		
-		故$\iint_{D}\left(\cos x^{2}+\sin y^{2}\right) \mathrm{d} x \mathrm{d} y = \iint_{D}\left(\cos x^{2}+\sin x^{2}\right) \mathrm{d} x \mathrm{d} y =\sqrt{2} \iint_{D} \cos \left(x^{2}+\frac{\pi}{4}\right) \mathrm{d} x \mathrm{d} y $
+		\[\iint_{D}\left(\cos x^{2}+\sin y^{2}\right) \mathrm{d} x \mathrm{d} y = \iint_{D}\left(\cos x^{2}+\sin x^{2}\right) \mathrm{d} x \mathrm{d} y =\sqrt{2} \iint_{D} \cos \left(x^{2}+\frac{\pi}{4}\right) \mathrm{d} x \mathrm{d} y \]
 		
-		由于$0 \leqslant x \leqslant 1$,故$0 \leqslant x^{2} \leqslant 1$,故$\frac{\pi}{4} \leqslant x^{2}+\frac{\pi}{4} \leqslant 1+\frac{\pi}{4}$,故$1 \leqslant \sqrt{2} \cos \left(x^{2}+\frac{\pi}{4}\right) \leqslant \sqrt{2}$
+		考虑到$0 \leqslant x \leqslant 1$,故$0 \leqslant x^{2} \leqslant 1$,故$\frac{\pi}{4} \leqslant x^{2}+\frac{\pi}{4} \leqslant 1+\frac{\pi}{4}$,即$1 \leqslant \sqrt{2} \cos \left(x^{2}+\frac{\pi}{4}\right) \leqslant \sqrt{2}$
 		
 		故$\iint_{D} \mathrm{d} x \mathrm{d} y \leqslant \sqrt{2} \iint_{D} \cos \left(x^{2}+\frac{\pi}{4}\right) \mathrm{d} x \mathrm{d} y \leqslant \sqrt{2} \iint_{D} \mathrm{d} x \mathrm{d} y$,即$1\leqslant \iint_{D}\left(\cos x^{2}+\sin y^{2}\right) \mathrm{d} x \mathrm{d} y \leqslant \sqrt{2}$
 	\end{proof}
